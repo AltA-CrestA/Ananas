@@ -14,7 +14,7 @@
     <div class="container">
         <div class="header__body">
             <a href="/" class="header__logo">
-                <img src="/app/template/img/01.png" alt="">
+                <img src="/app/template/img/01.webp" alt="">
             </a>
             <nav class="header__menu">
                 <ul class="header__list">

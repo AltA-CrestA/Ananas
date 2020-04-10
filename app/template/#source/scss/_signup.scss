@@ -1,11 +1,11 @@
 .signup {
-  background: center / cover no-repeat url("/app/template/img/010.jpg");
+  background: center / cover no-repeat url("/app/template/img/010.webp");
   @include disflex(flex, center, center);
   padding: 80px 0;
 }
 .signup-container {
   width: 800px;
-  background: center / cover no-repeat url("/app/template/img/005.png");
+  background: center / cover no-repeat url("/app/template/img/005.webp");
   border-radius: 20px;
   padding: 0 0 40px 0;
 }
@@ -45,13 +45,12 @@
     width: 300px;
     margin-top: 10px;
   }
-  @media (max-width:350px) {
+  @media (max-width: 350px) {
     .signup-input {
       width: 260px;
     }
   }
 }
-
 
 .signup__button {
   font-size: 20px;
@@ -81,8 +80,8 @@
     margin-right: 10px;
   }
 }
- // Адаптация от вячеславскеса
-@media (max-width:640px) {
+// Адаптация от вячеславскеса
+@media (max-width: 640px) {
   .signup-container {
     width: 100%;
   }
@@ -97,8 +96,8 @@
     align-items: center;
   }
 }
- // Адаптация от вячеславскеса
-@media (max-width:350px) {
+// Адаптация от вячеславскеса
+@media (max-width: 350px) {
   .label {
     font-size: 18px;
   }

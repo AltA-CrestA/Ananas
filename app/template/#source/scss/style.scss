@@ -141,7 +141,7 @@ body {
 }
 
 .hi {
-  background: url("/app/template/img/002.jpg") 100% center no-repeat;
+  background: url("/app/template/img/002.webp") 100% center no-repeat;
   background-size: cover;
   height: 750px;
   @include disflex(flex, center, center);
@@ -268,7 +268,7 @@ body {
 }
 
 .buy {
-  background: url("/app/template/img/003.jpg");
+  background: url("/app/template/img/003.webp");
   background-size: cover;
   height: 110%;
   @include disflex(flex, center, center);

@@ -1,5 +1,5 @@
 .login-content {
-  background: url("/app/template/img/009.jpg") no-repeat 50% 50%;
+  background: url("/app/template/img/009.webp") no-repeat 50% 50%;
   background-size: cover;
   height: 100vh;
   @include fontzcolor(24px, #fff);
@@ -29,29 +29,29 @@
       .login-text {
         font-size: 16px;
       }
-       // Адаптация от вячеславскеса
-      @media (max-width:470px) {
+      // Адаптация от вячеславскеса
+      @media (max-width: 470px) {
         .login-title {
           font-size: 25px;
-      }
+        }
         .login-text {
           font-size: 12px;
+        }
+        @media (max-width: 400px) {
+          .login-title {
+            font-size: 20px;
+          }
+          .login-text {
+            font-size: 10px;
+            text-align: center;
+          }
+        }
+        @media (max-width: 335px) {
+          .login-title {
+            font-size: 18px;
+          }
+        }
       }
-      @media (max-width:400px) {
-        .login-title {
-          font-size: 20px;
-      }
-        .login-text {
-          font-size: 10px;
-          text-align: center;
-      }
-      }
-      @media (max-width:335px) {
-        .login-title {
-          font-size: 18px;
-      }
-      }
-    }
 
       .login__link {
         text-decoration: underline;
@@ -93,30 +93,30 @@
         .login__input {
           @extend %tplinput;
         }
-        @media (max-width:470px) {
+        @media (max-width: 470px) {
           .login__string {
             padding: 20px 60px;
           }
           &:nth-child(1) {
             margin-top: 20px;
           }
-  
+
           &:nth-child(2) {
             margin-bottom: 20px;
           }
-  
+
           .label-login {
             margin-bottom: 5px;
           }
         }
       }
-       // Адаптация от вячеславскеса
-      @media (max-width:1500px) {
+      // Адаптация от вячеславскеса
+      @media (max-width: 1500px) {
         .login__string {
           padding: 20px 80px;
         }
       }
-      @media (max-width:500px) {
+      @media (max-width: 500px) {
         .login__string {
           padding: 20px 40px;
         }
@@ -135,8 +135,8 @@
           @extend %tplneon;
           padding: 10px 50px;
         }
-        @media (max-width:500px) {
-          .button__login{
+        @media (max-width: 500px) {
+          .button__login {
             font-size: 16px;
             padding: 10px 40px;
           }
@@ -144,46 +144,45 @@
       }
     }
   }
-   // Адаптация от вячеславскеса
-  @media (max-width:1390px) {
+  // Адаптация от вячеславскеса
+  @media (max-width: 1390px) {
     .login-container {
       width: 40%;
     }
   }
-  @media (max-width:1165px) {
+  @media (max-width: 1165px) {
     .login-container {
       width: 45%;
     }
   }
-  @media (max-width:1040px) {
+  @media (max-width: 1040px) {
     .login-container {
       width: 55%;
     }
   }
-  @media (max-width:850px) {
+  @media (max-width: 850px) {
     .login-container {
       width: 60%;
     }
   }
-  @media (max-width:777px) {
+  @media (max-width: 777px) {
     .login-container {
       width: 70%;
     }
   }
-  @media (max-width:668px) {
+  @media (max-width: 668px) {
     .login-container {
       width: 90%;
     }
   }
-  @media (max-width:540px) {
+  @media (max-width: 540px) {
     .login-container {
       width: 100%;
     }
   }
 }
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .login-content {
     @include fontzcolor(20px, #fff);
   }
-  
 }

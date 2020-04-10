@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -9,7 +10,7 @@ html, body {
     left: 0;
     z-index: 50;
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -67,174 +68,180 @@ html, body {
 .header-login {
     z-index: 20;
     .login__button {
-    @extend %tplneon;
-    @include disflex(inline-flex, flex-start, center);
-    border: 2px solid #fff;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: transparent;
-    @include fontzcolor(16px, #fff);
-    font-weight: 700;
+        @extend %tplneon;
+        @include disflex(inline-flex, flex-start, center);
+        border: 2px solid #fff;
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: transparent;
+        @include fontzcolor(16px, #fff);
+        font-weight: 700;
     }
     .header__buttons {
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    .header-cart {
-        cursor: pointer;
-        position: relative;
-        box-sizing: border-box;
-        background-color: hsl(308, 100%, 50%);
-        color: hsl(0, 0%, 100%);
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        @include disflex(inline-flex, space-between, center);
-        flex: none;
-        font-family: Comfortaa;
-        flex-wrap: wrap;
-        border-radius: 0.4em;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        background: transparent !important;
-        border: 0.1em solid hsl(0, 0%, 100%);
-        text-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.45em,
-          hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
-          hsl(308, 100%, 50%) 0px 0px 0.75em;
-        box-shadow: hsl(0, 0%, 100%) 0px 0px 0.075em, hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.22em,
-          hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
-          hsl(308, 100%, 50%) 0px 0px 0.75em, inset hsl(308, 100%, 50%) 0 0 0.6em;
-        &:hover {
-          text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em, hsl(0, 0%, 100%) 0px 0px 0.9em,
-            hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
-            hsl(308, 100%, 50%) 0px 0px 1.5em;
-          box-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.44em,
-            hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
-            hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
-        }
-        position: relative;
-        padding: 10px;
-        border-radius: 50%;
-        .icon__cart-basket {
-            position: absolute;
-            border: 0.1em solid white;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        .header-cart {
+            cursor: pointer;
+            position: relative;
+            box-sizing: border-box;
+            background-color: hsl(308, 100%, 50%);
+            color: hsl(0, 0%, 100%);
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            @include disflex(inline-flex, space-between, center);
+            flex: none;
+            font-family: Comfortaa;
+            flex-wrap: wrap;
+            border-radius: 0.4em;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            background: transparent !important;
+            border: 0.1em solid hsl(0, 0%, 100%);
+            text-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em,
+                hsl(0, 0%, 100%) 0px 0px 0.45em, hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em,
+                hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 0.75em;
+            box-shadow: hsl(0, 0%, 100%) 0px 0px 0.075em, hsl(0, 0%, 100%) 0px 0px 0.15em,
+                hsl(0, 0%, 100%) 0px 0px 0.22em, hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em,
+                hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 0.75em,
+                inset hsl(308, 100%, 50%) 0 0 0.6em;
+            &:hover {
+                text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em,
+                    hsl(0, 0%, 100%) 0px 0px 0.9em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+                    hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
+                    hsl(308, 100%, 50%) 0px 0px 1.5em;
+                box-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em,
+                    hsl(0, 0%, 100%) 0px 0px 0.44em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+                    hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
+                    hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
+            }
+            position: relative;
+            padding: 10px;
             border-radius: 50%;
-            background-color: #af2179;
-            color: white;
-            padding: 3px 3px 1px 4px;
-            width: 25px;
-            height: 25px;
-            font-size: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            left: 28px;
-            bottom: -9px;
-        }
-        @media (max-width:967px) {
             .icon__cart-basket {
-                padding: 3.5px 3px 0.7px 4px;
-                width: 20px;
-                height: 20px;
-                font-size: 9px;
+                position: absolute;
+                border: 0.1em solid white;
+                border-radius: 50%;
+                background-color: #af2179;
+                color: white;
+                padding: 3px 3px 1px 4px;
+                width: 25px;
+                height: 25px;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 left: 28px;
-                bottom: -5px;
+                bottom: -9px;
+            }
+            @media (max-width: 967px) {
+                .icon__cart-basket {
+                    padding: 3.5px 3px 0.7px 4px;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 9px;
+                    left: 28px;
+                    bottom: -5px;
+                }
             }
         }
-    }
-    @media (max-width:967px) {
-        .header-cart {
-            font-size: 14px;
+        @media (max-width: 967px) {
+            .header-cart {
+                font-size: 14px;
+            }
         }
-    }
-    .header-user {
-        cursor: pointer;
-        position: relative;
-        box-sizing: border-box;
-        background-color: hsl(308, 100%, 50%);
-        color: hsl(0, 0%, 100%);
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        @include disflex(inline-flex, space-between, center);
-        flex: none;
-        font-family: Comfortaa;
-        flex-wrap: wrap;
-        border-radius: 0.4em;
-        padding: 10px 20px;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        background: transparent !important;
-        border: 0.1em solid hsl(0, 0%, 100%);
-        text-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.45em,
-            hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
-            hsl(308, 100%, 50%) 0px 0px 0.75em;
-        box-shadow: hsl(0, 0%, 100%) 0px 0px 0.075em, hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.22em,
-            hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
-            hsl(308, 100%, 50%) 0px 0px 0.75em, inset hsl(308, 100%, 50%) 0 0 0.6em;
-        &:hover {
-            text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em, hsl(0, 0%, 100%) 0px 0px 0.9em,
-            hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
-            hsl(308, 100%, 50%) 0px 0px 1.5em;
-            box-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.44em,
-            hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
-            hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
-        }
-        text-transform: none;
-        padding: 10px 12px;
-        border-radius: 50px;
-        margin-right: 20px;
-        position: relative;
-        display: inline-block;
-        a {
+        .header-user {
+            cursor: pointer;
+            position: relative;
+            box-sizing: border-box;
+            background-color: hsl(308, 100%, 50%);
+            color: hsl(0, 0%, 100%);
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            @include disflex(inline-flex, space-between, center);
+            flex: none;
+            font-family: Comfortaa;
+            flex-wrap: wrap;
+            border-radius: 0.4em;
+            padding: 10px 20px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            background: transparent !important;
+            border: 0.1em solid hsl(0, 0%, 100%);
+            text-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em,
+                hsl(0, 0%, 100%) 0px 0px 0.45em, hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em,
+                hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 0.75em;
+            box-shadow: hsl(0, 0%, 100%) 0px 0px 0.075em, hsl(0, 0%, 100%) 0px 0px 0.15em,
+                hsl(0, 0%, 100%) 0px 0px 0.22em, hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em,
+                hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 0.75em,
+                inset hsl(308, 100%, 50%) 0 0 0.6em;
+            &:hover {
+                text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em,
+                    hsl(0, 0%, 100%) 0px 0px 0.9em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+                    hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
+                    hsl(308, 100%, 50%) 0px 0px 1.5em;
+                box-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em,
+                    hsl(0, 0%, 100%) 0px 0px 0.44em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+                    hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
+                    hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
+            }
+            text-transform: none;
+            padding: 10px 12px;
+            border-radius: 50px;
+            margin-right: 20px;
+            position: relative;
+            display: inline-block;
+            a {
                 color: #fff;
-        }
-        .dropdown-content {
-        text-align: center;
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 40px;
-        background: #09102c;
-        border-radius: 20px;
-        border: 2px solid #fff;
-        padding: 20px 10px;
-        min-width: 100%;
-        z-index: 1;
-        a {
-          padding: 12px 16px;
-          text-shadow: none;
-          display: block;
-          line-height: 20px;
-          font-size: 12px;
-          &:hover {
-            @extend %tplneon;
-            box-shadow: none;
-            border: none;
-          }
-        }
-      }
-      
-        @media (max-width: 400px) {
+            }
             .dropdown-content {
-                left: -45px;
-                padding: 10px 0px;
-                width: 130px;
+                text-align: center;
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                background: #09102c;
+                border-radius: 20px;
+                border: 2px solid #fff;
+                padding: 20px 10px;
+                min-width: 100%;
                 z-index: 1;
                 a {
-                  padding: 10px 5px;
-                  text-shadow: none;
-                  display: block;
-                  line-height: 20px;
-                  font-size: 8px;
-                line-height: 10px;
+                    padding: 12px 16px;
+                    text-shadow: none;
+                    display: block;
+                    line-height: 20px;
+                    font-size: 12px;
+                    &:hover {
+                        @extend %tplneon;
+                        box-shadow: none;
+                        border: none;
+                    }
                 }
-              }
+            }
+
+            @media (max-width: 400px) {
+                .dropdown-content {
+                    left: -45px;
+                    padding: 10px 0px;
+                    width: 130px;
+                    z-index: 1;
+                    a {
+                        padding: 10px 5px;
+                        text-shadow: none;
+                        display: block;
+                        line-height: 20px;
+                        font-size: 8px;
+                        line-height: 10px;
+                    }
+                }
+            }
+            &:hover .dropdown-content {
+                display: block;
+            }
         }
-      &:hover .dropdown-content {
-        display: block;
-      }
-    }
     }
     @media (max-width: 976px) {
         .header__buttons {
@@ -248,13 +255,21 @@ html, body {
             margin-right: 15px;
         }
     }
+    @media (max-width: 400px) {
+        .header__buttons {
+            margin-right: 30px;
+        }
+        .login__button {
+            margin-right: 30px;
+        }
+    }
 }
 
 .header-cart a {
     color: white;
 }
 
-.header__buttons__mini{
+.header__buttons__mini {
     margin-top: 30px;
 }
 
@@ -264,15 +279,15 @@ html, body {
 }
 
 .header-logged {
-  @include disflex(flex, flex-start, center);
-  background: #09102c;
-  padding: 10px 100px;
-  .header__logged {
-    width: 10%;
-    & img {
-      max-width: 70%;
+    @include disflex(flex, flex-start, center);
+    background: #09102c;
+    padding: 10px 100px;
+    .header__logged {
+        width: 10%;
+        & img {
+            max-width: 70%;
+        }
     }
-  }
 }
 
 .dropbtn img {
@@ -287,7 +302,7 @@ html, body {
     color: black;
     padding: 50px 0;
     font-family: Montserrat;
-    min-height: 100vh;
+    min-height: 77vh;
 }
 
 .title__cart {
@@ -352,13 +367,13 @@ html, body {
 }
 
 .inpute__amount {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .uk-form-small {
-   display: none;
+    display: none;
 }
 
 .button__amount {
@@ -396,12 +411,12 @@ html, body {
 
 // МЕДИА 1500px - 1000px --------------------------
 
-@media (max-width:1250px) {
+@media (max-width: 1250px) {
     .header__list li {
         margin-left: 50px;
     }
 }
-@media (max-width:1140px) {
+@media (max-width: 1140px) {
     .header__list li {
         margin-left: 20px;
     }
@@ -414,24 +429,24 @@ html, body {
     }
 }
 
-@media (max-width:976px){
+@media (max-width: 976px) {
     .header__logo {
         flex: 0 0 auto;
         & img {
-            width:70px;
+            width: 70px;
         }
     }
     .header {
         height: 60px;
         padding-top: 5px;
     }
-    .container{
+    .container {
         padding: 0px 15px;
     }
     body.lock {
         overflow: hidden;
     }
-    .header__body{
+    .header__body {
         height: 50px;
         justify-content: space-between;
     }
@@ -453,7 +468,7 @@ html, body {
     }
     .header__burger:before,
     .header__burger:after {
-        content: '';
+        content: "";
         background-color: #fff;
         position: absolute;
         width: 100%;
@@ -461,7 +476,7 @@ html, body {
         left: 0;
         transition: all 0.3s ease 0s;
     }
-    .header__burger:before{
+    .header__burger:before {
         top: 0;
     }
     .header__burger:after {
@@ -488,7 +503,7 @@ html, body {
         height: 100%;
         overflow: auto;
         transition: all 0.3s ease 0s;
-        background-color: #32133F;
+        background-color: #32133f;
         padding: 80px 10px 20px 10px;
     }
     .header__menu.active {
@@ -545,7 +560,7 @@ html, body {
         font-size: 16px;
         width: 20px;
         height: 20px;
-    } 
+    }
     .title__amount {
         margin-right: 80px;
     }
@@ -554,6 +569,9 @@ html, body {
             top: -6px;
             right: -33px;
         }
+    }
+    .cart__box {
+        min-height: 50vh;
     }
 }
 
@@ -600,27 +618,20 @@ html, body {
     .title__amount {
         margin-right: 10px;
     }
-    .cart__box {
-        @include disflex(flex, flex-start, center);
-    }
 }
 
 @media (max-width: 350px) {
-    .cart__box {
-        padding: 20px 0;
-    }
-    
     .title__cart {
         margin-bottom: 30px;
     }
     .cart__up-main {
         margin-bottom: 40px;
     }
-    
+
     .cart__up {
         margin-bottom: 30px;
     }
-    
+
     .up__title {
         margin-bottom: 10px;
     }

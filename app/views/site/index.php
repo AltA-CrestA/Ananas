@@ -7,9 +7,9 @@
     <div class="wrapper">
         <div class="hi">
             <div class="hi-container">
-                <h1 class="hi-title wow fadeInLeft" data-wow-delay="0.8s" >Одежда напрокат</h1>
-                <div class="hi-subtitle wow fadeInLeft" data-wow-delay="1.1s">Первый шоп-шейринг в Краноярске с эксклюзивными<br>брендами одежды и аксессуарами</div>
-                <a href="" class="hi__link wow fadeInLeft" data-wow-delay="1.4s">Посмотреть каталог</a>
+                <h1 class="hi-title wow fadeInLeft" data-wow-delay="0.3s" >Одежда напрокат</h1>
+                <div class="hi-subtitle wow fadeInLeft" data-wow-delay="0.6s">Первый шоп-шейринг в Краноярске с эксклюзивными<br>брендами одежды и аксессуарами</div>
+                <a href="" class="hi__link wow fadeInLeft" data-wow-delay="0.9s">Посмотреть каталог</a>
             </div>
         </div>
         <div class="about">

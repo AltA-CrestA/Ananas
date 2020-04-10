@@ -1,6 +1,6 @@
 <?php include ROOT . '/app/views/layouts/header.php'; ?>
 
-    <main class="catalog">
+    <main class="marker">
         <div class="catalog__wrapper">
             <div class="marker__title">
                 <h1>Мои закладки</h1>

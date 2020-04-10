@@ -1,11 +1,11 @@
 // Секция, как это работает
 .howthiswork {
-  max-width: 1280px;
-  margin: 40px auto;
+  max-width: 1350px;
+  margin: 20px auto;
   font-family: Comfortaa;
   padding: 30px 0;
   border-radius: 30px;
-  background-color: #09102C;
+  background-color: #09102c;
 }
 
 .how__box {
@@ -27,8 +27,7 @@
   font-size: 20px;
   text-align: center;
   line-height: 32px;
-  text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #ff00de, 0 0 17px #ff00de, 0 0 20px #ff00de,
-      0 0 25px #ff00de, 0 0 37px #ff00de;
+  text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7px #ff00de, 0 0 9px #ff00de, 0 0 10px #ff00de;
 }
 
 .how__border {
@@ -80,7 +79,7 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: #E3E3E3;
+  background-color: #e3e3e3;
   width: 25%;
   box-shadow: -3px 2px 9px rgba(88, 88, 88, 0.52);
   transform: translateX(-100%);
@@ -145,7 +144,7 @@
 // Кнопка открытия фильтра
 
 .filter__button {
-  margin: 10px 0 25px 0;
+  margin: 10px 0 18px 0;
   padding: 0 25px 0 25px;
 }
 
@@ -161,9 +160,9 @@
   padding: 10px 0 10px 0;
   border-radius: 5px;
   display: block;
-    &:hover {
-      background-color: rgb(235, 235, 235);
-    }
+  &:hover {
+    background-color: rgb(235, 235, 235);
+  }
 }
 
 // Настройка открывающегося меню фильтра
@@ -202,7 +201,7 @@
   font-size: 15px;
 }
 
-.content__filter{
+.content__filter {
   padding: 0.9vmax;
 }
 
@@ -286,6 +285,7 @@
 // Кнопка закладок в товарах
 
 .product__button {
+  color: black;
   cursor: pointer;
   text-align: center;
   margin-top: 10px;
@@ -300,12 +300,16 @@
     background-color: rgb(228, 228, 228);
   }
   &.change {
-    background: #28A745;
+    background: #28a745;
     color: white;
     &:hover {
       color: white;
       background-color: #218838;
     }
+  }
+  .button__text,
+  .star1 {
+    color: black;
   }
 }
 
@@ -324,7 +328,7 @@
 
 // МЕДИА 1500px - 1000px --------------------------
 
-@media (max-width:1350px) {
+@media (max-width: 1350px) {
   .filter__box-mini {
     width: 30%;
   }
@@ -377,8 +381,8 @@
   }
 }
 
-@media (max-width:768px) {
-  .catalog__products{
+@media (max-width: 768px) {
+  .catalog__products {
     grid-template-columns: 1fr 1fr;
   }
   .catalog__products h2 {

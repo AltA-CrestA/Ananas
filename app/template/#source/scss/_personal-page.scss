@@ -19,13 +19,8 @@
   font-weight: bold;
 }
 
-// .cabinet__wrapper {
-//   height: 70vh;
-//   display: flex;
-//   align-items: center;
-// }
-
 .cabinet {
+  min-height: 70vh;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -50,7 +45,7 @@
   padding-bottom: 10px;
 
   &-title {
-    @extend %tplcabinet-title; 
+    @extend %tplcabinet-title;
     font-family: Comfortaa;
   }
 
@@ -165,7 +160,6 @@
   &-title {
     @extend %tplcabinet-title;
     font-family: Comfortaa;
-
   }
 
   &-items {
@@ -218,7 +212,7 @@
   margin-top: -40px;
 }
 
-@media (max-width:1550px) {
+@media (max-width: 1550px) {
   .button__page,
   .personal-button__link {
     font-size: 85%;
@@ -237,10 +231,10 @@
   .ticket,
   .favorite {
     width: 320px;
-  }  
+  }
 }
 
-@media (max-width:1390px) {
+@media (max-width: 1390px) {
   .cabinet__wrapper {
     display: inline;
   }
@@ -267,7 +261,7 @@
   .favorite {
     width: 400px;
     height: 500px;
-  }  
+  }
   .cabinet {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5em 0em;
@@ -275,26 +269,26 @@
   }
 }
 
-@media (max-width:968px) {
+@media (max-width: 968px) {
   .personal,
   .goodies,
   .ticket,
   .favorite {
     width: 350px;
-  } 
+  }
   .cabinet {
     grid-gap: 1em;
     padding: 50px 10px;
-  } 
+  }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .personal,
   .goodies,
   .ticket,
   .favorite {
     width: 300px;
-  }  
+  }
   .button__page,
   .personal-button__link {
     font-size: 85%;
@@ -318,14 +312,14 @@
   }
 }
 
-@media (max-width:649px) {
+@media (max-width: 649px) {
   .personal,
   .goodies,
   .ticket,
   .favorite {
     width: 400px;
     height: 500px;
-  }  
+  }
   .button__page,
   .personal-button__link {
     font-size: 90%;
@@ -350,28 +344,28 @@
   }
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
   .personal,
   .goodies,
   .ticket,
   .favorite {
     width: 350px;
     transform: scale(0.9);
-  }  
+  }
   .cabinet {
     padding: 20px 0px;
     grid-gap: 0em 0em;
   }
 }
 
-@media (max-width:350px) {
+@media (max-width: 350px) {
   .personal,
   .goodies,
   .ticket,
   .favorite {
     width: 305px;
     height: 430px;
-  }  
+  }
   .cabinet {
     padding: 20px 0px;
   }

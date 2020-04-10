@@ -1,0 +1,106 @@
+%tplneon {
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: hsl(308, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: Comfortaa;
+  border-radius: 0.4em;
+  padding: 10px 20px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  background: transparent !important;
+  border: 0.1em solid hsl(0, 0%, 100%);
+  text-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.45em,
+    hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+    hsl(308, 100%, 50%) 0px 0px 0.75em;
+  box-shadow: hsl(0, 0%, 100%) 0px 0px 0.075em, hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.22em,
+    hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+    hsl(308, 100%, 50%) 0px 0px 0.75em, inset hsl(308, 100%, 50%) 0 0 0.6em;
+  &:hover {
+    text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em, hsl(0, 0%, 100%) 0px 0px 0.9em,
+      hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
+      hsl(308, 100%, 50%) 0px 0px 1.5em;
+    box-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.44em,
+      hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
+      hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
+  }
+}
+
+%tpltext {
+  text-shadow: hsl(0, 0%, 100%) 0px 0px 0.07em, hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(308, 100%, 50%) 0px 0px 0.15em,
+    hsl(308, 100%, 50%) 0px 0px 0.26em, hsl(308, 100%, 50%) 0px 0px 0.3em;
+}
+
+%tplinput {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+
+  &:focus {
+    box-shadow: hsl(0, 0%, 100%) 0px 0px 0.075em, hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.22em,
+      hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+      hsl(308, 100%, 50%) 0px 0px 0.75em, inset hsl(308, 100%, 50%) 0 0 0.6em;
+  }
+}
+
+%tplerror {
+  //   background: #fff;
+  color: #ff0000;
+  line-height: 30px;
+  text-align: center;
+  margin: 20px 40px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-shadow: hsl(0, 100%, 50%) 0px 0px 0.6em, hsl(0, 100%, 50%) 0px 0px 0.75em;
+}
+
+@keyframes neon6 {
+  0% {
+    text-shadow: 0 0 1.2px #fff, 0 0 2.5px #fff, 0 0 3.5px #fff, 0 0 5px #ff00de, 0 0 8.5px #ff00de, 0 0 10px #ff00de,
+      0 0 12.5px #ff00de, 0 0 18.5px #ff00de;
+  }
+  50% {
+    text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #ff00de, 0 0 17px #ff00de, 0 0 20px #ff00de,
+      0 0 25px #ff00de, 0 0 37px #ff00de;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de,
+      0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}

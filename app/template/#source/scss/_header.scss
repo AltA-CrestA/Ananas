@@ -1,0 +1,103 @@
+.container {
+  @include disflex(flex, space-between, center);
+  background-color: #09102c;
+  padding: 20px 100px;
+}
+.header-logo {
+  width: 10%;
+  & img {
+    max-width: 100%;
+  }
+}
+.header-nav {
+  padding: 25px 0px 0 80px;
+  width: 70%;
+}
+.header-item {
+  margin: 0 20px;
+  color: #fff;
+  &:hover {
+    animation: neon6 1.5s ease-in-out infinite alternate;
+  }
+}
+.header-login {
+  padding: 25px 0 0 0;
+  width: 20%;
+  .login__button {
+    @extend %tplneon;
+    @include disflex(inline-flex, flex-start, center);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    @include fontzcolor(16px, #fff);
+    font-weight: 700;
+  }
+  .header__buttons {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0px;
+    .header-cart {
+      @extend %tplneon;
+      padding: 10px;
+      border-radius: 50px;
+      margin-right: 10px;
+    }
+    .header-user {
+      @extend %tplneon;
+      padding: 10px 12px;
+      border-radius: 50px;
+      margin-left: 10px;
+      position: relative;
+      display: flex;
+      span {
+        margin-left: 10px;
+        text-transform: none;
+        font-size: 16px;
+      }
+      a {
+        color: #fff;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: -40px;
+        top: 40px;
+        background: #09102c;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        padding: 20px 10px;
+        min-width: 160px;
+        z-index: 1;
+        a {
+          padding: 12px 16px;
+          text-shadow: none;
+          display: block;
+          line-height: 20px;
+          font-size: 12px;
+          &:hover {
+            @extend %tplneon;
+            box-shadow: none;
+            border: none;
+          }
+        }
+      }
+      &:hover .dropdown-content {
+        display: block;
+      }
+    }
+  }
+}
+
+.header-logged {
+  @include disflex(flex, flex-start, center);
+  background: #09102c;
+  padding: 10px 100px;
+  .header__logged {
+    width: 10%;
+    & img {
+      max-width: 70%;
+    }
+  }
+}

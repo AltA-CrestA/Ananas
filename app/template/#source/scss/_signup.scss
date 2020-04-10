@@ -1,0 +1,77 @@
+.signup {
+  background: center / cover no-repeat url("/img/010.jpg");
+  @include disflex(flex, center, center);
+  padding: 80px 0;
+}
+
+.signup-container {
+  width: 800px;
+  background: center / cover no-repeat url("/img/005.png");
+  border-radius: 20px;
+  padding: 0 0 40px 0;
+}
+
+.signup-title {
+  @include fontzcolor(40px, #09102c);
+  background: #fff;
+  text-align: center;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+  padding: 40px 0;
+  font-family: Montserrat;
+}
+
+.signup-mistakes {
+  @extend %tplerror;
+}
+
+.signup-row {
+  @include disflex(flex, space-around, center);
+  &:last-child {
+    flex-direction: column;
+    padding: 0 150px;
+    //  text-align: center;
+    height: 150px;
+  }
+}
+
+.signup__string {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  padding: 20px 0;
+  .signup-input {
+    @extend %tplinput;
+    width: 300px;
+    margin-top: 10px;
+  }
+}
+
+.signup__button {
+  font-size: 20px;
+  @extend %tplneon;
+}
+
+.no-neon {
+  text-shadow: none;
+  box-shadow: none;
+  &:hover {
+    text-shadow: none;
+    box-shadow: none;
+    cursor: default;
+  }
+}
+
+.yes-neon {
+  @extend %tplneon;
+}
+
+.signup__checkbox {
+  @include fontzcolor(14px, #fff);
+  display: flex;
+  max-width: 300px;
+  input {
+    margin-right: 10px;
+  }
+}

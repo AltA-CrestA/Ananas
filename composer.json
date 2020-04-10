@@ -1,0 +1,27 @@
+{
+    "name": "ananas/class",
+    "description": "learning",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Webskill-back-end",
+            "email": "info@webskill24.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        },
+        "classmap": [
+            "app/models",
+            "app/components"
+        ]
+    }
+}
+
+

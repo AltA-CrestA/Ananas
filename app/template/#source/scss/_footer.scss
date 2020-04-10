@@ -1,0 +1,92 @@
+.footer-content {
+  @include disflex(flex, space-between, center);
+  background-color: #09102c;
+  padding: 20px 150px;
+}
+.footer-col-1 {
+  @include disflex(flex, flex-start, center);
+  flex-direction: column;
+}
+
+.logo b {
+  font-family: Slimamif;
+  color: #09102c;
+  text-shadow: hsl(0, 0%, 100%) 0px 0px 0.15em, hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.45em,
+    hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em, hsl(308, 100%, 50%) 0px 0px 0.6em,
+    hsl(308, 100%, 50%) 0px 0px 0.75em;
+}
+.logo b span {
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+
+.footer-title {
+  font-family: Slimamif;
+  @include fontzcolor(40px, #ab2179);
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.title__forname {
+  @include fontzcolor(16px, #fff);
+  text-align: center;
+}
+.footer-subtitle {
+  padding-top: 20px;
+  line-height: 30px;
+  @include fontzcolor(22px, #fff);
+  font-family: Montserrat;
+  text-align: center;
+}
+
+.subtitle__forname {
+  font-size: 20px;
+}
+.footer-col-2 {
+  padding: 0 0 0 80px;
+  display: flex;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+}
+
+.footer-menu__item {
+  color: #fff;
+  line-height: 40px;
+  &:before {
+    content: "\2014";
+    margin: 0 10px 0 0;
+  }
+  &:hover {
+    animation: neon6 1.5s ease-in-out infinite alternate;
+  }
+}
+
+.footer-col-3 {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social__item {
+  @extend %tplneon;
+  @include disflex(inline-flex, flex-start, center);
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: transparent;
+  @include fontzcolor(20px, #fff);
+  text-transform: none;
+  font-weight: 700;
+  &:nth-child(2) {
+    margin: 20px 0 0 0;
+  }
+  &:nth-child(3) {
+    margin: 30px 0 0 0;
+  }
+}

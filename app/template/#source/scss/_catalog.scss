@@ -1,0 +1,235 @@
+.wrapper-catalog {
+  background: #fff;
+  padding: 60px 0px;
+}
+
+.catalog {
+  background: #09102c;
+  border-radius: 20px;
+  padding: 40px 0 60px;
+  width: 90%;
+  margin: 0 auto;
+
+  &-title {
+    text-align: center;
+    @include fontzcolor(40px, #fff);
+    font-family: Montserrat;
+    margin-bottom: 80px;
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Common style */
+.catalog-grid {
+  margin: 40px auto 120px;
+  max-width: 1002px;
+  width: 100%;
+}
+
+.catalog-grid a {
+  float: left;
+  max-width: 334px;
+  width: 33%;
+  color: #333;
+}
+
+.catalog-grid figure {
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  background: #333;
+}
+
+.catalog-grid figure img {
+  position: relative;
+  display: block;
+  width: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.catalog-grid figcaption {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.catalog-grid figcaption h2 {
+  margin: 0 0 20px 0;
+  color: #000;
+  font-family: Comfortaa;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 130%;
+  transition: transform 0.3s;
+}
+
+.catalog-grid figcaption p {
+  padding: 0 20px;
+  color: #09102c;
+  font-weight: 300;
+  font-family: Montserrat;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.catalog-grid figcaption h2,
+.catalog-grid figcaption p {
+  transform: translateY(50px);
+}
+
+.catalog-grid figure button {
+  position: absolute;
+  padding: 4px 20px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.catalog-grid figcaption,
+.catalog-grid figcaption h2,
+.catalog-grid figcaption p,
+.catalog-grid figure button {
+  backface-visibility: hidden;
+}
+
+/* Style for SVG */
+.catalog-grid svg {
+  position: absolute;
+  top: -1px; /* fixes rendering issue in FF */
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+//-------ВЕРХНЯЯ ПОДЛОЖКА------------//
+
+.catalog-grid svg path {
+  fill: #fff;
+}
+
+//--------------------------------//
+
+/* Hover effects */
+.catalog-grid a:hover figure img {
+  opacity: 1;
+}
+
+.catalog-grid a:hover figcaption h2,
+.catalog-grid a:hover figcaption p {
+  transform: translateY(0);
+}
+
+.catalog-grid a:hover figcaption p {
+  opacity: 0;
+}
+
+/* Individual styles */
+
+.demo-2 body {
+  background: #e74c3c;
+}
+
+//--------ЗАГАЛОВОК--------//
+
+.demo-2 .catalog-grid figcaption h2 {
+  color: #09102c;
+}
+
+.demo-2 .catalog-grid figcaption p {
+  transition-delay: 0.05s;
+}
+
+//--------НИЖНЯЯ ПОДЛОЖКА----------//
+
+.demo-2 .catalog-grid figure button {
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  width: 100%;
+  background: #fff;
+  color: #09102c;
+  font-weight: 300;
+  transform: translateY(100%);
+}
+
+.demo-2 .catalog-grid a:hover figure button {
+  transition-timing-function: ease-out;
+  transform: translateY(0);
+}
+
+.demo-2 .catalog-grid a:hover figcaption p {
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+}
+
+@media screen and (max-width: 58em) {
+  .catalog-grid a {
+    width: 33.333%;
+  }
+
+  .catalog-grid a:nth-child(odd) {
+    margin: 0;
+  }
+
+  .catalog-grid a:nth-child(3n-1) {
+    margin: 30px 0 -30px 0;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .catalog-grid {
+    max-width: 500px;
+  }
+
+  .catalog-grid a {
+    width: 50%;
+  }
+
+  .catalog-grid a:nth-child(3n-1) {
+    margin: 0;
+  }
+
+  .catalog-grid a:nth-child(even) {
+    margin: 30px 0 -30px 0;
+  }
+
+  .catalog-grid figcaption h2 {
+    margin-bottom: 0px;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  .catalog-grid figcaption p {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 27em) {
+  .catalog-grid {
+    max-width: 250px;
+  }
+
+  .catalog-grid a {
+    width: 100%;
+  }
+
+  .catalog-grid a:nth-child(even) {
+    margin: 0;
+  }
+}

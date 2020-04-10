@@ -1,5 +1,5 @@
 .edit-wrapper {
-  background: center / cover no-repeat url("/img/011.jpg");
+  background: center / cover no-repeat url("/app/template/img/011.jpg");
   width: 100%;
   padding: 80px 0;
   color: #fff;
@@ -7,7 +7,7 @@
 
 .edit {
   max-width: 800px;
-  background: center / cover no-repeat url("/img/005.png");
+  background: center / cover no-repeat url("/app/template/img/005.png");
   border-radius: 20px;
   margin: 0 auto;
 
@@ -68,5 +68,71 @@
       margin: 10px 0;
       font-size: 22px;
     }
+  }
+}
+
+
+@media (max-width: 700px) {
+  .edit-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .edit-inputs__input {
+    width: 45%;
+  }
+  .edit-title {
+    @include fontzcolor(35px, #09102c);
+    line-height: 45px;
+    margin-bottom: 0px;
+  }
+  .signup-mistakes {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-inputs__input {
+    width: 55%;
+  }
+  .edit-title {
+    @include fontzcolor(32px, #09102c);
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .edit-inputs__input {
+    width: 60%;
+    margin: 10px 0 20px;
+  }
+  .edit-inputs__input label {
+    font-size: 20px;
+  }
+  .edit-buttons__link {
+    font-size: 18px;
+  }
+  .edit-title {
+    @include fontzcolor(28px, #09102c);
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .edit-inputs__input {
+    width: 65%;
+  }
+  .edit-title {
+    @include fontzcolor(24px, #09102c);
+  }
+  .edit-buttons__link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 350px) {
+  .edit-inputs__input {
+    width: 70%;
   }
 }

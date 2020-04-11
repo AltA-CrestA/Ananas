@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="about-img wow fadeInRight" data-wow-offset="150">
-                <img src="/app/template/img/01.png" alt="">
+                <img src="/app/template/img/01.webp" alt="">
             </div>
         </div>
         <div class="buy">

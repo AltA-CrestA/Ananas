@@ -24,6 +24,8 @@ return array(
     'like/add/([0-9]+)' => 'like/add/$1', // actionAdd в LikeController
     'like/addAjax/([0-9]+)' => 'like/addAjax/$1',
 
+    'admin' => 'admin/index',
+
 
 
     'contacts' => 'site/contact',

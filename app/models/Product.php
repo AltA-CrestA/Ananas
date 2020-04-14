@@ -21,9 +21,9 @@ class Product
 
         $productList = array();
 
-        $result = $db->query('SELECT * FROM table_product_women '
+        $result = $db->query('SELECT * FROM products '
             . 'WHERE status = "1" '
-            . 'ORDER BY id DESC '
+            . 'ORDER BY RAND() '
             . 'LIMIT ' . $count);
 
         $i = 0;
@@ -48,8 +48,8 @@ class Product
 
             $db = Db::getConnection();
             $products = array();
-            $result = $db->query("SELECT * FROM table_product_men "
-                . "WHERE status = '1' AND category_id = '$categoryId' "
+            $result = $db->query("SELECT * FROM products "
+                . "WHERE status = '1' AND category_id = '$categoryId'  AND gender = '1'"
                 . "ORDER BY id DESC "
                 . "LIMIT ".self::SHOW_BY_DEFAULT);
 
@@ -73,8 +73,8 @@ class Product
 
             $db = Db::getConnection();
             $products = array();
-            $result = $db->query("SELECT * FROM table_product_women "
-                . "WHERE status = '1' AND category_id = '$categoryId' "
+            $result = $db->query("SELECT * FROM products "
+                . "WHERE status = '1' AND category_id = '$categoryId' AND gender = '0'"
                 . "ORDER BY id DESC "
                 . "LIMIT ".self::SHOW_BY_DEFAULT);
 
@@ -101,7 +101,7 @@ class Product
 
         $idsString = implode(',', $idsArray);
 
-        $sql = "SELECT * FROM table_product_women WHERE status = 1 AND id IN ($idsString)";
+        $sql = "SELECT * FROM products WHERE status = 1 AND id IN ($idsString)";
 
         $result = $db->query($sql);
         $result->setFetchMode(PDO::FETCH_ASSOC);
@@ -132,7 +132,7 @@ class Product
         if ($id) {
             $db = Db::getConnection();
 
-            $result = $db->query('SELECT * FROM table_product WHERE id=' . $id);
+            $result = $db->query('SELECT * FROM products WHERE id=' . $id);
             $result->setFetchMode(PDO::FETCH_ASSOC);
 
             return $result->fetch();
@@ -146,7 +146,7 @@ class Product
     {
         $db = Db::getConnection();
 
-        $result = $db->query('SELECT count(id) AS count FROM table_product '
+        $result = $db->query('SELECT count(id) AS count FROM products '
             . 'WHERE status="1" AND category_id ="'.$categoryId.'"');
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $row = $result->fetch();

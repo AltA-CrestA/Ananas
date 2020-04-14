@@ -1,4 +1,4 @@
-<?php include ROOT . '/app/views/layouts/header.php'; ?>
+<?php include ROOT . '/app/views/layouts/header_admin.php'; ?>
 
 <main>
     <section class="admin-welcome">
@@ -11,4 +11,4 @@
     </section>
 </main>
 
-<?php include ROOT . '/app/views/layouts/footer.php'; ?>
+<?php include ROOT . '/app/views/layouts/footer_admin.php'; ?>

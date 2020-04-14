@@ -1,8 +1,7 @@
 <?php
 
 
-namespace App\controllers;
-
+use App\components\AdminBase;
 
 class AdminController extends AdminBase
 {

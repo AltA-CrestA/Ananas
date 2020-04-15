@@ -92,6 +92,32 @@ class Product
         }
     }
 
+
+    public static function getAllProductsListByCategory($categoryId = false)
+    {
+        if ($categoryId) {
+
+            $db = Db::getConnection();
+            $products = array();
+            $result = $db->query("SELECT * FROM products_all "
+                . "WHERE status = '1' AND category_id = '$categoryId' AND gender = '2'"
+                . "ORDER BY RAND() "
+                . "LIMIT ".self::SHOW_BY_DEFAULT);
+
+            $i = 0;
+            while ($row = $result->fetch()) {
+                $products[$i]['id'] = $row['id'];
+                $products[$i]['name'] = $row['name'];
+                $products[$i]['image'] = $row['image'];
+                $products[$i]['size'] = $row['size'];
+                $products[$i]['color'] = $row['color'];
+                $i++;
+            }
+
+            return $products;
+        }
+    }
+
     public static function getProductsByIds($idsArray)
     {
 
@@ -152,6 +178,24 @@ class Product
         $row = $result->fetch();
 
         return $row['count'];
+    }
+
+    public static function getProductsList()
+    {
+
+        $db = Db::getConnection();
+
+        $result = $db->query('SELECT * FROM products ORDER BY id ASC');
+        $productsList = array();
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $productsList[$i]['id'] = $row['id'];
+            $productsList[$i]['name'] = $row['name'];
+            $productsList[$i]['size'] = $row['size'];
+            $productsList[$i]['color'] = $row['color'];
+            $i++;
+        }
+        return $productsList;
     }
 
 }

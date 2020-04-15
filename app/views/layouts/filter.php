@@ -46,7 +46,21 @@
                 </div>
                 <div class="list__filter-dress">
                     <div class="title__box">
-                        <a href="#">Не знаю кто я</a>
+                        <p>Не знаю кто я</p>
+                        <img src="/app/template/img/chevron-right-solid.svg" class="catalog__icon" alt="">
+                    </div>
+                    <div class="list__link">
+                        <ul>
+
+                            <?php foreach ($categoriesAll as $categoryAll): ?>
+                                <li>
+                                    <a href="/category/<?php echo $categoryAll['id']; ?>">
+                                        <?php echo $categoryAll['name']; ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+
+                        </ul>
                     </div>
                 </div>
             </div>

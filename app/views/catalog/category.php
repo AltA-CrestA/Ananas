@@ -72,6 +72,21 @@
                             </div>
                         <?php endforeach; ?>
 
+                        <?php foreach ($categoryProductsAll as $productItemAll): ?>
+                            <div  class="catalog__box">
+                                <div class="img__product">
+                                    <img src="/app/template/img/catalog/<?php echo $productItemAll['image']; ?>" alt="">
+                                </div>
+                                <h2><?php echo $productItemAll['name']; ?></h2>
+                                <p class="textforproduct">Размер: <?php echo $productItemAll['size']; ?> | Цвет: <?php echo $productItemAll['color']; ?></p>
+                                <div class="product__button">
+                                    <a class="btn mark">
+                                        <i class="far fa-star star1"></i><span class="button__text">Добавить в закладки</span>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>

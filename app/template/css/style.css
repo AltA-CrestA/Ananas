@@ -970,6 +970,60 @@ html, body { height: 100%; }
 
 @media (max-width: 400px) { .st__title { font-size: 22px; } }
 
+.header-admin { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0px 40px; height: 10vh; background-color: #09102c; }
+
+.header-admin a { color: white; }
+
+.header-admin a:hover { color: #af2179; }
+
+.admin__item { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.admin-welcome { width: 20%; height: 90vh; background-color: #af2179; padding: 30px 20px; color: white; }
+
+.admin-welcome__title { text-align: center; font-size: 26px; font-weight: 700; cursor: default; }
+
+.admin__hi { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; width: 80%; font-size: 50px; }
+
+.admin__hi img { margin-top: 30px; height: 45vh; width: 45vw; }
+
+.admin-welcome-subtitle ul { margin-top: 50px; }
+
+.admin-welcome-subtitle li { cursor: pointer; margin-top: 40px; }
+
+.admin-welcome-subtitle li:first-child { margin-top: 0px; }
+
+.admin-welcome-subtitle a { color: white; }
+
+.admin-welcome-subtitle a:hover { color: #09102c; }
+
+.admin-panel { padding: 40px 20px; height: 90vh; width: 80%; }
+
+.panel__title { text-align: center; margin-bottom: 30px; font-size: 25px; }
+
+.pamel__item-title { text-decoration: underline; }
+
+.panet__table { table-layout: fixed; margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; }
+
+.panet__table td { text-align: center; padding: 3px; width: 30px; height: 35px; }
+
+.panet__table tr { border-bottom: 1px solid #c9c9c9; }
+
+.panet__table tr:last-child { border: 0; }
+
+.panet__table .panel__icon { width: 30px; height: 35px; cursor: pointer; }
+
+@media (max-width: 1300px) { .admin-welcome { width: 30%; }
+  .admin-welcome-subtitle { font-size: 18px; }
+  .admin__hi { font-size: 40px; width: 70%; } }
+
+@media (max-width: 790px) { .admin-welcome { padding: 30px 10px; }
+  .admin-welcome-subtitle { word-wrap: inherit; font-size: 16px; }
+  .admin__hi { font-size: 32px; }
+  .admin__hi img { height: 300px; } }
+
+@media (max-width: 767px) { .admin__hi { display: none; }
+  .admin-welcome { width: 100%; text-align: center; } }
+
 /*ПОДКЛЮЧАЮ ШРИФТЫ*/
 @font-face { font-family: "Slimamif"; src: url("subset-Slimamif.eot"); font-weight: 500; font-style: normal; }
 

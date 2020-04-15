@@ -9,7 +9,7 @@
     <title>Ананас</title>
 </head>
 
-<body>
+<body class="admin__body">
 <header>
     <div class="header-admin">
         <div class="header-admin__panel">

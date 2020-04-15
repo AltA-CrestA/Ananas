@@ -2,17 +2,17 @@
 
 <main class="admin__item">
     <section class="admin-welcome">
-        <div class="admin-welcome__title">Добрый день, администратор</div>
+        <div class="admin-welcome__title">Меню</div>
         <div class="admin-welcome-subtitle">
             <ul>
                 <li>
-                    <a href="#">Управление товарами(Бета)</a>
+                    <a href="#">Управление товарами (Бета)</a>
                 </li>
                 <li>
-                    <a>Управление категориями(Бета)</a>
+                    <a>Управление категориями (Бета)</a>
                 </li>
                 <li>
-                    <a>Управление заказами(Бета)</a>
+                    <a>Управление заказами (Бета)</a>
                 </li>
             </ul>
         </div>
@@ -35,24 +35,24 @@
                         <td>Шорты</td>
                         <td>S</td>
                         <td>black</td>
-                        <td></a><img src="app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                        <td><img src="app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
+                        <td></a><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
+                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Трусы</td>
                         <td>M</td>
                         <td>white</td>
-                        <td><img src="app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                        <td><img src="app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
+                        <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
+                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Носки</td>
                         <td>L</td>
                         <td>green</td>
-                        <td><img src="app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                        <td><img src="app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
+                        <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
+                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
                     </tr>
             </table>
         </div>

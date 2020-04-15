@@ -13,7 +13,7 @@
 <header>
     <div class="header-admin">
         <div class="header-admin__panel">
-            <a href="#">Админпанель</a>
+            <a href="/admin">Админпанель</a>
         </div>
         <div class="header-admin__site">
             <a href="#">На сайт</a>

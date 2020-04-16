@@ -982,7 +982,7 @@ html, body { height: 100%; }
 
 .admin-welcome__title { text-align: center; font-size: 26px; font-weight: 700; cursor: default; }
 
-.admin__hi { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; width: 80%; font-size: 50px; }
+.admin__hi { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; width: 80%; font-size: 50px; }
 
 .admin__hi img { margin-top: 30px; height: 45vh; width: 45vw; }
 
@@ -996,11 +996,19 @@ html, body { height: 100%; }
 
 .admin-welcome-subtitle a:hover { color: #09102c; }
 
-.admin-panel { padding: 40px 20px; min-height: 90vh; }
+.admin-panel { padding: 40px 20px; min-height: 90vh; position: relative; }
 
 .panel__title { text-align: center; margin-bottom: 30px; font-size: 25px; }
 
 .pamel__item-title { font-weight: 700; font-size: 20px; }
+
+.panel__button-add a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 235px; color: black; }
+
+.panel__button-add a img { margin-right: 10px; height: 32px; width: 32px; }
+
+.panel__button-return a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 235px; color: black; }
+
+.panel__button-return a img { margin-right: 10px; height: 32px; width: 32px; }
 
 .panet__table { margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; }
 
@@ -1016,6 +1024,8 @@ html, body { height: 100%; }
 
 .panet__table .name__product { width: 30%; }
 
+.return a { width: 115px; }
+
 @media (max-width: 1300px) { .admin-welcome { width: 30%; }
   .admin-welcome-subtitle { font-size: 18px; }
   .admin__hi { font-size: 40px; width: 70%; } }
@@ -1027,6 +1037,54 @@ html, body { height: 100%; }
 
 @media (max-width: 767px) { .admin__hi { display: none; }
   .admin-welcome { width: 100%; text-align: center; } }
+
+.admin-select { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; height: 90vh; }
+
+.admin-select__title { margin-bottom: 30px; font-size: 30px; }
+
+.admin-select__gender { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.gender__men { padding-bottom: 10px; text-align: center; width: 300px; margin-right: 50px; background-color: silver; -webkit-transition: 0.1s ease-in-out; transition: 0.1s ease-in-out; position: relative; }
+
+.gender__men:last-child { margin-right: 0px; }
+
+.gender__men a { color: black; }
+
+.gender__men:hover { -webkit-transform: scale(1.04); transform: scale(1.04); }
+
+.gender__return a { position: relative; content: ""; top: 95px; left: 20px; width: 115px; }
+
+.create__return { margin: 20px 0 0 20px; }
+
+.create__panel { font-size: 25px; }
+
+.create__form { display: -ms-grid; display: grid; -ms-grid-columns: 1fr; grid-template-columns: 1fr; width: 100%; }
+
+.create__form label { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 447px; margin-bottom: 100px; height: 35px; font-size: 22px; font-weight: 700; }
+
+.create__form input, .create__form option { border-bottom: 2px solid #ab2179; height: 25px; padding: 5px; }
+
+.create__form p { margin-bottom: 20px; border-bottom: 1px solid silver; }
+
+.status { margin-top: 20px; }
+
+.select__down { padding: 3px; -webkit-box-shadow: 0 2px 0 #ab2179; box-shadow: 0 2px 0 #ab2179; color: black; border: none; outline: none; display: inline-block; cursor: pointer; width: 447px; }
+
+.create__button { padding: 0 10px; width: 450px; height: 50px; border-radius: 5px; font-size: 16px; background-color: silver; }
+
+.create__button:hover { background-color: #777777; color: white; }
+
+.button__place { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.delele__panel { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; position: relative; min-height: 80vh; }
+
+.delele__panel h1 { font-size: 28px; margin-bottom: 40px; }
+
+.delele__panel h2 { margin-bottom: 40px; }
+
+.delele__panel button { padding: 0 10px; width: 100px; height: 50px; border-radius: 5px; font-size: 16px; background-color: silver; }
+
+.delele__panel button:hover { background-color: #777777; color: white; }
 
 /*ПОДКЛЮЧАЮ ШРИФТЫ*/
 @font-face { font-family: "Slimamif"; src: url("subset-Slimamif.eot"); font-weight: 500; font-style: normal; }

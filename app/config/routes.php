@@ -25,7 +25,9 @@ return array(
     'like/addAjax/([0-9]+)' => 'like/addAjax/$1',
 
     // Управление товарами:
-    'admin/product/create' => 'adminProduct/create',
+    'admin/product/select' => 'adminProduct/select',
+    'admin/product/createMan' => 'adminProduct/createMan',
+    'admin/product/createWoman' => 'adminProduct/createWoman',
     'admin/product/update/([0-9]+)' => 'adminProduct/update/$1',
     'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
     'admin/product' => 'adminProduct/index',

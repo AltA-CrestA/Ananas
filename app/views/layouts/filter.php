@@ -64,29 +64,29 @@
                     </div>
                 </div>
             </div>
-            <div class="filter__mini-box">
-                <div class="title__filter">РАЗМЕР
-                </div>
-                <div class="content__filter">
-                    <ul class="list__filter-mini">
-                        <li>
-                            <button id="size1-mini" class="button-size" type="button">XS</button>
-                        </li>
-                        <li>
-                            <button id="size2-mini" class="button-size" type="button">S</button>
-                        </li>
-                        <li>
-                            <button id="size3-mini" class="button-size" type="button">M</button>
-                        </li>
-                        <li>
-                            <button id="size4-mini" class="button-size" type="button">L</button>
-                        </li>
-                        <li>
-                            <button id="size5-mini" class="button-size" type="button">XL</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<!--            <div class="filter__mini-box">-->
+<!--                <div class="title__filter">РАЗМЕР-->
+<!--                </div>-->
+<!--                <div class="content__filter">-->
+<!--                    <ul class="list__filter-mini">-->
+<!--                        <li>-->
+<!--                            <button id="size1-mini" class="button-size" type="button">XS</button>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <button id="size2-mini" class="button-size" type="button">S</button>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <button id="size3-mini" class="button-size" type="button">M</button>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <button id="size4-mini" class="button-size" type="button">L</button>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <button id="size5-mini" class="button-size" type="button">XL</button>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@
     <section class="admin-panel">
         <div class="panel__title">Управление товарами(Бета)</div>
         <div class="panel__item">
+            <div class="panel__button-add"><a href="/admin/product/select">Добавить товар</a></div> <!-- Сюда добавить иконку в виде плюса -->
             <div class="pamel__item-title">Список товаров</div>
             <table class="panet__table">
                     <tr>
@@ -13,6 +14,7 @@
                         <td class="small__width">Категория товара</td>
                         <td class="small__width">Размер</td>
                         <td class="small__width">Цвет</td>
+                        <td class="small__width">В наличии</td>
                         <td class="small__width">Редактировать</td>
                         <td class="small__width">Удалить</td>
                     </tr>
@@ -32,6 +34,7 @@
                             </td>
                             <td class="small__width"><?php echo $product['size']; ?></td>
                             <td class="small__width"><?php echo $product['color']; ?></td>
+                            <td class="small__width"><?php if ($product['status'] == 1){echo 'Да';}else{echo 'Нет';} ?></td>
                             <td class="small__width"><a href="/admin/product/update/<?php echo $product['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
                             <td class="small__width"><a href="/admin/product/delete/<?php echo $product['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
                         </tr>

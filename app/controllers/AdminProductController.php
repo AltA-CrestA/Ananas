@@ -28,17 +28,29 @@ class AdminProductController extends AdminBase
         return true;
     }
 
+    public function actionSelect()
+    {
+
+        // Проверка доступа
+        self::checkAdmin();
+
+        require_once (ROOT . '/app/views/admin_product/select.php');
+        return true;
+
+    }
+
     /**
-     * Action для страницы "Добавить товар"
+     * Action для страницы "Добавить товар-Женский"
      */
-    public function actionCreate()
+    public function actionCreateWoman()
     {
 
         // Проверка доступа
         self::checkAdmin();
 
         // Получаем список категорий для выпадающего списка
-        $categoriesList = Category::getCategoriesListAdmin();
+        $categoriesListWoman = Category::getCategoriesListWomanAdmin();
+        $categoriesListAll = Category::getCategoriesListAllAdmin();
 
         // Обработка формы
         if (isset($_POST['submit'])) {
@@ -46,6 +58,57 @@ class AdminProductController extends AdminBase
             // Получаем данные формы
             $options['name'] = $_POST['name'];
             $options['gender'] = $_POST['gender'];
+            $options['category_id'] = $_POST['category_id'];
+            $options['category_all_id'] = $_POST['category_all_id'];
+            $options['image'] = $_POST['image'];
+            $options['size'] = $_POST['size'];
+            $options['color'] = $_POST['color'];
+            $options['status'] = $_POST['status'];
+
+            // Флаг ошибок в форме
+            $errors = false;
+
+            // При необходимости можно валидировать значения нужым образом
+            if (!isset($options['name']) || empty($options['name'])) {
+                $errors[] = 'Заполните поля';
+            }
+
+            if ($errors == false) {
+                // Если ошибок нет
+                // Добавляем новый товар
+                $id = Product::createProductWoman($options);
+
+                echo 'Товар успешно добавлен';
+
+//                header("Location: /admin/product");
+            }
+        }
+
+        // Подключим вид
+        require_once (ROOT . '/app/views/admin_product/createWoman.php');
+        return true;
+
+    }
+
+    /**
+     * Action для страницы "Добавить товар-Мужской"
+     */
+    public function actionCreateMan()
+    {
+
+        // Проверка доступа
+        self::checkAdmin();
+
+        // Получаем список категорий для выпадающего списка
+        $categoriesListMan = Category::getCategoriesListManAdmin();
+        $categoriesListAll = Category::getCategoriesListAllAdmin();
+
+        // Обработка формы
+        if (isset($_POST['submit'])) {
+            // Если форма отправлена
+            // Получаем данные формы
+            $options['name'] = $_POST['name'];
+            $options['gender'] = 1;
             $options['category_id'] = $_POST['category_id'];
             $options['image'] = $_POST['image'];
             $options['size'] = $_POST['size'];
@@ -63,14 +126,14 @@ class AdminProductController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем новый товар
-                $id = Product::createProduct($options);
+                $id = Product::createProductMan($options);
 
                 header("Location: /admin/product");
             }
         }
 
         // Подключим вид
-        require_once (ROOT . '/app/views/admin_product/create.php');
+        require_once (ROOT . '/app/views/admin_product/createMan.php');
         return true;
 
     }

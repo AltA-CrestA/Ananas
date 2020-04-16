@@ -195,10 +195,42 @@ class Product
             $productsList[$i]['category_all_id'] = $row['category_all_id'];
             $productsList[$i]['size'] = $row['size'];
             $productsList[$i]['color'] = $row['color'];
+            $productsList[$i]['status'] = $row['status'];
             $i++;
         }
 
         return $productsList;
+    }
+
+    /**
+     * Добавляет новый товар - женский
+     * @param array $options <p>Массив с информацией о товаре</p>
+     * @return integer <p>id добавленной в таблицу записи</p>
+     */
+    public static function createProductWoman($options)
+    {
+
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса в БД
+        $sql = 'INSERT INTO products '
+                . 'name, gender, category_id, category_all_id, image, size, color, status '
+                . 'VALUES '
+                . ':name, :gender, :category_id, :category_all_id, :image, :size, :color, :status';
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
+        $result->bindParam(':gender', $options['gender'], PDO::PARAM_INT);
+        $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
+        $result->bindParam(':category_all_id', $options['category_all_id'], PDO::PARAM_INT);
+        $result->bindParam(':image', $options['image'], PDO::PARAM_STR);
+        $result->bindParam(':size', $options['size'], PDO::PARAM_STR);
+        $result->bindParam(':color', $options['color'], PDO::PARAM_STR);
+        $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
+        return $result->execute();
+
     }
 
     /**

@@ -192,12 +192,20 @@ class Product
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
             $productsList[$i]['gender'] = $row['gender'];
-            $productsList[$i]['category_id'] = $row['category_id'];
+            $productsList[$i]['category_all_id'] = $row['category_all_id'];
             $productsList[$i]['size'] = $row['size'];
             $productsList[$i]['color'] = $row['color'];
             $i++;
         }
+
         return $productsList;
+    }
+
+    public static function getProductCategory()
+    {
+
+        $product = self::getProductsList();
+
     }
 
 }

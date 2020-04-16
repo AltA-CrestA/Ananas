@@ -21,6 +21,8 @@ class AdminProductController extends AdminBase
         // Получаем список товаров
         $productList = Product::getProductsList();
 
+        $productCategory = Category::getCategoriesAll();
+
         // Подкючаем вид
         require_once (ROOT . '/app/views/admin_product/index.php');
         return true;

@@ -996,13 +996,13 @@ html, body { height: 100%; }
 
 .admin-welcome-subtitle a:hover { color: #09102c; }
 
-.admin-panel { padding: 40px 20px; height: 90vh; width: 80%; }
+.admin-panel { padding: 40px 20px; min-height: 90vh; }
 
 .panel__title { text-align: center; margin-bottom: 30px; font-size: 25px; }
 
 .pamel__item-title { font-weight: 700; font-size: 20px; }
 
-.panet__table { table-layout: fixed; margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; }
+.panet__table { margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; }
 
 .panet__table td { text-align: center; padding: 3px; width: 30px; height: 35px; }
 
@@ -1011,6 +1011,10 @@ html, body { height: 100%; }
 .panet__table tr:last-child { border: 0; }
 
 .panet__table .panel__icon { width: 30px; height: 35px; cursor: pointer; }
+
+.panet__table .small__width { width: 10%; }
+
+.panet__table .name__product { width: 30%; }
 
 @media (max-width: 1300px) { .admin-welcome { width: 30%; }
   .admin-welcome-subtitle { font-size: 18px; }

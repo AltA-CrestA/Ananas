@@ -68,8 +68,7 @@
 
 .admin-panel {
   padding: 40px 20px;
-  height: 90vh;
-  width: 80%;
+  min-height: 90vh;
 }
 
 .panel__title {
@@ -84,7 +83,6 @@
 }
 
 .panet__table {
-  table-layout: fixed;
   margin-top: 30px;
   width: 100%;
   border-collapse: collapse;
@@ -106,6 +104,12 @@
     width: 30px;
     height: 35px;
     cursor: pointer;
+  }
+  .small__width {
+    width: 10%;
+  }
+  .name__product {
+    width: 30%;
   }
 }
 

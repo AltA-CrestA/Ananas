@@ -145,4 +145,30 @@ class Category
 
     }
 
+    public static function getCategoryText($category)
+    {
+
+        switch ($category) {
+            case '12':
+                return 'Верхняя одежда';
+                break;
+            case '13':
+                return 'Рубашки/блузки/футболки';
+                break;
+            case '14':
+                return 'Свитера/толстовки';
+                break;
+            case '15':
+                return 'Платья/юбки';
+                break;
+            case '16':
+                return 'Джинсы/шорты';
+                break;
+            case '17':
+                return 'Аксессуары';
+                break;
+        }
+
+    }
+
 }

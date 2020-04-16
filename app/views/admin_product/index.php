@@ -1,4 +1,6 @@
-<?php include ROOT . '/app/views/layouts/header_admin.php'; ?>
+<?php use App\models\Category;
+
+include ROOT . '/app/views/layouts/header_admin.php'; ?>
 
 <main>
     <section class="admin-panel">
@@ -23,18 +25,11 @@
                         <tr>
                             <td class="small__width"><?php echo $product['id']; ?></td>
                             <td class="name__product"><?php echo $product['name']; ?></td>
-                            <td class="small__width"><?php if ($product['gender'] == 0) {echo 'Ж';} else {echo 'М';} ?></td>
-                            <td class="small__width">
-                                <?php if ($product['category_all_id'] == 12){echo 'Верхняя одежда';}
-                                    elseif ($product['category_all_id'] == 13){echo 'Рубашки/блузки/футболки';}
-                                    elseif ($product['category_all_id'] == 14){echo 'Свитера/толстовки';}
-                                    elseif ($product['category_all_id'] == 15){echo 'Платья/юбки';}
-                                    elseif ($product['category_all_id'] == 16){echo 'Джинсы/шорты';}
-                                    elseif ($product['category_all_id'] == 17){echo 'Аксессуары';} ?>
-                            </td>
+                            <td class="small__width"><?php if ($product['gender'] == 0) echo 'Ж'; else echo 'М'; ?></td>
+                            <td class="small__width"> <?php echo Category::getCategoryText($product['category_all_id'])?></td>
                             <td class="small__width"><?php echo $product['size']; ?></td>
                             <td class="small__width"><?php echo $product['color']; ?></td>
-                            <td class="small__width"><?php if ($product['status'] == 1){echo 'Да';}else{echo 'Нет';} ?></td>
+                            <td class="small__width"><?php if ($product['status'] == 1) echo 'Да'; else echo 'Нет'; ?></td>
                             <td class="small__width"><a href="/admin/product/update/<?php echo $product['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
                             <td class="small__width"><a href="/admin/product/delete/<?php echo $product['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
                         </tr>

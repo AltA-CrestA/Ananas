@@ -150,6 +150,7 @@ class Product
     /**
      * Return product item by id
      * @param integer $id
+     * @return mixed
      */
     public static function getProductById($id)
     {
@@ -215,20 +216,58 @@ class Product
 
         // Текст запроса в БД
         $sql = 'INSERT INTO products '
-                . 'name, gender, category_id, category_all_id, image, size, color, status '
+                . '(name, gender, category_id, category_all_id, image, size, color, status) '
                 . 'VALUES '
-                . ':name, :gender, :category_id, :category_all_id, :image, :size, :color, :status';
+                . '(:name, :gender, :category_id, :category_all_id, :image, :size, :color, :status)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
-        $result->bindParam(':gender', $options['gender'], PDO::PARAM_INT);
-        $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
-        $result->bindParam(':category_all_id', $options['category_all_id'], PDO::PARAM_INT);
+        $result->bindParam(':gender', $options['gender'], PDO::PARAM_STR);
+        $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_STR);
+        $result->bindParam(':category_all_id', $options['category_all_id'], PDO::PARAM_STR);
         $result->bindParam(':image', $options['image'], PDO::PARAM_STR);
         $result->bindParam(':size', $options['size'], PDO::PARAM_STR);
         $result->bindParam(':color', $options['color'], PDO::PARAM_STR);
-        $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
+        $result->bindParam(':status', $options['status'], PDO::PARAM_STR);
+        return $result->execute();
+
+    }
+
+    /**
+     * Редактируем товар с заданным id
+     * @param integer $id <p>id товара</p>
+     * @param array $options <p>Массив с информацией о товаре</p>
+     * @return boolean <p>Результат выполнения метода</p>
+     */
+    public static function updateProductById($id, $options)
+    {
+
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса в БД
+        $sql = "UPDATE products
+            SET
+                name = :name,
+                category_id = :category_id,
+                category_all_id = :category_all_id,
+                image = :image,
+                size = :size,
+                color = :color,
+                status = :status
+            WHERE id = :id";
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_STR);
+        $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
+        $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_STR);
+        $result->bindParam(':category_all_id', $options['category_all_id'], PDO::PARAM_STR);
+        $result->bindParam(':image', $options['image'], PDO::PARAM_STR);
+        $result->bindParam(':size', $options['size'], PDO::PARAM_STR);
+        $result->bindParam(':color', $options['color'], PDO::PARAM_STR);
+        $result->bindParam(':status', $options['status'], PDO::PARAM_STR);
         return $result->execute();
 
     }

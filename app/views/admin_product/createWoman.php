@@ -7,12 +7,6 @@
             <label>Наименование товара
                 <input type="text" name="name">
             </label>
-            <label>Пол
-                <select name="gender" disabled>
-                    <option value="1">Мужской</option>
-                    <option value="0" selected>Женский</option>
-                </select>
-            </label>
             <label>Категория
                 <select name="category_id">
 
@@ -45,6 +39,7 @@
             <label>Размер
                 <select name="size">
                     <option value="S">S</option>
+                    <option value="S\M">S\M</option>
                     <option value="M" selected>M</option>
                     <option value="L">L</option>
                 </select>

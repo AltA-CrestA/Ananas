@@ -57,7 +57,7 @@ class AdminProductController extends AdminBase
             // Если форма отправлена
             // Получаем данные формы
             $options['name'] = $_POST['name'];
-            $options['gender'] = $_POST['gender'];
+            $options['gender'] = 0;
             $options['category_id'] = $_POST['category_id'];
             $options['category_all_id'] = $_POST['category_all_id'];
             $options['image'] = $_POST['image'];
@@ -78,9 +78,7 @@ class AdminProductController extends AdminBase
                 // Добавляем новый товар
                 $id = Product::createProductWoman($options);
 
-                echo 'Товар успешно добавлен';
-
-//                header("Location: /admin/product");
+                header("Location: /admin/product");
             }
         }
 
@@ -134,6 +132,42 @@ class AdminProductController extends AdminBase
 
         // Подключим вид
         require_once (ROOT . '/app/views/admin_product/createMan.php');
+        return true;
+
+    }
+
+    public function actionUpdate($id)
+    {
+
+        // Проверка доступа
+        self::checkAdmin();
+
+        // Получаем список категорий для выпадающего списка
+        $categoriesListMan = Category::getCategoriesListManAdmin();
+        $categoriesListAll = Category::getCategoriesListAllAdmin();
+
+        // Получаем данные о конкретном товаре
+        $product = Product::getProductById($id);
+
+        // Обработка формы
+        if (isset($_POST['submit'])) {
+            // Если форма отправлена
+            // Получаем данные формы
+            $options['name'] = $_POST['name'];
+            $options['category_id'] = $_POST['category_id'];
+            $options['image'] = $_POST['image'];
+            $options['size'] = $_POST['size'];
+            $options['color'] = $_POST['color'];
+            $options['status'] = $_POST['status'];
+
+            // Сохраняем изменения
+            Product::updateProductById($id, $options);
+
+//            header("Location: /admin/product");
+        }
+
+        // Подключим вид
+        require_once (ROOT . '/app/views/admin_product/update.php');
         return true;
 
     }

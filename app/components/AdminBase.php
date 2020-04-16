@@ -15,7 +15,7 @@ abstract class AdminBase
 
     /**
      * Метод который проверяет пользователя на то, является ли он администратором
-     *""куегкт boolean
+     *@return  boolean
      */
     public static function checkAdmin()
     {

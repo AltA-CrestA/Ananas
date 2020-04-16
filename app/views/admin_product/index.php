@@ -23,37 +23,44 @@
             <div class="pamel__item-title">Список товаров</div>
             <table class="panet__table">
                     <tr>
-                        <td>Id товара</td>
+                        <td>ID товара</td>
                         <td>Наименование</td>
+                        <td>Пол</td>
+                        <td>ID категории</td>
                         <td>Размер</td>
                         <td>Цвет</td>
                         <td>Редактировать</td>
                         <td>Удалить</td>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Шорты</td>
-                        <td>S</td>
-                        <td>black</td>
-                        <td></a><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Трусы</td>
-                        <td>M</td>
-                        <td>white</td>
-                        <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Носки</td>
-                        <td>L</td>
-                        <td>green</td>
-                        <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
-                    </tr>
+
+                    <?php foreach ($productList as $product): ?>
+                        <tr>
+                            <td><?php echo $product['id']; ?></td>
+                            <td><?php echo $product['name']; ?></td>
+                            <td><?php echo $product['gender']; ?></td>
+                            <td><?php echo $product['category_id']; ?></td>
+                            <td><?php echo $product['size']; ?></td>
+                            <td><?php echo $product['color']; ?></td>
+                            <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
+                            <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
+                        </tr>
+                    <?php endforeach; ?>
+<!--                    <tr>-->
+<!--                        <td>2</td>-->
+<!--                        <td>Трусы</td>-->
+<!--                        <td>M</td>-->
+<!--                        <td>white</td>-->
+<!--                        <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>-->
+<!--                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>3</td>-->
+<!--                        <td>Носки</td>-->
+<!--                        <td>L</td>-->
+<!--                        <td>green</td>-->
+<!--                        <td><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>-->
+<!--                        <td><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>-->
+<!--                    </tr>-->
             </table>
         </div>
     </section>

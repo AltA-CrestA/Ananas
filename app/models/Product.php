@@ -99,8 +99,8 @@ class Product
 
             $db = Db::getConnection();
             $products = array();
-            $result = $db->query("SELECT * FROM products_all "
-                . "WHERE status = '1' AND category_id = '$categoryId' AND gender = '2'"
+            $result = $db->query("SELECT * FROM products "
+                . "WHERE status = '1' AND category_all_id = '$categoryId' "
                 . "ORDER BY RAND() "
                 . "LIMIT ".self::SHOW_BY_DEFAULT);
 
@@ -173,7 +173,7 @@ class Product
         $db = Db::getConnection();
 
         $result = $db->query('SELECT count(id) AS count FROM products '
-            . 'WHERE status="1" AND category_id ="'.$categoryId.'"');
+            . 'WHERE status="1" AND category_all_id ="'.$categoryId.'"');
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $row = $result->fetch();
 
@@ -191,6 +191,8 @@ class Product
         while ($row = $result->fetch()) {
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
+            $productsList[$i]['gender'] = $row['gender'];
+            $productsList[$i]['category_id'] = $row['category_id'];
             $productsList[$i]['size'] = $row['size'];
             $productsList[$i]['color'] = $row['color'];
             $i++;

@@ -208,7 +208,7 @@ class Product
      * @param array $options <p>Массив с информацией о товаре</p>
      * @return integer <p>id добавленной в таблицу записи</p>
      */
-    public static function createProductWoman($options)
+    public static function createProduct($options)
     {
 
         // Соединение с БД

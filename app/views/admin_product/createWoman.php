@@ -7,7 +7,8 @@
             <p>Назад</p>
         </a>
     </div>
-    <section class="admin-panel" class="create__panel">
+    <section class="admin-panel create__panel">
+        <h1>Добавить новый товар</h1>
         <form action="#" method="post" class="create__form">
             <label>
                 <p>Наименование товара</p>
@@ -15,7 +16,7 @@
             </label>
             <label>
                 <p>Категория</p>
-                <select name="category_id" class='select__down'>
+                <select name="category_id" class="select__down">
 
                     <?php if (is_array($categoriesListWoman)): ?>
                         <?php foreach ($categoriesListWoman as $categoryWoman): ?>
@@ -49,6 +50,7 @@
                 <p>Размер</p>
                 <select name="size" class='select__down'>
                     <option value="S">S</option>
+                    <option value="S\M">S\M</option>
                     <option value="M" selected>M</option>
                     <option value="L">L</option>
                 </select>

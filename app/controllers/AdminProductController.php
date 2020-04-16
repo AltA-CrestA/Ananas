@@ -76,7 +76,7 @@ class AdminProductController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем новый товар
-                $id = Product::createProductWoman($options);
+                $id = Product::createProduct($options);
 
                 header("Location: /admin/product");
             }
@@ -108,6 +108,7 @@ class AdminProductController extends AdminBase
             $options['name'] = $_POST['name'];
             $options['gender'] = 1;
             $options['category_id'] = $_POST['category_id'];
+            $options['category_all_id'] = $_POST['category_all_id'];
             $options['image'] = $_POST['image'];
             $options['size'] = $_POST['size'];
             $options['color'] = $_POST['color'];
@@ -124,7 +125,7 @@ class AdminProductController extends AdminBase
             if ($errors == false) {
                 // Если ошибок нет
                 // Добавляем новый товар
-                $id = Product::createProductMan($options);
+                $id = Product::createProduct($options);
 
                 header("Location: /admin/product");
             }
@@ -143,6 +144,7 @@ class AdminProductController extends AdminBase
         self::checkAdmin();
 
         // Получаем список категорий для выпадающего списка
+        $categoriesListWoman = Category::getCategoriesListWomanAdmin();
         $categoriesListMan = Category::getCategoriesListManAdmin();
         $categoriesListAll = Category::getCategoriesListAllAdmin();
 

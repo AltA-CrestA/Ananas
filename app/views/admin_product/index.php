@@ -32,8 +32,8 @@
                             </td>
                             <td class="small__width"><?php echo $product['size']; ?></td>
                             <td class="small__width"><?php echo $product['color']; ?></td>
-                            <td class="small__width"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></td>
-                            <td class="small__width"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></td>
+                            <td class="small__width"><a href="/admin/product/update/<?php echo $product['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
+                            <td class="small__width"><a href="/admin/product/delete/<?php echo $product['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
                         </tr>
                     <?php endforeach; ?>
 

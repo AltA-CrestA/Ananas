@@ -201,10 +201,24 @@ class Product
         return $productsList;
     }
 
-    public static function getProductCategory()
+    /**
+     * Удаляем товар с куазанным id
+     * @param integer $id <p>id товара</p>
+     * @return boolean <p>Результат выполнения метода</p>
+     */
+    public static function deleteProductById($id)
     {
 
-        $product = self::getProductsList();
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'DELETE FROM products WHERE id = :id';
+
+        // Получение и возврат результатов. Используеся подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        return $result->execute();
 
     }
 

@@ -1,0 +1,70 @@
+.create__return {
+  margin: 20px 0 0 20px;
+}
+
+.create__panel {
+  font-size: 25px;
+}
+
+.create__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 447px;
+    margin-bottom: 100px;
+    height: 35px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  input,
+  option {
+    border-bottom: 2px solid #ab2179;
+    height: 25px;
+    padding: 5px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    border-bottom: 1px solid silver;
+  }
+}
+
+.status {
+  margin-top: 20px;
+}
+
+.select__down {
+  padding: 3px;
+  box-shadow: 0 2px 0 #ab2179;
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  width: 447px;
+}
+
+
+.create__button {
+  padding: 0 10px;
+  width: 450px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: silver;
+
+  &:hover {
+    background-color: rgb(119, 119, 119);
+    color: white;
+  }
+}
+
+.button__place {
+  display: flex;
+  justify-content: space-between;
+}

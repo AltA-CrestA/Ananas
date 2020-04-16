@@ -1,7 +1,5 @@
 .header-admin {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include disflex(flex, space-between, center);
   padding: 0px 40px;
   height: 10vh;
   background-color: #09102c;
@@ -35,10 +33,8 @@
 }
 
 .admin__hi {
-  display: flex;
+  @include disflex(flex, center, center);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   width: 80%;
   font-size: 50px;
@@ -76,6 +72,7 @@
 .admin-panel {
   padding: 40px 20px;
   min-height: 90vh;
+  position: relative;
 }
 
 .panel__title {
@@ -87,6 +84,34 @@
 .pamel__item-title {
   font-weight: 700;
   font-size: 20px;
+}
+
+
+// Кнопка добавить
+.panel__button-add a {
+  display: flex;
+  align-items: center;
+  width: 235px;
+  color: black;
+
+  img {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.panel__button-return a {
+  display: flex;
+  align-items: center;
+  width: 235px;
+  color: black;
+
+  img {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .panet__table {
@@ -124,6 +149,10 @@
   .name__product {
     width: 30%;
   }
+}
+
+.return a {
+  width: 115px;
 }
 
 // МЕДИА  --------------------------

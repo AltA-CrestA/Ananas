@@ -5,8 +5,10 @@
   padding: 0px 40px;
   height: 10vh;
   background-color: #09102c;
+
   a {
     color: white;
+
     &:hover {
       color: #af2179;
     }
@@ -40,6 +42,7 @@
   text-align: center;
   width: 80%;
   font-size: 50px;
+
   img {
     margin-top: 30px;
     height: 45vh;
@@ -51,15 +54,19 @@
   ul {
     margin-top: 50px;
   }
+
   li {
     cursor: pointer;
     margin-top: 40px;
+
     &:first-child {
       margin-top: 0px;
     }
   }
+
   a {
     color: white;
+
     &:hover {
       color: #09102c;
     }
@@ -88,26 +95,32 @@
   border-collapse: collapse;
   border-spacing: 0;
   color: black;
+
   td {
     text-align: center;
     padding: 3px;
     width: 30px;
     height: 35px;
   }
+
   tr {
     border-bottom: 1px solid #c9c9c9;
+
     &:last-child {
       border: 0;
     }
   }
+
   .panel__icon {
     width: 30px;
     height: 35px;
     cursor: pointer;
   }
+
   .small__width {
     width: 10%;
   }
+
   .name__product {
     width: 30%;
   }
@@ -119,9 +132,11 @@
   .admin-welcome {
     width: 30%;
   }
+
   .admin-welcome-subtitle {
     font-size: 18px;
   }
+
   .admin__hi {
     font-size: 40px;
     width: 70%;
@@ -132,13 +147,16 @@
   .admin-welcome {
     padding: 30px 10px;
   }
+
   .admin-welcome-subtitle {
     word-wrap: inherit;
     font-size: 16px;
   }
+
   .admin__hi {
     font-size: 32px;
   }
+
   .admin__hi img {
     height: 300px;
   }
@@ -148,6 +166,7 @@
   .admin__hi {
     display: none;
   }
+
   .admin-welcome {
     width: 100%;
     text-align: center;

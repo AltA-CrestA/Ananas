@@ -2,22 +2,22 @@
 
 <main>
     <section class="admin-panel">
+        <div class="button__place">
+            <div class="panel__button-return">
+                <a href="/admin">
+                    <img src="\app\template\img\admin\return1.svg" alt="">
+                    <p>Назад</p>
+                </a>
+            </div>
+            <div class="add__category">
+                <a href="/admin">
+                    <img src="\app\template\img\admin\create.svg" alt="">
+                    <p>Добавить категорию</p>
+                </a>
+            </div>
+        </div>
         <div class="panel__title">Управление категориями(Бета)</div>
         <div class="panel__item">
-            <div class="button__place">
-                <div class="panel__button-return">
-                    <a href="/admin">
-                        <img src="\app\template\img\admin\return1.svg" alt="">
-                        <p>Назад</p>
-                    </a>
-                </div>
-                <div class="panel__button-add">
-                    <a href="/admin">
-                        <img src="\app\template\img\admin\create.svg" alt="">
-                        <p>Добавить категорию</p>
-                    </a>
-                </div>
-            </div>
             <div class="admin__tabs">
                 <div class="tabs__items-admin">
                     <span class="tabs__item-admin is-active" data-tab-name="tab-1">Женское</span>

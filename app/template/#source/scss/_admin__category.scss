@@ -1,3 +1,16 @@
+.add__category a {
+  display: flex;
+  align-items: center;
+  width: 288px;
+  color: black;
+
+  img {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+  }
+}
+
 .admin__tabs {
   margin-top: 50px;
 }

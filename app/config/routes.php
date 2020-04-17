@@ -38,6 +38,12 @@ return array(
     'admin/category/delete/([0-9]+)' => 'adminCategory/delete/$1',
     'admin/category' => 'adminCategory/index',
 
+    // Управление абонементами:
+    'admin/ticket/create' => 'adminTicket/create',
+    'admin/ticket/update/([0-9]+)' => 'adminTicket/update/$1',
+    'admin/ticket/delete/([0-9]+)' => 'adminTicket/delete/$1',
+    'admin/ticket' => 'adminTicket/index',
+
     // Просмотр пользователей:
     'admin/user/update/([0-9]+)' => 'adminUser/update/$1',
     'admin/user' => 'adminUser/index',

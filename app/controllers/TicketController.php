@@ -10,7 +10,7 @@ class TicketController
     {
 
         $latestTickets = array();
-        $latestTickets = Ticket::getLatestTickets(4);
+        $latestTickets = Ticket::getLatestTickets(50);
 
         require_once(ROOT . '/app/views/ticket/index.php');
 

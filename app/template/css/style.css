@@ -1086,6 +1086,28 @@ html, body { height: 100%; }
 
 .delele__panel button:hover { background-color: #777777; color: white; }
 
+.admin__tabs { margin-top: 50px; }
+
+.tabs__items-admin { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.tabs__item-admin { cursor: pointer; border-bottom: 3px solid transparent; -webkit-box-flex: 0; -ms-flex: 0 1 33%; flex: 0 1 33%; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-transform: uppercase; text-decoration: none; margin-bottom: 10px; }
+
+.tabs__item-admin.active { border-color: #af2179; }
+
+.panet__table-admin { margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; }
+
+.panet__table-admin td { text-align: center; padding: 3px; width: 30px; height: 35px; }
+
+.panet__table-admin tr { border-bottom: 1px solid #c9c9c9; }
+
+.panet__table-admin tr:last-child { border: 0; }
+
+.panet__table-admin .panel__icon { width: 30px; height: 35px; cursor: pointer; }
+
+.panet__table-admin .small__width { width: 15%; }
+
+.panet__table-admin .name__product { width: 25%; }
+
 /*ПОДКЛЮЧАЮ ШРИФТЫ*/
 @font-face { font-family: "Slimamif"; src: url("subset-Slimamif.eot"); font-weight: 500; font-style: normal; }
 

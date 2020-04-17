@@ -1,0 +1,59 @@
+.admin__tabs {
+  margin-top: 50px;
+}
+
+.tabs__items-admin {
+  display: flex;
+}
+
+.tabs__item-admin {
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  flex: 0 1 33%;
+  height: 50px;
+  @include disflex(flex, center, center);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.tabs__item-admin.active {
+  border-color: #af2179;
+}
+
+.panet__table-admin {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+
+  td {
+    text-align: center;
+    padding: 3px;
+    width: 30px;
+    height: 35px;
+  }
+
+  tr {
+    border-bottom: 1px solid #c9c9c9;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .panel__icon {
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  .small__width {
+    width: 15%;
+  }
+
+  .name__product {
+    width: 25%;
+  }
+}

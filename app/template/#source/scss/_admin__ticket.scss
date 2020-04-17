@@ -1,0 +1,89 @@
+.ticket__button-add a {
+  display: flex;
+  align-items: center;
+  width: 288px;
+  color: black;
+
+  img {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.panet__table-admin {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 16px;
+
+  td {
+    text-align: center;
+    padding: 3px;
+    width: 30px;
+    height: 35px;
+  }
+
+  tr {
+    border-bottom: 1px solid #c9c9c9;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .panel__icon {
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  .title__admin-ticket {
+    font-size: 16px;
+  }
+
+  .width1 {
+    width: 9%;
+  }
+  .width2 {
+    width: 9%;
+  }
+  .width3 {
+    width: 10%;
+  }
+  .width4 {
+    width: 8%;
+  }
+  .width5 {
+    width: 10%;
+  }
+  .width6 {
+    width: 22%;
+  }
+  .short__content {
+    text-align: justify;
+    line-height: 25px;
+  }
+  .width7 {
+    width: 8%;
+  }
+  .width8 {
+    width: 8%;
+  }
+  .width9 {
+    width: 8%;
+  }
+  .width10 {
+    width: 8%;
+  }
+}
+
+.textarea__change {
+  height: 200px;
+  border: 2px solid #ab2179;
+  padding: 5px;
+  width: 455px;
+  margin-bottom: 60px;
+}

@@ -41,7 +41,7 @@
             </label>
             <div class="select">
                 <select name="category_all_id" class="option__create">
-                    <option selected disabled>Выбирете категорию</option>
+                    <option selected disabled>Выберите категорию</option>
                     <?php if (is_array($categoriesListAll)): ?>
                         <?php foreach ($categoriesListAll as $categoryAll): ?>
                             <option value="<?php echo $categoryAll['id']; ?>"

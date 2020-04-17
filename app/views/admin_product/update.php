@@ -10,10 +10,12 @@
     <section class="admin-panel create__panel">
         <h1>Редактировать товар #<?php echo $id; ?></h1>
         <form action="#" method="post" class="create__form">
-            <label>Наименование товара
+            <label>
+                <p>Наименование товара</p>
                 <input type="text" name="name" value="<?php echo $product['name']; ?>">
             </label>
-            <label>Категория
+            <label>
+                <p>Категория</p>
                 <select name="category_id" class="select__down">
 
                     <?php if ($product['gender'] == 0 and is_array($categoriesListWoman)): ?>
@@ -36,7 +38,8 @@
 
                 </select>
             </label>
-            <label>Категория для "Не знаю кто я"
+            <label>
+                <p>Категория для "Не знаю кто я"</p>
                 <select name="category_all_id" class="select__down">
 
                     <?php if (is_array($categoriesListAll)): ?>
@@ -50,7 +53,8 @@
 
                 </select>
             </label>
-            <label>Изображение (Наименование файла)
+            <label>
+                <p>Изображение (Наименование файла)</p>
                 <input type="text" name="image" value="<?php echo $product['image']; ?>">
             </label>
             <label>Размер
@@ -61,10 +65,12 @@
                     <option value="L" <?php if ($product['size'] == 'L') echo 'selected';?>>L</option>
                 </select>
             </label>
-            <label>Цвет
+            <label>
+                <p>Цвет</p>
                 <input type="text" name="color" value="<?php echo $product['color']; ?>">
             </label>
-            <label>В наличии
+            <label>
+                <p>В наличии</p>
                 <select name="status" class="select__down">
                     <option value="1" <?php if ($product['status'] == '1') echo 'selected';?>>Да</option>
                     <option value="0" <?php if ($product['status'] == '0') echo 'selected';?>>Нет</option>

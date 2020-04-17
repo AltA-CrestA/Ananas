@@ -1,7 +1,6 @@
 .delele__panel {
     @include disflex(flex, center, center);
     flex-direction: column;
-    position: relative;
     min-height: 80vh;
 
     h1 {

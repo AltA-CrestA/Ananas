@@ -998,6 +998,8 @@ html, body { height: 100%; }
 
 .admin-panel { padding: 40px 20px; min-height: 90vh; position: relative; }
 
+.admin-panel h1 { margin-bottom: 25px; color: #af2179; }
+
 .panel__title { text-align: center; margin-bottom: 30px; font-size: 25px; }
 
 .pamel__item-title { font-weight: 700; font-size: 20px; }
@@ -1038,7 +1040,7 @@ html, body { height: 100%; }
 @media (max-width: 767px) { .admin__hi { display: none; }
   .admin-welcome { width: 100%; text-align: center; } }
 
-.admin-select { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; height: 90vh; }
+.admin-select { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; height: 80vh; }
 
 .admin-select__title { margin-bottom: 30px; font-size: 30px; }
 
@@ -1066,8 +1068,6 @@ html, body { height: 100%; }
 
 .create__form p { margin-bottom: 20px; border-bottom: 1px solid silver; }
 
-.status { margin-top: 20px; }
-
 .select__down { padding: 3px; -webkit-box-shadow: 0 2px 0 #ab2179; box-shadow: 0 2px 0 #ab2179; color: black; border: none; outline: none; display: inline-block; cursor: pointer; width: 447px; }
 
 .create__button { padding: 0 10px; width: 450px; height: 50px; border-radius: 5px; font-size: 16px; background-color: silver; }
@@ -1076,7 +1076,7 @@ html, body { height: 100%; }
 
 .button__place { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-.delele__panel { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; position: relative; min-height: 80vh; }
+.delele__panel { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; min-height: 80vh; }
 
 .delele__panel h1 { font-size: 28px; margin-bottom: 40px; }
 

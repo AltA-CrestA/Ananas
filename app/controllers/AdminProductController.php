@@ -157,6 +157,7 @@ class AdminProductController extends AdminBase
             // Получаем данные формы
             $options['name'] = $_POST['name'];
             $options['category_id'] = $_POST['category_id'];
+            $options['category_all_id'] = $_POST['category_all_id'];
             $options['image'] = $_POST['image'];
             $options['size'] = $_POST['size'];
             $options['color'] = $_POST['color'];
@@ -165,7 +166,7 @@ class AdminProductController extends AdminBase
             // Сохраняем изменения
             Product::updateProductById($id, $options);
 
-//            header("Location: /admin/product");
+            header("Location: /admin/product");
         }
 
         // Подключим вид

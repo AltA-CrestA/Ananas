@@ -3,6 +3,7 @@
 namespace App\models;
 
 use App\components\Db;
+use PDO;
 
 
 class Category
@@ -168,6 +169,66 @@ class Category
                 return 'Аксессуары';
                 break;
         }
+
+    }
+
+    public static function createCategory($name, $gender, $sort_order, $status)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = 'INSERT INTO category (name, gender, sort_order, status) '
+                . 'VALUES (:name, :gender, :sort_order, :status)';
+
+        $result = $db->prepare($sql);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':gender', $gender, PDO::PARAM_STR);
+        $result->bindParam(':sort_order', $sort_order, PDO::PARAM_STR);
+        $result->bindParam(':status', $status, PDO::PARAM_STR);
+
+        return $result->execute();
+
+    }
+
+    public static function updateCategoryById($id, $name, $gender, $sort_order, $status)
+    {
+
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса в БД
+        $sql = "UPDATE category
+            SET
+                name = :name,
+                gender = :gender,
+                sort_order = :sort_order,
+                status = :status
+            WHERE id = :id";
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':gender', $gender, PDO::PARAM_STR);
+        $result->bindParam(':sort_order', $sort_order, PDO::PARAM_STR);
+        $result->bindParam(':status', $status, PDO::PARAM_STR);
+        return $result->execute();
+
+    }
+
+    public static function deleteCategoryById($id)
+    {
+
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = 'DELETE FROM category WHERE id = :id';
+
+        // Получение и возврат результатов. Используеся подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        return $result->execute();
 
     }
 

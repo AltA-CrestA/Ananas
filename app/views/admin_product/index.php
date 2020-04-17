@@ -6,13 +6,13 @@ include ROOT . '/app/views/layouts/header_admin.php'; ?>
     <section class="admin-panel">
         <div class="button__place">
                 <div class="panel__button-return">
-                    <a href="/admin">
+                    <a href="/admin/">
                         <img src="\app\template\img\admin\return1.svg" alt="">
                         <p>Назад</p>
                     </a>
                 </div>
                 <div class="panel__button-add">
-                    <a href="/admin/product/select">
+                    <a href="/admin/product/select/">
                         <img src="\app\template\img\admin\create.svg" alt="">
                         <p>Добавить товар</p>
                     </a>

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/app/template/css/style.css">
+    <link rel="shortcut icon" href="/app/template/img/icon.png" type="image/png">
+    <link rel="icon" href="/app/template/img/icon.png" type="image/png">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
-    <title>Ананас</title>
+    <title><?php include ROOT . '/app/config/titles.php'?></title>
 </head>
 
 <body>
@@ -36,7 +38,6 @@
             <div class="header-login steal__big">
 
                 <?php use App\models\Cart;
-                use App\models\Like;
 
                 if (!App\models\User::isGuest()): ?>
                     <div class="header__buttons">

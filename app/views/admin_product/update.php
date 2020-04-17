@@ -2,7 +2,7 @@
 
 <main class="admin__creating">
     <div class="panel__button-return create__return">
-        <a href="/admin/product">
+        <a href="/admin/product/">
             <img src="\app\template\img\admin\return1.svg" alt="">
             <p>Назад</p>
         </a>

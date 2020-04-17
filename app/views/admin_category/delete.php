@@ -2,7 +2,7 @@
 
 <main>
     <div class="panel__button-return  gender__return">
-        <a href="/admin/category">
+        <a href="/admin/category/">
             <img src="\app\template\img\admin\return1.svg" alt="">
             <p>Назад</p>
         </a>

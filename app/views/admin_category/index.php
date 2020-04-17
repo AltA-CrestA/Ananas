@@ -4,13 +4,13 @@
     <section class="admin-panel">
         <div class="button__place">
             <div class="panel__button-return">
-                <a href="/admin">
+                <a href="/admin/">
                     <img src="\app\template\img\admin\return1.svg" alt="">
                     <p>Назад</p>
                 </a>
             </div>
             <div class="add__category">
-                <a href="/admin">
+                <a href="/admin/category/create/">
                     <img src="\app\template\img\admin\create.svg" alt="">
                     <p>Добавить категорию</p>
                 </a>

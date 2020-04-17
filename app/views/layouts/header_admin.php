@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/app/template/css/style.css">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
-    <title>Ананас</title>
+    <title><?php include ROOT . '/app/config/titles.php'?></title>
 </head>
 
 <body class="admin__body">

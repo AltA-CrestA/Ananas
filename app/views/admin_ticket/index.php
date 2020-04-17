@@ -6,13 +6,13 @@
         <div class="panel__item">
             <div class="button__place">
                 <div class="panel__button-return">
-                    <a href="/admin">
+                    <a href="/admin/">
                         <img src="\app\template\img\admin\return1.svg" alt="">
                         <p>Назад</p>
                     </a>
                 </div>
                 <div class="panel__button-add">
-                    <a href="/admin/ticket/create">
+                    <a href="/admin/ticket/create/">
                         <img src="\app\template\img\admin\create.svg" alt="">
                         <p>Добавить абонемент</p>
                     </a>

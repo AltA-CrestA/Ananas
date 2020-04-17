@@ -6,17 +6,11 @@
         <div class="panel__item">
             <div class="button__place">
                 <div class="panel__button-return">
-                    <a href="/admin">
+                    <a href="/admin/">
                         <img src="\app\template\img\admin\return1.svg" alt="">
                         <p>Назад</p>
                     </a>
                 </div>
-<!--                <div class="panel__button-add">-->
-<!--                    <a href="/admin/product/select">-->
-<!--                        <img src="\app\template\img\admin\create.svg" alt="">-->
-<!--                        <p>Добавить товар</p>-->
-<!--                    </a>-->
-<!--                </div>-->
             </div>
             <table class="panet__table-user">
                 <tr>

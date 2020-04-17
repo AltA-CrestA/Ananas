@@ -8,7 +8,7 @@
         </a>
     </div>
     <section class="admin-panel create__panel">
-        <h1>Добавить новый товар</h1>
+        <h1>Добавить новый товар &#128120</h1>
         <form action="#" method="post" class="create__form">
             <!-- Наименование -->
             <label><p>Наименование товара</p></label>

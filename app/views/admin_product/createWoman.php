@@ -8,7 +8,7 @@
         </a>
     </div>
     <section class="admin-panel create__panel">
-        <h1>Добавить новый товар</h1>
+        <h1>Добавить новый товар &#128120</h1>
         <form action="#" method="post" class="create__form">
             <!-- Наименование -->
             <label><p>Наименование товара</p></label>
@@ -17,7 +17,7 @@
             <label><p>Категория</p></label>
             <div class="select">
                 <select name="category_id" class="option__create">
-                    <option selected disabled>Выбирете категорию</option>
+                    <option selected disabled>Выберите категорию</option>
                     <?php if (is_array($categoriesListWoman)): ?>
                         <?php foreach ($categoriesListWoman as $categoryWoman): ?>
                             <option value="<?php echo $categoryWoman['id']; ?>">
@@ -31,7 +31,7 @@
             <label><p>Категория для "Не знаю кто я"</p></label>
             <div class="select">
                 <select name="category_all_id" class="option__create">
-                    <option selected disabled>Выбирете категорию</option>
+                    <option selected disabled>Выберите категорию</option>
                     <?php if (is_array($categoriesListAll)): ?>
                         <?php foreach ($categoriesListAll as $categoryAll): ?>
                             <option value="<?php echo $categoryAll['id']; ?>">
@@ -48,7 +48,7 @@
             <label><p>Размер</p></label>
             <div class="select">
                 <select name="size" class="option__create">
-                    <option selected disabled>Выбирете размер</option>
+                    <option selected disabled>Выберите размер</option>
                     <option value="S">S</option>
                     <option value="S\M">S\M</option>
                     <option value="M">M</option>
@@ -62,7 +62,7 @@
             <label><p>В наличии</p></label>   
             <div class="select">
                 <select name="status" class="option__create">
-                    <option selected disabled><p>Выбирете наличие</p></option>
+                    <option selected disabled><p>Выберите наличие</p></option>
                     <option value="1">Да</option>
                     <option value="0">Нет</option>
                 </select>

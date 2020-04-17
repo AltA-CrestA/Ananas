@@ -1137,6 +1137,46 @@ option { color: black; }
 
 .panet__table-user .name__product { width: 10%; }
 
+.ticket__button-add a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 288px; color: black; }
+
+.ticket__button-add a img { margin-right: 10px; height: 32px; width: 32px; }
+
+.panet__table-admin { margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; font-size: 16px; }
+
+.panet__table-admin td { text-align: center; padding: 3px; width: 30px; height: 35px; }
+
+.panet__table-admin tr { border-bottom: 1px solid #c9c9c9; }
+
+.panet__table-admin tr:last-child { border: 0; }
+
+.panet__table-admin .panel__icon { width: 30px; height: 35px; cursor: pointer; }
+
+.panet__table-admin .title__admin-ticket { font-size: 16px; }
+
+.panet__table-admin .width1 { width: 9%; }
+
+.panet__table-admin .width2 { width: 9%; }
+
+.panet__table-admin .width3 { width: 10%; }
+
+.panet__table-admin .width4 { width: 8%; }
+
+.panet__table-admin .width5 { width: 10%; }
+
+.panet__table-admin .width6 { width: 22%; }
+
+.panet__table-admin .short__content { text-align: justify; line-height: 25px; }
+
+.panet__table-admin .width7 { width: 8%; }
+
+.panet__table-admin .width8 { width: 8%; }
+
+.panet__table-admin .width9 { width: 8%; }
+
+.panet__table-admin .width10 { width: 8%; }
+
+.textarea__change { height: 200px; border: 2px solid #ab2179; padding: 5px; width: 455px; margin-bottom: 60px; }
+
 /*ПОДКЛЮЧАЮ ШРИФТЫ*/
 @font-face { font-family: "Slimamif"; src: url("subset-Slimamif.eot"); font-weight: 500; font-style: normal; }
 

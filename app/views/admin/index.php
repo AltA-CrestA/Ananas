@@ -6,13 +6,16 @@
         <div class="admin-welcome-subtitle">
             <ul>
                 <li>
-                    <a href="/admin/product">Управление товарами (Бета)</a>
+                    <a href="/admin/product">Управление товарами</a>
                 </li>
                 <li>
-                    <a href="/admin/category">Управление категориями (Бета)</a>
+                    <a href="/admin/category">Управление категориями</a>
                 </li>
                 <li>
                     <a>Управление заказами (Бета)</a>
+                </li>
+                <li>
+                    <a href="/admin/user">Просмотр пользователей</a>
                 </li>
             </ul>
         </div>

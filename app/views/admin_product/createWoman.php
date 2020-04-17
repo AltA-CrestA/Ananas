@@ -8,7 +8,7 @@
         </a>
     </div>
     <section class="admin-panel create__panel">
-        <h1>Добавить новый товар &#128120</h1>
+        <h1>Добавить новый товар</h1>
         <form action="#" method="post" class="create__form">
             <label>
                 <p>Наименование товара</p>
@@ -57,7 +57,7 @@
             </label>
             <label>
                 <p>Цвет</p>
-                <input type="text" name="color" placeholder="Введите цвет">
+                <input type="text" name="color">
             </label>
             <label>
                 <p>В наличии</p>

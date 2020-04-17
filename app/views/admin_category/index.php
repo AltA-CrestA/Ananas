@@ -2,7 +2,7 @@
 
 <main>
     <section class="admin-panel">
-        <div class="panel__title">Управление категориями(Бета)</div>
+        <div class="panel__title">Управление категориями</div>
         <div class="panel__item">
             <div class="button__place">
                 <div class="panel__button-return">
@@ -12,7 +12,7 @@
                     </a>
                 </div>
                 <div class="panel__button-add">
-                    <a href="/admin">
+                    <a href="/admin/category/create">
                         <img src="\app\template\img\admin\create.svg" alt="">
                         <p>Добавить категорию</p>
                     </a>
@@ -26,28 +26,6 @@
                 </div>
                 <div class="tabs__body-admin">
                     <div class="tabs__block-admin tab-1 is-active">
-                        <table class="panet__table-admin">
-                            <tr>
-                                <td class="small__width">ID категории</td>
-                                <td class="name__product">Наименование</td>
-                                <td class="small__width">Порядок сортировки</td>
-                                <td class="small__width">Статус</td>
-                                <td class="small__width">Редактировать</td>
-                                <td class="small__width">Удалить</td>
-                            </tr>
-                            <?php foreach ($categoryListAll as $categoryAll): ?>
-                            <tr>
-                                <td class="small__width"><?php echo $categoryAll['id']; ?></td>
-                                <td class="name__product"><?php echo $categoryAll['name']; ?></td>
-                                <td class="small__width"><?php echo $categoryAll['sort_order']; ?></td>
-                                <td class="small__width"><?php echo $categoryAll['status']; ?></td>
-                                <td class="small__width"><a href="/admin/product/update/<?php echo $categoryAll['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
-                                <td class="small__width"><a href="/admin/product/delete/<?php echo $categoryAll['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </table>
-                    </div>
-                    <div class="tabs__block-admin tab-2">
                             <div class="tabs__block-title-admin"></div>
                             <table class="panet__table">
                                 <tr>
@@ -63,14 +41,14 @@
                                     <td class="small__width"><?php echo $categoryWoman['id']; ?></td>
                                     <td class="name__product"><?php echo $categoryWoman['name']; ?></td>
                                     <td class="small__width"><?php echo $categoryWoman['sort_order']; ?></td>
-                                    <td class="small__width"><?php echo $categoryWoman['status']; ?></td>
-                                    <td class="small__width"><a href="/admin/product/update/<?php echo $categoryWoman['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
-                                    <td class="small__width"><a href="/admin/product/delete/<?php echo $categoryWoman['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
+                                    <td class="small__width"><?php if ($categoryWoman['status'] == 1) echo 'Отображается'; else echo 'Не отображается'; ?></td>
+                                    <td class="small__width"><a href="/admin/category/update/<?php echo $categoryWoman['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
+                                    <td class="small__width"><a href="/admin/category/delete/<?php echo $categoryWoman['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </table> 
                     </div>
-                    <div class="tabs__block-admin tab-3">
+                    <div class="tabs__block-admin tab-2">
                             <div class="tabs__block-title-admin"></div>
                             <table class="panet__table">
                                 <tr>
@@ -87,12 +65,34 @@
                                     <td class="small__width"><?php echo $categoryMan['id']; ?></td>
                                     <td class="name__product"><?php echo $categoryMan['name']; ?></td>
                                     <td class="small__width"><?php echo $categoryMan['sort_order']; ?></td>
-                                    <td class="small__width"><?php echo $categoryMan['status']; ?></td>
-                                    <td class="small__width"><a href="/admin/product/update/<?php echo $categoryMan['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
-                                    <td class="small__width"><a href="/admin/product/delete/<?php echo $categoryMan['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
+                                    <td class="small__width"><?php if ($categoryMan['status'] == 1) echo 'Отображается'; else echo 'Не отображается'; ?></td>
+                                    <td class="small__width"><a href="/admin/category/update/<?php echo $categoryMan['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
+                                    <td class="small__width"><a href="/admin/category/delete/<?php echo $categoryMan['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </table>
+                    </div>
+                    <div class="tabs__block-admin tab-3">
+                        <table class="panet__table-admin">
+                            <tr>
+                                <td class="small__width">ID категории</td>
+                                <td class="name__product">Наименование</td>
+                                <td class="small__width">Порядок сортировки</td>
+                                <td class="small__width">Статус</td>
+                                <td class="small__width">Редактировать</td>
+                                <td class="small__width">Удалить</td>
+                            </tr>
+                            <?php foreach ($categoryListAll as $categoryAll): ?>
+                                <tr>
+                                    <td class="small__width"><?php echo $categoryAll['id']; ?></td>
+                                    <td class="name__product"><?php echo $categoryAll['name']; ?></td>
+                                    <td class="small__width"><?php echo $categoryAll['sort_order']; ?></td>
+                                    <td class="small__width"><?php if ($categoryAll['status'] == 1) echo 'Отображается'; else echo 'Не отображается'; ?></td>
+                                    <td class="small__width"><a href="/admin/category/update/<?php echo $categoryAll['id']; ?>"><img src="\app\template\img\admin\eqit.svg" alt="" class='panel__icon'></a></td>
+                                    <td class="small__width"><a href="/admin/category/delete/<?php echo $categoryAll['id']; ?>"><img src="\app\template\img\admin\delite.svg" alt="" class='panel__icon'></a></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
                     </div>
                 </div>
             </div>

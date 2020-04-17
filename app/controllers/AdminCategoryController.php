@@ -85,6 +85,8 @@ class AdminCategoryController extends AdminBase
         // Проверка доступа
         self::checkAdmin();
 
+        $category = Category::getCategoryById($id);
+
         // Обработка формы
         if (isset($_POST['submit'])) {
             // Если форма отправлена

@@ -38,6 +38,10 @@ return array(
     'admin/category/delete/([0-9]+)' => 'adminCategory/delete/$1',
     'admin/category' => 'adminCategory/index',
 
+    // Просмотр пользователей:
+    'admin/user/update/([0-9]+)' => 'adminUser/update/$1',
+    'admin/user' => 'adminUser/index',
+
     // Админпанель
     'admin' => 'admin/index',
 

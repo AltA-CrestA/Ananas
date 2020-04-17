@@ -216,6 +216,27 @@ class Category
 
     }
 
+    /**
+     * Return category by id
+     * @param integer $id
+     * @return mixed
+     */
+    public static function getCategoryById($id)
+    {
+
+        $id = intval($id);
+
+        if ($id) {
+            $db = Db::getConnection();
+
+            $result = $db->query('SELECT * FROM category WHERE id=' . $id);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+
+            return $result->fetch();
+        }
+
+    }
+
     public static function deleteCategoryById($id)
     {
 

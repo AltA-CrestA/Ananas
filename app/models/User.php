@@ -152,4 +152,48 @@ class User
         }
 
     }
+
+    public static function getUsersListAdmin()
+    {
+
+        $db = Db::getConnection();
+
+        $result = $db->query('SELECT * FROM users ORDER BY id ASC');
+        $usersList = array();
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $usersList[$i]['id'] = $row['id'];
+            $usersList[$i]['name'] = $row['name'];
+            $usersList[$i]['surname'] = $row['surname'];
+            $usersList[$i]['birth'] = $row['birth'];
+            $usersList[$i]['email'] = $row['email'];
+            $usersList[$i]['phone'] = $row['phone'];
+            $usersList[$i]['login'] = $row['login'];
+            $usersList[$i]['bonus'] = $row['bonus'];
+            $usersList[$i]['role'] = $row['role'];
+            $i++;
+        }
+
+        return $usersList;
+
+    }
+
+    public static function updateUserById($id, $role)
+    {
+
+        $db = Db::getConnection();
+
+        // Текст запроса в БД
+        $sql = "UPDATE users
+            SET
+                role = :role
+            WHERE id = :id";
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_STR);
+        $result->bindParam(':role', $role, PDO::PARAM_STR);
+        return $result->execute();
+
+    }
 }

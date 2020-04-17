@@ -18,7 +18,7 @@
 <!--                    </a>-->
 <!--                </div>-->
             </div>
-            <table class="panet__table">
+            <table class="panet__table-user">
                 <tr>
                     <td class="small__width">ID пользователя</td>
                     <td class="name__product">Имя</td>

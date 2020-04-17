@@ -1123,6 +1123,20 @@ option { color: black; }
 
 .panet__table-admin .name__product { width: 25%; }
 
+.panet__table-user { margin-top: 30px; width: 100%; border-collapse: collapse; border-spacing: 0; color: black; }
+
+.panet__table-user td { text-align: center; padding: 3px; width: 30px; height: 35px; }
+
+.panet__table-user tr { border-bottom: 1px solid #c9c9c9; }
+
+.panet__table-user tr:last-child { border: 0; }
+
+.panet__table-user .panel__icon { width: 30px; height: 35px; cursor: pointer; }
+
+.panet__table-user .small__width { width: 10%; }
+
+.panet__table-user .name__product { width: 10%; }
+
 /*ПОДКЛЮЧАЮ ШРИФТЫ*/
 @font-face { font-family: "Slimamif"; src: url("subset-Slimamif.eot"); font-weight: 500; font-style: normal; }
 

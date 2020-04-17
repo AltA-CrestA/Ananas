@@ -1,0 +1,36 @@
+.panet__table-user {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+
+  td {
+    text-align: center;
+    padding: 3px;
+    width: 30px;
+    height: 35px;
+  }
+
+  tr {
+    border-bottom: 1px solid #c9c9c9;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .panel__icon {
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  .small__width {
+    width: 10%;
+  }
+
+  .name__product {
+    width: 10%;
+  }
+}

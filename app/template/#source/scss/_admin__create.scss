@@ -1,9 +1,13 @@
-.create__return {
-  margin: 20px 0 0 20px;
+.admin__creating {
+  padding: 40px 20px;
 }
 
 .create__panel {
-  font-size: 25px;
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #af2179;
+  }
 }
 
 .create__form {
@@ -15,17 +19,17 @@
     display: flex;
     flex-direction: column;
     width: 447px;
-    margin-bottom: 100px;
     height: 35px;
     font-size: 22px;
     font-weight: 700;
   }
 
-  input,
-  option {
+  input {
     border-bottom: 2px solid #ab2179;
     height: 25px;
-    padding: 5px;
+    padding: 2px;
+    width: 447px;
+    margin-bottom: 70px;
   }
 
   p {
@@ -33,18 +37,6 @@
     border-bottom: 1px solid silver;
   }
 }
-
-.select__down {
-  padding: 3px;
-  box-shadow: 0 2px 0 #ab2179;
-  color: rgb(0, 0, 0);
-  border: none;
-  outline: none;
-  display: inline-block;
-  cursor: pointer;
-  width: 447px;
-}
-
 
 .create__button {
   padding: 0 10px;
@@ -63,4 +55,42 @@
 .button__place {
   display: flex;
   justify-content: space-between;
+}
+
+// ------------
+.option__create {
+  font-family: Comfortaa;
+  appearance: none;
+  border-bottom: 2px solid #ab2179;
+  flex: 1;
+  padding: 2px;
+  cursor: pointer;
+}
+/* Custom Select */
+.select {
+  margin-bottom: 70px;
+  position: relative;
+  display: flex;
+  width: 447px;
+  height: 25px;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 2px;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+option {
+  color: black;
 }

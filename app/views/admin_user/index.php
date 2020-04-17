@@ -2,9 +2,7 @@
 
 <main>
     <section class="admin-panel">
-        <div class="panel__title">Список пользователей</div>
-        <div class="panel__item">
-            <div class="button__place">
+        <div class="button__place">
                 <div class="panel__button-return">
                     <a href="/admin">
                         <img src="\app\template\img\admin\return1.svg" alt="">
@@ -17,7 +15,9 @@
 <!--                        <p>Добавить товар</p>-->
 <!--                    </a>-->
 <!--                </div>-->
-            </div>
+        </div>
+        <div class="panel__title">Список пользователей</div>
+        <div class="panel__item">
             <table class="panet__table-user">
                 <tr>
                     <td class="small__width">ID пользователя</td>

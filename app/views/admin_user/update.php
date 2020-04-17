@@ -1,6 +1,6 @@
 <?php include ROOT . '/app/views/layouts/header_admin.php'; ?>
 
-<main>
+<main class="admin__creating">
     <div class="panel__button-return create__return">
         <a href="/admin/user">
             <img src="\app\template\img\admin\return1.svg" alt="">

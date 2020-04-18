@@ -60,10 +60,14 @@ class CabinetController
 
             if (trim($_POST['name']) == '') {
                 $errors[] = 'Укажите ваше Имя!';
+            } elseif (trim($_POST['name']) < 2) {
+                $errors[] = 'Имя должно содержать не менее 2 символов';
             }
 
             if (trim($_POST['surname']) == '') {
                 $errors[] = 'Укажите вашу Фамилию!';
+            } elseif (trim($_POST['surname']) < 2) {
+                $errors[] = 'Фамилия должна содержать не менее 2 символов';
             }
 
             if (trim($_POST['birth']) == '') {
@@ -80,10 +84,14 @@ class CabinetController
 
             if (trim($_POST['login']) == '') {
                 $errors[] = 'Укажите ваш Логин!';
+            } elseif (trim($_POST['login']) < 4) {
+                $errors[] = 'Логин должен содержать не менее 4 символов';
             }
 
             if ($_POST['password'] == '') {
                 $errors[] = 'Укажите ваш Пароль!';
+            } elseif (trim($_POST['password']) < 6) {
+                $errors[] = 'Пароль должнен быть не короче 6 символов';
             }
 
             if ($_POST['password_2'] != $_POST['password']) {
@@ -91,7 +99,12 @@ class CabinetController
             }
 
             if ($errors == false) {
+                // Если ошибок нет
+                // Изменяем данные пользователя и запоминаем в сессию
                 $result = User::edit($userId, $name, $surname, $birth, $email, $phone, $login, $password);
+                $_SESSION['logged-user'] = $result;
+
+                // Перенаправляем пользователя в личный кабинет
                 header('Location: /cabinet/');
             }
         }

@@ -3,7 +3,7 @@
 <section class="signup">
     <div class="signup-container">
         <div class="signup-title">Создание аккаунта</div>
-        <form method="POST" class="signup-form">
+        <form method="POST" class="signup-form" onfocus="this.className='focused'">
 
             <?php if (isset($errors) && is_array($errors)): ?>
                     <ul class="signup-mistakes">
@@ -35,8 +35,13 @@
             </div>
             <div class="signup-row">
                 <div class="signup__string">
-                    <label class="label"><strong>Номер телефона</strong>&nbsp;:</label>
-                    <input type="tel" name="phone" class="masked-phone signup-input" value="<?php echo @$_POST['phone']; ?>">
+                    <label class="label" for="online_phone"><strong>Номер телефона</strong>&nbsp;:</label>
+                    <input class="online_phone signup-input" name="phone" type="tel" maxlength="50"
+                        required="required"
+                        outline="none"
+						value="<?php echo @$_POST['phone']; ?>"
+						pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+						placeholder="+7(___)___-__-__">
                 </div>
                 <div class="signup__string">
                     <label class="label"><strong>Ваш логин</strong>&nbsp;:</label>

@@ -36,7 +36,8 @@
             <div class="signup-row">
                 <div class="signup__string">
                     <label class="label"><strong>Номер телефона</strong>&nbsp;:</label>
-                    <input class="signup-input" type="tel" name="phone" value="<?php echo @$_POST['phone']; ?>">
+                    <!-- <input class="signup-input" type="tel" name="phone" value="<?php echo @$_POST['phone']; ?>"> -->
+                    <input type="tel" name="phone" class="masked-phone signup-input" value="<?php echo @$_POST['phone']; ?>">
                 </div>
                 <div class="signup__string">
                     <label class="label"><strong>Ваш логин</strong>&nbsp;:</label>

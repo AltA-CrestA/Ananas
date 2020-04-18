@@ -49,8 +49,11 @@ class User
         $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         $result->bindParam(':login', $login, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
+        $result->execute();
 
-        return$result->execute();
+        $user = $result->fetch();
+
+        return $user['id'];
 
     }
 
@@ -87,24 +90,24 @@ class User
         return false;
     }
 
-    public static function checkUserData($login, $password)
+    public static function checkUserData($login)
     {
 
         $db = Db::getConnection();
 
-        $sql = 'SELECT * FROM users WHERE login = :login AND password = :password';
+        $sql = 'SELECT * FROM users WHERE login = :login';
 
         $result = $db->prepare($sql);
         $result->bindParam(':login', $login, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
         $result->execute();
 
         $user = $result->fetch();
-        if ($user) {
+        if (password_verify($password, $user['password'])) {
             return $user['id'];
+        } else {
+            return false;
         }
 
-        return false;
     }
 
 

@@ -25,7 +25,7 @@ class UserController
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $login = $_POST['login'];
-            $password = $_POST['password'];
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $password_2 = $_POST['password_2'];
             $bonus = $_POST['bonus'];
 
@@ -41,10 +41,14 @@ class UserController
 
             if (trim($_POST['name']) == '') {
                 $errors[] = 'Укажите ваше Имя!';
+            } elseif (trim($_POST['name']) < 2) {
+                $errors[] = 'Имя должно содержать не менее 2 символов';
             }
 
             if (trim($_POST['surname']) == '') {
                 $errors[] = 'Укажите вашу Фамилию!';
+            } elseif (trim($_POST['surname']) < 2) {
+                $errors[] = 'Фамилия должна содержать не менее 2 символов';
             }
 
             if (trim($_POST['birth']) == '') {
@@ -61,10 +65,14 @@ class UserController
 
             if (trim($_POST['login']) == '') {
                 $errors[] = 'Укажите ваш Логин!';
+            } elseif (trim($_POST['login']) < 4) {
+                $errors[] = 'Логин должен содержать не менее 4 символов';
             }
 
             if ($_POST['password'] == '') {
                 $errors[] = 'Укажите ваш Пароль!';
+            } elseif (trim($_POST['password']) < 6) {
+                $errors[] = 'Пароль должнен быть не короче 6 символов';
             }
 
             if ($_POST['password_2'] != $_POST['password']) {
@@ -72,15 +80,18 @@ class UserController
             }
 
             if ($errors == false) {
+                // Если ошибок нет
+                // Регистрируем пользователя и запоминаем в сессию
                 $result = User::register($name, $surname, $birth, $email, $phone, $login, $password, $bonus);
+                $_SESSION['logged-user'] = $result;
+
+                // Перенаправляем пользователя в личный кабинет
                 header("Location: /cabinet/");
             }
         }
 
-
-
+        // Подключаем виды
         require_once(ROOT . '/app/views/user/register.php');
-
         return true;
 
     }
@@ -97,10 +108,11 @@ class UserController
             $errors = false;
 
             // Проверяем существует ли пользователь
-            $userId = User::checkUserData($login, $password);
+            $userId = User::checkUserData($login);
 
             if ($userId == false) {
                 $errors[] = 'Неправильно введён логин или пароль';
+
             } else {
                 // Если данные правильные, запоминаем пользователя (сессия)
                 User::auth($userId);
@@ -112,7 +124,6 @@ class UserController
         }
 
         require_once(ROOT . '/app/views/user/login.php');
-
         return true;
     }
 

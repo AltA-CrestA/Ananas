@@ -30,6 +30,7 @@
         </div>
     </div>
 </footer>
+<a class="button__up"></a>
 </body>
 <script src="/app/template/js/wow.min.js"></script>
 <script>

@@ -206,3 +206,20 @@ function addElement(e) {
   addDiv.classList.add('pulse');
   this.appendChild(addDiv);
 }
+
+// Кнопка up
+
+var btn = $('.button__up');
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, '300');
+});

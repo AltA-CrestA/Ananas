@@ -32,7 +32,7 @@
 					</div>
 					<div class="edit-inputs__input">
 						<label for="tel">Номер телефона</label>
-						<input type="tel" name="phone" value="<?php echo $phone; ?>">
+						<input type="tel" name="phone" class="masked-phone signup-input" value="<?php echo $phone; ?>">
 					</div>
 					<div class="edit-inputs__input">
 						<label for="login">Ваш логин</label>

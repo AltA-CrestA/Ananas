@@ -9,10 +9,10 @@
             <div class="hi-container">
                 <h1 class="hi-title wow fadeInLeft" data-wow-delay="0.3s" >Одежда напрокат</h1>
                 <div class="hi-subtitle wow fadeInLeft" data-wow-delay="0.6s">Первый шоп-шейринг в Краноярске с эксклюзивными<br>брендами одежды и аксессуарами</div>
-                <a href="" class="hi__link wow fadeInLeft" data-wow-delay="0.9s">Посмотреть каталог</a>
+                <a href="/catalog/" class="hi__link wow fadeInLeft" data-wow-delay="0.9s">Посмотреть каталог</a>
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="about">
             <div class="about-content">
                 <div class="about__text">
                     <p>Когда мы можем носить то, что нам действительно нравится, это заставляет нас чувствовать себя лучше, придает уверенности в себе, и, в свою очередь, делает жизнь более яркой и насыщенной.</p><br>
@@ -22,7 +22,7 @@
                     <p>Мы считаем, что аренда - это будущее шопинга, и мы только начинаем...</p>
                 </div>
                 <div class="about-button">
-                    <a href="" class="about__button wow fadeInLeft">Подобрать наряд</a>
+                    <a href="/catalog/" class="about__button wow fadeInLeft">Подобрать наряд</a>
                 </div>
             </div>
             <div class="about-img wow fadeInRight" data-wow-offset="150">

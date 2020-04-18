@@ -41,13 +41,13 @@ class UserController
 
             if (trim($_POST['name']) == '') {
                 $errors[] = 'Укажите ваше Имя!';
-            } elseif (trim($_POST['name']) < 2) {
+            } elseif (strlen(trim($_POST['name'])) < 2) {
                 $errors[] = 'Имя должно содержать не менее 2 символов';
             }
 
             if (trim($_POST['surname']) == '') {
                 $errors[] = 'Укажите вашу Фамилию!';
-            } elseif (trim($_POST['surname']) < 2) {
+            } elseif (strlen(trim($_POST['surname'])) < 2) {
                 $errors[] = 'Фамилия должна содержать не менее 2 символов';
             }
 
@@ -65,13 +65,13 @@ class UserController
 
             if (trim($_POST['login']) == '') {
                 $errors[] = 'Укажите ваш Логин!';
-            } elseif (trim($_POST['login']) < 4) {
+            } elseif (strlen(trim($_POST['login'])) < 4) {
                 $errors[] = 'Логин должен содержать не менее 4 символов';
             }
 
             if ($_POST['password'] == '') {
                 $errors[] = 'Укажите ваш Пароль!';
-            } elseif (trim($_POST['password']) < 6) {
+            } elseif (strlen(trim($_POST['surname'])) < 6) {
                 $errors[] = 'Пароль должнен быть не короче 6 символов';
             }
 

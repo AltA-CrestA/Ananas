@@ -27,7 +27,7 @@
                         <a href="/ticket/" class="header__link">Абонементы</a>
                     </li>
                     <li>
-                        <a href="#" class="header__link">О нас</a>
+                        <a href="/#about" class="header__link">О нас</a>
                     </li>
                     <li>
                         <a href="/contacts/" class="header__link">Контакты</a>

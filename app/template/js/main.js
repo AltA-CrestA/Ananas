@@ -212,7 +212,7 @@ function addElement(e) {
 var btn = $('.button__up');
 
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 300) {
+  if ($(window).scrollTop() > 500) {
     btn.addClass('show');
   } else {
     btn.removeClass('show');
@@ -221,7 +221,7 @@ $(window).scroll(function () {
 
 btn.on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({ scrollTop: 0 }, '300');
+  $('html, body').animate({ scrollTop: 0 }, '500');
 });
 
 // Форма input для телефона в регистрации

@@ -164,7 +164,7 @@ class AdminProductController extends AdminBase
             $options['status'] = $_POST['status'];
 
             // Сохраняем изменения
-            Product::updateProductById($id, $options);
+            $test = Product::updateProductById($id, $options);
 
             header("Location: /admin/product");
         }

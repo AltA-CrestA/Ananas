@@ -90,7 +90,7 @@ class User
         return false;
     }
 
-    public static function checkUserData($login)
+    public static function checkUserData($login, $password)
     {
 
         $db = Db::getConnection();

@@ -18,7 +18,7 @@ include ROOT . '/app/views/layouts/header_admin.php'; ?>
                     </a>
                 </div>
             </div>
-        <div class="panel__title">Управление товарами(Бета)</div>
+        <div class="panel__title">Управление товарами</div>
         <div class="panel__item">
             <table class="panet__table">
                     <tr>

@@ -71,7 +71,7 @@ class UserController
 
             if ($_POST['password'] == '') {
                 $errors[] = 'Укажите ваш Пароль!';
-            } elseif (strlen(trim($_POST['surname'])) < 6) {
+            } elseif (strlen(trim($_POST['password'])) < 6) {
                 $errors[] = 'Пароль должнен быть не короче 6 символов';
             }
 
@@ -108,7 +108,7 @@ class UserController
             $errors = false;
 
             // Проверяем существует ли пользователь
-            $userId = User::checkUserData($login);
+            $userId = User::checkUserData($login, $password);
 
             if ($userId == false) {
                 $errors[] = 'Неправильно введён логин или пароль';

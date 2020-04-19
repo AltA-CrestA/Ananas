@@ -16,7 +16,7 @@
             <!-- Категории -->
             <label><p>Категория</p></label>
             <div class="select">
-                <select name="category_all_id" class="option__create">
+                <select name="category_id" class="option__create">
                 <?php if ($product['gender'] == 0 and is_array($categoriesListWoman)): ?>
                             <?php foreach ($categoriesListWoman as $categoryWoman): ?>
                                 <option value="<?php echo $categoryWoman['id']; ?>"
@@ -41,7 +41,6 @@
             </label>
             <div class="select">
                 <select name="category_all_id" class="option__create">
-                    <option selected disabled>Выберите категорию</option>
                     <?php if (is_array($categoriesListAll)): ?>
                         <?php foreach ($categoriesListAll as $categoryAll): ?>
                             <option value="<?php echo $categoryAll['id']; ?>"

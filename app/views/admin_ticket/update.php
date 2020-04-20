@@ -25,9 +25,9 @@
             <label><p>Статус</p>
             </label>
             <div class="select">
-                <select name="category_id" class="option__create">
+                <select name="status" class="option__create">
                     <option value="1" <?php if ($ticket['status'] == '1') echo 'selected';?>>Отображается</option>
-                    <option value="0" <?php if ($ticket['status'] == '1') echo 'selected';?>>Не отображается</option>
+                    <option value="0" <?php if ($ticket['status'] == '0') echo 'selected';?>>Не отображается</option>
                 </select>
             </div>
             <button type="submit" name="submit" class="create__button">Изменить</button>

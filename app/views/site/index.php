@@ -26,7 +26,10 @@
                 </div>
             </div>
             <div class="about-img wow fadeInRight" data-wow-offset="150">
-                <img src="/app/template/img/01.webp" alt="">
+                <picture>
+                    <source srcset="/app/template/img/01.png" type="image/webp">
+                    <img src="/app/template/img/01.png" alt="">
+                </picture>
             </div>
         </div>
         <div class="buy">
@@ -34,7 +37,10 @@
                 <section id="grid" class="grid clearfix">
                     <a href="/ticket/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
-                            <img src="/app/template/img/site/01.webp"  alt=""/>
+                            <picture>
+                                <source srcset="/app/template/img/site/01.webp" type="image/webp">
+                                <img src="/app/template/img/site/01.jpg"  alt=""/>
+                            </picture>
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
                             <figcaption>
@@ -46,7 +52,10 @@
                     </a>
                     <a href="/ticket/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
-                            <img src="/app/template/img/site/02.webp"  alt=""/>
+                            <picture>
+                                <source srcset="/app/template/img/site/02.webp" type="image/webp">
+                                <img src="/app/template/img/site/02.jpg"  alt=""/>
+                            </picture>
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
                             <figcaption>
@@ -58,7 +67,10 @@
                     </a>
                     <a href="/ticket/" class="hide__grid" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
-                            <img src="/app/template/img/site/03.webp"  alt=""/>
+                            <picture>
+                                <source srcset="/app/template/img/site/03.webp" type="image/webp">
+                                <img src="/app/template/img/site/03.jpg"  alt=""/>
+                            </picture>
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
                             <figcaption>
@@ -70,7 +82,10 @@
                     </a>
                     <a href="/ticket/" class="hide__grid" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
-                            <img src="/app/template/img/site/04.webp"  alt=""/>
+                            <picture>
+                                <source srcset="/app/template/img/site/04.webp" type="image/webp">
+                                <img src="/app/template/img/site/04.jpg"  alt=""/>
+                            </picture>
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
                             <figcaption>

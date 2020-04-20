@@ -10,29 +10,29 @@
     <section class="admin-panel create__panel">
         <h1>Добавить новую категорию</h1>
         <form action="#" method="post" class="create__form">
-            <label>
-                <p>Наименование категории</p>
-                <input type="text" name="name" placeholder="Введите наименование">
-            </label>
-            <label>
-                <p>Пол для категории</p>
-                <select name="gender" class="select__down">
+            <!-- Наименование -->
+            <label>Наименование категории</label>
+            <input type="text" name="name" placeholder="Введите наименование">
+            <!-- Пол -->
+            <label>Пол для категории</label>
+            <div class="select">
+                <select name="gender" class="option__create">
                     <option value="0" selected>Женский</option>
                     <option value="1">Мужской</option>
                     <option value="2">Не знаю кто я</option>
                 </select>
-            </label>
-            <label>
-                <p>Номер по порядку сортировки</p>
-                <input type="number" name="sort_order">
-            </label>
-            <label>
-                <p>Статус</p>
-                <select name="status" class='select__down'>
+            </div>
+            <!-- Номер п/п -->
+            <label>Номер по порядку сортировки</label>
+            <input type="number" name="sort_order">
+            <!-- Статус -->
+            <label>Статус</label>
+            <div class="select">
+                <select name="status" class='option__create'>
                     <option value="1" selected>Отображается</option>
                     <option value="0">Не отображается</option>
                 </select>
-            </label>
+            </div>
             <button type="submit" name="submit" class="create__button">Добавить категорию</button>
         </form>
     </section>

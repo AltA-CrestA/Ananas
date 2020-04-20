@@ -10,13 +10,13 @@
     <section class="admin-panel create__panel">
         <h1>Изменить роль пользователя #<?php echo $id; ?></h1>
         <form action="#" method="post" class="create__form">
-            <label>
-                <p>Роль пользователя</p>
-                <select name="role" class="select__down">
+            <label>Роль пользователя</label>
+            <div class="select">
+                <select name="role" class="option__create">
                     <option value="user" <?php if ($user['role'] == 'user') echo 'selected';?>>Пользователь</option>
                     <option value="admin" <?php if ($user['role'] == 'admin') echo 'selected';?>>Администратор</option>
                 </select>
-            </label>
+            </div>
             <button type="submit" name="submit" class="create__button">Изменить</button>
         </form>
     </section>

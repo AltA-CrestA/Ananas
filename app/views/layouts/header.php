@@ -16,7 +16,10 @@
     <div class="container">
         <div class="header__body">
             <a href="/" class="header__logo">
-                <img src="/app/template/img/01.webp" alt="">
+                <picture>
+                    <source srcset="/app/template/img/01.webp" type="image/webp">
+                    <img src="/app/template/img/01.png" alt="">
+                </picture>
             </a>
             <nav class="header__menu">
                 <ul class="header__list">

@@ -10,7 +10,7 @@ class Db
     public static function getConnection()
     {
 
-        $paramsPath = ROOT . ' /app/config/db_params.php';
+        $paramsPath = ROOT . '/app/config/db_params.php';
         $params = include($paramsPath);
 
 

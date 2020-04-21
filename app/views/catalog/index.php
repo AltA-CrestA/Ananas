@@ -45,7 +45,10 @@
                     <?php foreach ($latestProducts as $productItem): ?>
                         <div  class="catalog__box">
                             <div class="img__product">
-                                <img src="/app/template/img/catalog/<?php echo $productItem['image']; ?>" alt="">
+									 	<picture>
+											<source srcset="/app/template/img/catalog_webp/<?php echo $productItem['image']; ?>.webp" type="image/webp">
+										 	<img src="/app/template/img/catalog_jpg/<?php echo $productItem['image']; ?>.jpg" alt="">
+										</picture>
                             </div>
                             <h2><?php echo $productItem['name']; ?></h2>
                             <p class="textforproduct">Размер: <?php echo $productItem['size']; ?> | Цвет: <?php echo $productItem['color']; ?></p>

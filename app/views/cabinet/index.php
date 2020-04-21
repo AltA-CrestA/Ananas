@@ -4,9 +4,9 @@
     <section class="personal">
         <div class="personal-title title__page">Персональные данные</div>
         <div class="personal-inputs">
-            <input type="text" placeholder="<?php echo $user['name'] ?>" disabled>
-            <input type="text" placeholder="<?php echo $user['surname'] ?>" disabled>
-            <input type="text" placeholder="<?php echo $user['login'] ?>" disabled>
+            <input type="text" placeholder="<?php echo $_SESSION['logged-user']['name'] ?>" disabled>
+            <input type="text" placeholder="<?php echo $_SESSION['logged-user']['surname'] ?>" disabled>
+            <input type="text" placeholder="<?php echo $_SESSION['logged-user']['login'] ?>" disabled>
         </div>
         <div class="personal-button button__page">
             <a href="/cabinet/edit/" class="personal-button__link">Редактировать</a>

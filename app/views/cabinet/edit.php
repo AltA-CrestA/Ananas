@@ -16,36 +16,36 @@
 				<form action="" method="POST" class="edit-inputs">
 					<div class="edit-inputs__input">
 						<label for="firstname">Ваше Имя</label>
-						<input type="text" name="name" value="<?php echo $name; ?>">
+						<input type="text" name="name" value="<?php echo $_SESSION['logged-user']['name']; ?>">
 					</div>
 					<div class="edit-inputs__input">
 						<label for="lastname">Ваша Фамилия</label>
-						<input type="text" name="surname" value="<?php echo $surname; ?>">
+						<input type="text" name="surname" value="<?php echo $_SESSION['logged-user']['surname']; ?>">
 					</div>
 					<div class="edit-inputs__input">
 						<label for="date">Дата рождения</label>
-						<input type="date" name="birth" value="<?php echo $birth; ?>">
+						<input type="date" name="birth" value="<?php echo $_SESSION['logged-user']['birth']; ?>">
 					</div>
 					<div class="edit-inputs__input">
 						<label for="email">Ваш E-mail</label>
-						<input type="email" name="email" value="<?php echo $email; ?>">
+						<input type="email" name="email" value="<?php echo $_SESSION['logged-user']['email']; ?>">
 					</div>
 					<div class="edit-inputs__input">
 						<label for="tel">Номер телефона</label>
 						<input class="online_phone signup-input" name="phone" type="tel" maxlength="50"
                         required="required"
                         outline="none"
-						value="<?php echo $phone; ?>"
+						value="<?php echo $_SESSION['logged-user']['phone']; ?>"
 						pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
 						placeholder="+7(___)___-__-__">
 					</div>
 					<div class="edit-inputs__input">
 						<label for="login">Ваш логин</label>
-						<input type="text" name="login" value="<?php echo $login; ?>">
+						<input type="text" name="login" value="<?php echo $_SESSION['logged-user']['login']; ?>">
 					</div>
                     <div class="edit-inputs__input">
                         <label for="login">Ваш пароль</label>
-                        <input type="text" name="password" value="<?php echo $password; ?>">
+                        <input type="text" name="password">
                     </div>
                     <div class="edit-inputs__input">
                         <label for="login">Повторите пароль</label>

@@ -257,4 +257,7 @@ function mask(e) {
 }
 window.addEventListener('DOMContentLoaded', function () {
   let input = document.querySelector('.online_phone');
+  input.addEventListener('input', mask, false);
+  input.focus(true);
+  setCursorPosition(3, input);
 });

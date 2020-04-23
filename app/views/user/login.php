@@ -25,10 +25,13 @@
             <div class="login__string">
                 <label class="label-login"><strong>Пароль</strong>&nbsp;:</label>
                 <input class="login__input" type="password" name="password">
-				</div>
-				<div class="login__string">
-					<input class="login__input" type="checkbox" name="remember" value="1">
-                <label class="label-login"><strong>Запомнить меня</strong></label>
+            </div>
+            <div class="checkbox__login">
+                <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="remember" value="1">
+                    <div class="checkbox__div"></div>
+                </label>
+                <p>Запомнить меня</p>
             </div>
             <div class="login-bottom">
                 <button class="button__login" type="submit" name="do_login">Войти</button>

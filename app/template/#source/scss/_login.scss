@@ -144,6 +144,56 @@
       }
     }
   }
+  // Чекбокс
+
+  .checkbox__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px 0 30px 0;
+  }
+  .checkbox {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .checkbox:hover {
+    filter: brightness(1.2);
+  }
+  .checkbox__div {
+    position: relative;
+    width: 45px;
+    height: 28px;
+    border-radius: 500px;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+
+  .checkbox__input {
+    display: none;
+  }
+
+  .checkbox__input:checked ~ .checkbox__div {
+    background-color: #fff;
+    box-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em;
+    transition: 0.3x ease-in-out;
+  }
+
+  .checkbox__input:checked ~ .checkbox__div::before {
+    background-color: #af2179;
+    left: 18.5px;
+  }
+
+  .checkbox__div::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background-color: #af2179;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+  }
   // Адаптация от вячеславскеса
   @media (max-width: 1390px) {
     .login-container {

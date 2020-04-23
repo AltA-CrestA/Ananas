@@ -8,7 +8,7 @@
         <div class="hi">
             <div class="hi-container">
                 <h1 class="hi-title wow fadeInLeft" data-wow-delay="0.3s" >Одежда напрокат</h1>
-                <div class="hi-subtitle wow fadeInLeft" data-wow-delay="0.6s">Первый шоп-шейринг в Краноярске с эксклюзивными<br>брендами одежды и аксессуарами</div>
+                <div class="hi-subtitle wow fadeInLeft" data-wow-delay="0.6s">Первый шоп-шеринг в Краноярске с эксклюзивными<br>брендами одежды и аксессуарами</div>
                 <a href="/catalog/" class="hi__link wow fadeInLeft" data-wow-delay="0.9s">Посмотреть каталог</a>
             </div>
         </div>
@@ -75,7 +75,7 @@
                                 <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
                             <figcaption>
                                 <h2>Абонемент №3</h2>
-                                <p>2 вещи на пол года</p>
+                                <p>2 вещи на полгода</p>
                                 <button>Узнать подробнее</button>
                             </figcaption>
                         </figure>
@@ -90,7 +90,7 @@
                                 <path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z" /></svg>
                             <figcaption>
                                 <h2>Абонемент №4</h2>
-                                <p>4 вещи на пол года</p>
+                                <p>4 вещи на полгода</p>
                                 <button>Узнать подробнее</button>
                             </figcaption>
                         </figure>

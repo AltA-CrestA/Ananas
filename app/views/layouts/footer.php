@@ -21,10 +21,10 @@
             </div>
         </div>
         <div class="footer-col-3">
-            <a href="" class="social__item">
+            <a href="https://www.instagram.com/ananas_krsk/" class="social__item">
                 <i class="fab fa-instagram"></i>&nbsp;Instagram
             </a>
-            <a href="" class="social__item">
+            <a href="https://vk.com/ananas_krsk" class="social__item">
                 <i class="fab fa-vk"></i>&nbsp;ВКонтакте
             </a>
         </div>

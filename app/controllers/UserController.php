@@ -81,9 +81,11 @@ class UserController
 
             if ($errors == false) {
                 // Если ошибок нет
-                // Регистрируем пользователя и запоминаем в сессию
-                $result = User::register($name, $surname, $birth, $email, $phone, $login, $password, $bonus);
-                $_SESSION['logged-user'] = $result;
+					 // Регистрируем пользователя и запоминаем в сессию
+					 $salt = User::generateSalt();
+					 User::register($name, $surname, $birth, $email, $phone, $login, $password, $bonus, $salt);
+					 $userId = User::checkUserData($login, $password);
+                User::auth($userId);
 
                 // Перенаправляем пользователя в личный кабинет
                 header("Location: /cabinet/");
@@ -115,10 +117,23 @@ class UserController
 
             } else {
                 // Если данные правильные, запоминаем пользователя (сессия)
-                User::auth($userId);
+					 $_SESSION['logged-user'] = $userId;
+					 $_SESSION['login'] = $login;
+					 $_SESSION['auth'] = true; // это понадобится для кукис
+
+					 //Проверяем, что была нажата галочка 'Запомнить меня':
+					 if (!empty($_POST['remember']) and $_POST['remember'] == 1) {
+						 //Сформируем случайную строку для куки (используем функцию generateSalt):
+						 $key = User::generateSalt(); //назовем ее $key
+
+						 //Пишем куки (имя куки, значение, время жизни - сейчас+месяц)
+						 setcookie('login', $login, time()+60*60*24*30*12, '/'); // Логин
+						 setcookie('key', $key, time()+60*60*24*30*12, '/'); // случайная строка
+						 User::setValueCookie($login, $key);
+					 }
 
                 // Перенаправляем пользователя в закрытую часть - кабинет
-                header("Location: /cabinet/");
+                 header("Location: /cabinet/");
             }
 
         }
@@ -130,8 +145,17 @@ class UserController
     public function actionLogout()
     {
 
-        unset($_SESSION['logged-user']);
-        header("Location: /");
+        //Если переменная auth из сессии не пуста и равна true, то...
+        if (!empty($_SESSION['auth']) and $_SESSION['auth']) {
+            unset($_SESSION['logged-user']);
+
+            //Удаляем куки авторизации путем установления времени их жизни на текущий момент:
+            setcookie('login', null, -1, '/'); //удаляем логин
+            setcookie('key', null, -1, '/'); //удаляем ключ
+
+
+            header("Location: /");
+        }
 
     }
 

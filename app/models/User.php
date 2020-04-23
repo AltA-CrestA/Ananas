@@ -9,13 +9,13 @@ use PDO;
 class User
 {
 
-    public static function register($name, $surname, $birth, $email, $phone, $login, $password, $bonus)
+    public static function register($name, $surname, $birth, $email, $phone, $login, $password, $bonus, $salt)
     {
 
         $db = Db::getConnection();
 
-        $sql = 'INSERT INTO users (name, surname, birth, email, phone, login, password, bonus) '
-                . 'VALUES (:name, :surname, :birth, :email, :phone, :login, :password, :bonus)';
+        $sql = 'INSERT INTO users (name, surname, birth, email, phone, login, password, bonus, salt) '
+                . 'VALUES (:name, :surname, :birth, :email, :phone, :login, :password, :bonus, :salt)';
 
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
@@ -25,7 +25,8 @@ class User
         $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         $result->bindParam(':login', $login, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-        $result->bindParam(':bonus', $bonus, PDO::PARAM_STR);
+		  $result->bindParam(':bonus', $bonus, PDO::PARAM_STR);
+		  $result->bindParam(':salt', $salt, PDO::PARAM_STR);
 
         return $result->execute();
 
@@ -88,7 +89,19 @@ class User
         if ($result->fetchColumn())
             return true;
         return false;
-    }
+	 }
+	 
+	 public static function generateSalt()
+	 {
+
+			$salt = '';
+			$saltLength = 8; // длина соли
+			for($i = 0; $i < $saltLength; $i++) {
+				$salt .= chr(mt_rand(33,126)); // символ из ASCII-table
+			}
+			return $salt;
+
+	 }
 
     public static function checkUserData($login, $password)
     {
@@ -113,7 +126,7 @@ class User
 
     public static function auth($userId)
     {
-        $_SESSION['logged-user'] = $userId;
+		  $_SESSION['logged-user'] = $userId;
     }
 
     public static function checkLogged()
@@ -125,7 +138,55 @@ class User
 
         header("Location: /user/login");
 
-    }
+	 }
+	 
+	 public static function setValueCookie($login, $key)
+	 {
+
+			$db = Db::getConnection();
+
+			// Текст запроса в БД
+			$sql = "UPDATE users
+				SET
+					cookie = :cookie
+				WHERE login = :login";
+			
+			// Получение и возврат результатов. Используется подготовленный запрос
+			$result = $db->prepare($sql);
+			$result->bindParam(':login', $login, PDO::PARAM_STR);
+			$result->bindParam(':cookie', $key, PDO::PARAM_STR);
+			return $result->execute();
+
+	 }
+
+	 /*
+		Если пользователь не авторизован (проверяем по сессии) -
+		тогда проверим его куки, если в куках есть логин и ключ,
+		то пробьем их по базе данных.
+		Если пара логин-ключ подходит - пишем авторизуем пользователя.
+
+		Если пользователь авторизован - ничего не делаем. 
+		Поэтому этот код должен вызываться всегда при заходе пользователя на сайт -
+		нагрузку на сервер он не создает.
+
+		Если пустая переменная auth из сессии ИЛИ она равна false (для авторизованного она true).
+	*/
+	 public static function getCookie($login, $key)
+	 {
+
+			$db = Db::getConnection();
+			$sql = 'SELECT * FROM users WHERE login = :login AND cookie = :cookie';
+
+			$result = $db->prepare($sql);
+			$result->bindParam(':login', $login, PDO::PARAM_STR);
+			$result->bindParam(':cookie', $key, PDO::PARAM_STR);
+
+			$result->setFetchMode(PDO::FETCH_ASSOC);
+			$result->execute();
+
+			return $result->fetch();
+
+	 }
 
     public static function isGuest()
     {

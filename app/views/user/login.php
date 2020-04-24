@@ -33,7 +33,7 @@
                 </label>
                 <p>Запомнить меня</p>
             </div>
-            <div class="login-bottom">
+            <div id="active" class="login-bottom">
                 <button class="button__login" type="submit" name="do_login">Войти</button>
             </div>
         </form>

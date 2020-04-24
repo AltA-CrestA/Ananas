@@ -667,6 +667,32 @@ html, body { height: 100%; }
   .catalog__products p { height: 8px; font-size: 10px; }
   .product__button { font-size: 14px; } }
 
+.modal { position: fixed; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%) scale(0); transform: translate(-50%, -50%) scale(0); -webkit-transition: 200ms ease-in-out; transition: 200ms ease-in-out; border-radius: 10px; z-index: 100; width: 500px; max-width: 80%; }
+
+.modal.active { -webkit-transform: translate(-50%, -50%) scale(1); transform: translate(-50%, -50%) scale(1); }
+
+.modal-header { padding: 10px 15px; float: right; }
+
+.modal-header .close-button { position: absolute; right: 10px; top: 30px; color: #09102c; background-color: white; -webkit-box-shadow: white 0px 0px 0.9em; box-shadow: white 0px 0px 0.9em; cursor: pointer; font-size: 1.25rem; font-weight: bold; height: 30px; width: 30px; border-radius: 50%; }
+
+.modal-body img { width: 500px; }
+
+#overlay { position: fixed; opacity: 0; -webkit-transition: 200ms ease-in-out; transition: 200ms ease-in-out; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.8); pointer-events: none; z-index: 99; }
+
+#overlay.active { opacity: 1; pointer-events: all; }
+
+@media (max-width: 767px) { .modal { width: 400px; max-width: 80%; }
+  .modal-body img { width: 400px; } }
+
+@media (max-width: 500px) { .modal { width: 400px; max-width: 100%; }
+  .modal-body img { width: 400px; } }
+
+@media (max-width: 400px) { .modal { width: 300px; max-width: 90%; }
+  .modal-body img { width: 300px; } }
+
+@media (max-width: 360px) { .modal { display: none; }
+  #overlay { display: none; } }
+
 @-webkit-keyframes fadeInLeft { from { opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }

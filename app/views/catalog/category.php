@@ -1,7 +1,16 @@
 <?php include ROOT . '/app/views/layouts/header.php'; ?>
 
 <?php include ROOT . '/app/views/layouts/filter.php'; ?>
-
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="modal__title">Example</div>
+            <button class="close-button">&times;</button>
+        </div>
+        <div class="modal__body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor tempora maiores, reprehenderit reiciendis repellendus eum aspernatur autem illum vitae veritatis necessitatibus maxime quas magni nisi, consectetur veniam inventore numquam ut quia explicabo repellat nostrum distinctio, quasi provident? Minima animi hic laudantium iste fuga blanditiis provident tenetur magni consectetur neque dolor quos nemo temporibus alias, nihil ipsum optio, at corrupti cupiditate vero, quis illo. Nam et labore aspernatur quod maxime ut at deserunt consectetur est consequatur voluptatem, alias aliquam, qui blanditiis praesentium sapiente ullam nobis dignissimos perferendis fugit natus dolorem! Repudiandae deleniti sit explicabo. Quis labore aperiam, dolor est dignissimos ipsa.
+        </div>
+    </div>
     <div class="howthiswork">
         <div class="how__wrapper">
             <div class="how__box">

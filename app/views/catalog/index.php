@@ -1,7 +1,6 @@
 <?php include ROOT . '/app/views/layouts/header.php'; ?>
 
 <?php include ROOT . '/app/views/layouts/filter.php'; ?>
-
 <div class="howthiswork">
     <div class="how__wrapper">
         <div class="how__box">
@@ -41,14 +40,13 @@
             </div>
             <div class="catalog__item">
                 <div class="catalog__products">
-
                     <?php foreach ($latestProducts as $productItem): ?>
                         <div  class="catalog__box">
                             <div class="img__product">
-									 	<picture>
-											<source srcset="/app/template/img/catalog_webp/<?php echo $productItem['image']; ?>.webp" type="image/webp">
-										 	<img src="/app/template/img/catalog_jpg/<?php echo $productItem['image']; ?>.jpg" alt="">
-										</picture>
+								<picture data-modal-target="#modal">
+									<source srcset="/app/template/img/catalog_webp/<?php echo $productItem['image']; ?>.webp" type="image/webp">
+									<img src="/app/template/img/catalog_jpg/<?php echo $productItem['image']; ?>.jpg" alt="">
+                                </picture>
                             </div>
                             <h2><?php echo $productItem['name']; ?></h2>
                             <p class="textforproduct">Размер: <?php echo $productItem['size']; ?> | Цвет: <?php echo $productItem['color']; ?></p>
@@ -59,6 +57,17 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- Модальное окно -->
+                        <div class="modal" id="modal">
+                            <div class="modal-header">
+                                <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/app/template/img/catalog_jpg/<?php echo $productItem['image']; ?>.jpg" alt="">
+                            </div>
+                        </div>
+                        <div id="overlay"></div>
+                        <!-- End -->
                     <?php endforeach; ?>
 
                 </div>

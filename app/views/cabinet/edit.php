@@ -32,11 +32,8 @@
 					</div>
 					<div class="edit-inputs__input">
 						<label for="tel">Номер телефона</label>
-						<input class="online_phone signup-input" name="phone" type="tel" maxlength="50"
-                        required="required"
-                        outline="none"
+						<input class="online_phone signup-input" name="phone" type="tel"
 						value="<?php echo $user['phone']; ?>"
-						pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
 						placeholder="+7(___)___-__-__">
 					</div>
 					<div class="edit-inputs__input">
@@ -58,5 +55,5 @@
 			</section>
 		</div>
 	</main>
-
+<script src="\app\template\js\inputForm.js"></script>
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>

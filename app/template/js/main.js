@@ -5,6 +5,9 @@ $(window).on('load', function () {
   $preloader.delay(200).fadeOut('slow');
 });
 
+// Анимация текста
+new WOW().init();
+
 // Бургер
 $(document).ready(function () {
   $('.header__burger').click(function (event) {
@@ -224,78 +227,27 @@ btn.on('click', function (e) {
   $('html, body').animate({ scrollTop: 0 }, '500');
 });
 
-// Форма input для телефона в регистрации
-
-function setCursorPosition(pos, e) {
-  e.focus();
-  if (e.setSelectionRange) e.setSelectionRange(pos, pos);
-  else if (e.createTextRange) {
-    var range = e.createTextRange();
-    range.collapse(true);
-    range.moveEnd('character', pos);
-    range.moveStart('character', pos);
-    range.select();
-  }
-}
-
-function mask(e) {
-  //console.log('mask',e);
-  let matrix = this.placeholder, // .defaultValue
-    i = 0,
-    def = matrix.replace(/\D/g, ''),
-    val = this.value.replace(/\D/g, '');
-  def.length >= val.length && (val = def);
-  matrix = matrix.replace(/[_\d]/g, function (a) {
-    return val.charAt(i++) || '_';
-  });
-  this.value = matrix;
-  i = matrix.lastIndexOf(val.substr(-1));
-  i < matrix.length && matrix != this.placeholder
-    ? i++
-    : (i = matrix.indexOf('_'));
-  setCursorPosition(i, this);
-}
-window.addEventListener('DOMContentLoaded', function () {
-  let input = document.querySelector('.online_phone');
-  input.addEventListener('input', mask, false);
-  input.focus(true);
-  setCursorPosition(3, input);
-});
-
 // Zoom photo catalog
-const openModalButtons = document.querySelectorAll('[data-modal-target]');
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.getElementById('overlay');
+$(function () {
+  $('.minimized').click(function (event) {
+    var i_path = $(this).attr('src');
+    $('body').append(
+      '<div id="overlay"></div><div id="magnify"><img src="' +
+        i_path +
+        '"><div id="close-popup"><i></i></div></div>'
+    );
+    $('#magnify').css({
+      left: ($(document).width() - $('#magnify').outerWidth()) / 2,
+      top: ($(window).height() - $('#magnify').outerHeight()) / 2,
+    });
+    $('#overlay, #magnify').fadeIn('fast');
+  });
 
-openModalButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget);
-    openModal(modal);
+  $('body').on('click', '#close-popup, #overlay', function (event) {
+    event.preventDefault();
+
+    $('#overlay, #magnify').fadeOut('fast', function () {
+      $('#close-popup, #magnify, #overlay').remove();
+    });
   });
 });
-
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active');
-  modals.forEach((modal) => {
-    closeModal(modal);
-  });
-});
-
-closeModalButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
-    closeModal(modal);
-  });
-});
-
-function openModal(modal) {
-  if (modal == null) return;
-  modal.classList.add('active');
-  overlay.classList.add('active');
-}
-
-function closeModal(modal) {
-  if (modal == null) return;
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
-}

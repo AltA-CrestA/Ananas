@@ -33,11 +33,8 @@
 <a class="button__up"></a>
 </body>
 <script src="/app/template/js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="\app\template\js\jquery.js"></script>
 <script src="/app/template/js/main.js"></script>
 <script>
     $(document).ready(function(){

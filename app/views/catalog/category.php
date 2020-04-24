@@ -54,10 +54,9 @@
                         <?php foreach ($categoryProductsMen as $productItemMen): ?>
                             <div  class="catalog__box">
                                 <div class="img__product">
-											<picture>
-												<source srcset="/app/template/img/catalog_webp/<?php echo $productItemMen['image']; ?>.webp" type="image/webp">
-										 		<img src="/app/template/img/catalog_jpg/<?php echo $productItemMen['image']; ?>.jpg" alt="">
-											</picture>
+                                    <picture class="image__wrapper">
+                                        <img src="/app/template/img/catalog_jpg/<?php echo $productItemMen['image']; ?>.jpg" alt="" class="minimized">
+                                    </picture>
                                 </div>
                                 <h2><?php echo $productItemMen['name']; ?></h2>
                                 <p class="textforproduct">Размер: <?php echo $productItemMen['size']; ?> | Цвет: <?php echo $productItemMen['color']; ?></p>
@@ -72,10 +71,9 @@
                         <?php foreach ($categoryProductsWomen as $productItemWomen): ?>
                             <div  class="catalog__box">
                                 <div class="img__product">
-										  <picture>
-												<source srcset="/app/template/img/catalog_webp/<?php echo $productItemWomen['image']; ?>.webp" type="image/webp">
-										 		<img src="/app/template/img/catalog_jpg/<?php echo $productItemWomen['image']; ?>.jpg" alt="">
-											</picture>
+                                    <picture class="image__wrapper">
+                                            <img src="/app/template/img/catalog_jpg/<?php echo $productItemWomen['image']; ?>.jpg" alt="" class="minimized">
+                                    </picture>
                                 </div>
                                 <h2><?php echo $productItemWomen['name']; ?></h2>
                                 <p class="textforproduct">Размер: <?php echo $productItemWomen['size']; ?> | Цвет: <?php echo $productItemWomen['color']; ?></p>
@@ -90,10 +88,9 @@
                         <?php foreach ($categoryProductsAll as $productItemAll): ?>
                             <div  class="catalog__box">
                                 <div class="img__product">
-										  <picture>
-												<source srcset="/app/template/img/catalog_webp/<?php echo $productItemAll['image']; ?>.webp" type="image/webp">
-										 		<img src="/app/template/img/catalog_jpg/<?php echo $productItemAll['image']; ?>.jpg" alt="">
-											</picture>
+                                    <picture class="image__wrapper">
+                                            <img src="/app/template/img/catalog_jpg/<?php echo $productItemAll['image']; ?>.jpg" alt="" class="minimized">
+                                    </picture>
                                 </div>
                                 <h2><?php echo $productItemAll['name']; ?></h2>
                                 <p class="textforproduct">Размер: <?php echo $productItemAll['size']; ?> | Цвет: <?php echo $productItemAll['color']; ?></p>

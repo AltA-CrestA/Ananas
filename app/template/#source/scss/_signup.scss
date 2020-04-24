@@ -87,58 +87,6 @@
   }
 }
 
-// Адаптация от вячеславскеса
-@media (max-width: 640px) {
-  .signup-container {
-    width: 100%;
-  }
-
-  .signup-row {
-    display: block;
-
-    &:last-child {
-      padding: 0 80px;
-      display: flex;
-    }
-  }
-
-  .signup__string {
-    align-items: center;
-  }
-}
-
-@media (max-width: 450px) {
-  .signup-row {
-    &:last-child {
-      padding: 0 20px;
-    }
-  }
-
-  .checkbox__register {
-    font-size: 18px;
-  }
-}
-
-// Адаптация от вячеславскеса
-@media (max-width: 350px) {
-  .label {
-    font-size: 18px;
-  }
-
-  .signup__checkbox {
-    margin-left: 5px;
-    @include fontzcolor(12px, #fff);
-  }
-
-  .signup__button {
-    font-size: 16px;
-  }
-
-  .checkbox__register {
-    font-size: 16px;
-  }
-}
-
 // Чекбокс
 
 .checkbox__register {
@@ -193,4 +141,57 @@
   background-color: #af2179;
   border-radius: 50%;
   transition: 0.3s ease-in-out;
+}
+
+// Адаптация от вячеславскеса
+@media (max-width: 640px) {
+  .signup-container {
+    width: 100%;
+  }
+
+  .signup-row {
+    display: block;
+
+    &:last-child {
+      padding: 0 80px;
+      display: flex;
+    }
+  }
+
+  .signup__string {
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .signup-row {
+    &:last-child {
+      padding: 0 20px;
+    }
+  }
+
+  .checkbox__register {
+    font-size: 18px;
+    text-align: start;
+  }
+}
+
+// Адаптация от вячеславскеса
+@media (max-width: 350px) {
+  .label {
+    font-size: 18px;
+  }
+
+  .signup__checkbox {
+    margin-left: 5px;
+    @include fontzcolor(12px, #fff);
+  }
+
+  .signup__button {
+    font-size: 16px;
+  }
+
+  .checkbox__register {
+    font-size: 16px;
+  }
 }

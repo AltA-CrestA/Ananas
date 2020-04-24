@@ -43,7 +43,7 @@
                     <?php foreach ($latestProducts as $productItem): ?>
                         <div  class="catalog__box">
                             <div class="img__product">
-								<picture data-modal-target="#modal">
+								<pictur data-modal-target='.modal'>
 									<source srcset="/app/template/img/catalog_webp/<?php echo $productItem['image']; ?>.webp" type="image/webp">
 									<img src="/app/template/img/catalog_jpg/<?php echo $productItem['image']; ?>.jpg" alt="">
                                 </picture>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <!-- Модальное окно -->
-                        <div class="modal" id="modal">
+                        <div class="modal">
                             <div class="modal-header">
                                 <button data-close-button class="close-button">&times;</button>
                             </div>

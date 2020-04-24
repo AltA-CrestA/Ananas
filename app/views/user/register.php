@@ -65,10 +65,15 @@
                 </div>
             </div>
             <div class="signup-row">
-                <div class="signup__checkbox">
-                    <input type="checkbox" id="signup-checkbox">
-                    <label>Я согласен на обработку персональных данных согласно политике конфиденциальности.</label>
+                <!-- Hawk -->
+                <div class="checkbox__register">
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="signup-checkbox">
+                        <div class="checkbox__div"></div>
+                    </label>
+                    <p>Я согласен на обработку персональных данных согласно политике конфиденциальности.</p>
                 </div>
+                <!-- Hawk -->
                 <input class="signup__button no-neon" id="signup-botton" type="submit" name="do_signup" value="Зарегистрироваться" disabled>
             </div>
         </form>

@@ -1,0 +1,40 @@
+.privacy {
+  padding: 30px 80px;
+
+  h1 {
+    font-size: 110%;
+    text-align: center;
+  }
+
+  h2,
+  h1 {
+    font-weight: 900;
+  }
+
+  ul,
+  p,
+  h2 {
+    line-height: 30px;
+  }
+
+  li {
+    list-style-type: disc;
+  }
+
+  a {
+    @extend %tpltext;
+    color: white;
+  }
+}
+
+@media (max-width:967px) {
+  .privacy {
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width:576px) {
+  .privacy {
+    padding: 30px 40px;
+  }
+}

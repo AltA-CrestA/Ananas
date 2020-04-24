@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
 
 .header-login .login__button:hover, .header-login .header__buttons .header-user .dropdown-content a:hover, #order:hover, .social__item:hover, .signup__button:hover, .yes-neon:hover, .login-content .login-container .login-form .login-bottom .button__login:hover, .edit-buttons__link:hover, .personal-button__link:hover, .ticket-button__link:hover, .goodies-button__link:hover, .favorite-button__link:hover, .st__button:hover, .hi .hi-container .hi__link:hover, .about-content .about-button .about__button:hover { text-shadow: white 0px 0px 0.3em, white 0px 0px 0.6em, white 0px 0px 0.9em, #ff00dd 0px 0px 0.6em, #ff00dd 0px 0px 1.04em, #ff00dd 0px 0px 1.2em, #ff00dd 0px 0px 1.5em; -webkit-box-shadow: white 0px 0px 0.15em, white 0px 0px 0.3em, white 0px 0px 0.44em, #ff00dd 0px 0px 0.6em, #ff00dd 0px 0px 1.04em, #ff00dd 0px 0px 1.2em, #ff00dd 0px 0px 1.5em, inset #ff00dd 0 0 1.2em; box-shadow: white 0px 0px 0.15em, white 0px 0px 0.3em, white 0px 0px 0.44em, #ff00dd 0px 0px 0.6em, #ff00dd 0px 0px 1.04em, #ff00dd 0px 0px 1.2em, #ff00dd 0px 0px 1.5em, inset #ff00dd 0 0 1.2em; }
 
-.ticket-info__date, .ticket-info__next span { text-shadow: white 0px 0px 0.07em, white 0px 0px 0.15em, #ff00dd 0px 0px 0.15em, #ff00dd 0px 0px 0.26em, #ff00dd 0px 0px 0.3em; }
+.checkbox__register a, .ticket-info__date, .ticket-info__next span, .privacy a { text-shadow: white 0px 0px 0.07em, white 0px 0px 0.15em, #ff00dd 0px 0px 0.15em, #ff00dd 0px 0px 0.26em, #ff00dd 0px 0px 0.3em; }
 
 .signup__string .signup-input, .login-content .login-container .login-form .login__string .login__input, .edit-inputs__input input, .personal-inputs input { padding: 10px; border-radius: 10px; font-size: 20px; }
 
@@ -436,6 +436,8 @@ html, body { height: 100%; }
 .signup__checkbox input { margin-right: 10px; }
 
 .checkbox__register { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0px 0 30px 0; color: white; width: 100%; text-align: center; }
+
+.checkbox__register a { color: white; }
 
 .checkbox { cursor: pointer; margin-right: 20px; }
 
@@ -1236,6 +1238,22 @@ option { color: black; }
 .panet__table-admin .width10 { width: 8%; }
 
 .textarea__change { height: 200px; border: 2px solid #ab2179; padding: 5px; width: 455px; margin-bottom: 60px; }
+
+.privacy { padding: 30px 80px; }
+
+.privacy h1 { font-size: 110%; text-align: center; }
+
+.privacy h2, .privacy h1 { font-weight: 900; }
+
+.privacy ul, .privacy p, .privacy h2 { line-height: 30px; }
+
+.privacy li { list-style-type: disc; }
+
+.privacy a { color: white; }
+
+@media (max-width: 967px) { .privacy { padding: 30px 50px; } }
+
+@media (max-width: 576px) { .privacy { padding: 30px 40px; } }
 
 /*ПОДКЛЮЧАЮ ШРИФТЫ*/
 @font-face { font-family: "Slimamif"; src: url("subset-Slimamif.eot"); font-weight: 500; font-style: normal; }

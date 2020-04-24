@@ -71,7 +71,7 @@
                         <input class="checkbox__input" type="checkbox" id="signup-checkbox">
                         <div class="checkbox__div"></div>
                     </label>
-                    <p>Я согласен на обработку персональных данных согласно политике конфиденциальности.</p>
+                    <p>Я согласен на обработку персональных данных согласно <a href="/privacy/">политике конфиденциальности</a>.</p>
                 </div>
                 <!-- Hawk -->
                 <input class="signup__button no-neon" id="signup-botton" type="submit" name="do_signup" value="Зарегистрироваться" disabled>

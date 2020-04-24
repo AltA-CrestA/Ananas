@@ -22,4 +22,13 @@ class SiteController
 
     }
 
+    public function actionPrivacy()
+    {
+
+        require_once (ROOT . '/app/views/site/privacy.php');
+
+        return true;
+
+    }
+
 }

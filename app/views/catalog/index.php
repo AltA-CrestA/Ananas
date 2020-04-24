@@ -43,7 +43,7 @@
                     <?php foreach ($latestProducts as $productItem): ?>
                         <div  class="catalog__box">
                             <div class="img__product">
-								<pictur data-modal-target='.modal'>
+								<picture data-modal-target='.modal'>
 									<source srcset="/app/template/img/catalog_webp/<?php echo $productItem['image']; ?>.webp" type="image/webp">
 									<img src="/app/template/img/catalog_jpg/<?php echo $productItem['image']; ?>.jpg" alt="">
                                 </picture>

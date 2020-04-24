@@ -50,7 +50,8 @@ return array(
 
     'contacts' => 'site/contact', // = 30
     'ticket' => 'ticket/index', // = 31
+    'privacy' => 'site/privacy', // = 32
 
-    '^/*$' => 'site/index', // action в SiteController // = 32
+    '^/*$' => 'site/index', // action в SiteController // = 33
 
 );

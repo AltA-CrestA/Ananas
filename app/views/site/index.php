@@ -34,7 +34,7 @@
         </div>
         <div class="buy">
             <div class="demo-2">
-                <section id="grid" class="grid clearfix">
+                <section id="grid" class="grid">
                     <a href="/ticket/#1" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
                             <picture>

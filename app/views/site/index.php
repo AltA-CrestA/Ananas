@@ -35,7 +35,7 @@
         <div class="buy">
             <div class="demo-2">
                 <section id="grid" class="grid clearfix">
-                    <a href="/ticket/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <a href="/ticket/#1" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
                             <picture>
                                 <source srcset="/app/template/img/site/01.webp" type="image/webp">
@@ -50,7 +50,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="/ticket/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <a href="/ticket/#2" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
                             <picture>
                                 <source srcset="/app/template/img/site/02.webp" type="image/webp">
@@ -65,7 +65,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="/ticket/" class="hide__grid" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <a href="/ticket/#3" class="hide__grid" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
                             <picture>
                                 <source srcset="/app/template/img/site/03.webp" type="image/webp">
@@ -80,7 +80,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="/ticket/" class="hide__grid" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                    <a href="/ticket/#4" class="hide__grid" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
                         <figure class="hide__grid">
                             <picture>
                                 <source srcset="/app/template/img/site/04.webp" type="image/webp">

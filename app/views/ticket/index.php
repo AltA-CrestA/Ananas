@@ -5,7 +5,7 @@ include ROOT . '/app/views/layouts/header.php'; ?>
     <main class="season-ticket">
 
         <?php foreach ($latestTickets as $ticketItem): ?>
-            <section class="st-item">
+            <section class="st-item" id="<?php echo $ticketItem['id']; ?>">
                 <div class="st-col1">
                     <div class="st__title"><?php echo $ticketItem['name']; ?></div>
                     <div class="st__text"><?php echo $ticketItem['description']; ?></div>

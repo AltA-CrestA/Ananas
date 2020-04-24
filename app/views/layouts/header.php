@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/app/template/css/style.css">
     <link rel="shortcut icon" href="/app/template/img/icon.png" type="image/png">
     <link rel="icon" href="/app/template/img/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/app/template/img/icon.png" type="image/png"/>
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
     <title><?php include ROOT . '/app/config/titles.php'?></title>
 </head>

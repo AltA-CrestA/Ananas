@@ -7,7 +7,7 @@
             </div>
             <div class="footer-subtitle">
                 <div class="subtitle__name">г. Красноярск</div>
-                <div class="subtitle__forname">ул. Пушкина 322</div>
+                <div class="subtitle__forname">ул. Карла Маркса 102Б</div>
             </div>
         </div>
         <div class="footer-col-2">

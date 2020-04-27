@@ -81,10 +81,9 @@ class UserController
 
             if ($errors == false) {
                 // Если ошибок нет
-					 // Регистрируем пользователя и запоминаем в сессию
-					 $salt = User::generateSalt();
-					 User::register($name, $surname, $birth, $email, $phone, $login, $password, $bonus, $salt);
-					 $userId = User::checkUserData($login, $password);
+                // Регистрируем пользователя и запоминаем в сессию
+                $id = User::register($name, $surname, $birth, $email, $phone, $login, $password, $bonus);
+                $userId = User::checkUserData($login, $password);
                 User::auth($userId);
 
                 // Перенаправляем пользователя в личный кабинет

@@ -34,12 +34,13 @@ class Cookies
 				if (!empty($result)) {
 					//Пишем в сессию информацию о том, что мы авторизовались:
 					$_SESSION['auth'] = true;
+					$userId = User::getIdByKey($key);
 
 					/*
 					Пишем в сессию логин и id пользователя
 					(их мы берем из переменной $user!):
 					*/
-					$_SESSION['logged-user'] = $key;
+					$_SESSION['logged-user'] = $userId;
 					$_SESSION['login'] = $login;
 				}
 			}

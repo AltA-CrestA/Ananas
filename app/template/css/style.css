@@ -211,7 +211,7 @@ html, body { height: 100%; }
 
 .up__text { position: relative; }
 
-.up__text .up__text-deite { content: ""; cursor: pointer; position: absolute; top: -3px; right: -33px; z-index: 200; height: 28px; width: 28px; }
+.up__text .up__text-deite { cursor: pointer; position: absolute; top: -3px; right: -33px; z-index: 200; height: 28px; width: 28px; }
 
 .title__amount { margin-right: 110px; }
 

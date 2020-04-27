@@ -9,13 +9,13 @@ use PDO;
 class User
 {
 
-    public static function register($name, $surname, $birth, $email, $phone, $login, $password, $bonus, $salt)
+    public static function register($name, $surname, $birth, $email, $phone, $login, $password, $bonus)
     {
 
         $db = Db::getConnection();
 
         $sql = 'INSERT INTO users (name, surname, birth, email, phone, login, password, bonus, salt) '
-                . 'VALUES (:name, :surname, :birth, :email, :phone, :login, :password, :bonus, :salt)';
+                . 'VALUES (:name, :surname, :birth, :email, :phone, :login, :password, :bonus)';
 
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
@@ -25,10 +25,11 @@ class User
         $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         $result->bindParam(':login', $login, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-		  $result->bindParam(':bonus', $bonus, PDO::PARAM_STR);
-		  $result->bindParam(':salt', $salt, PDO::PARAM_STR);
+        $result->bindParam(':bonus', $bonus, PDO::PARAM_STR);
+        $result->execute();
 
-        return $result->execute();
+
+        return $db->lastInsertId();
 
     }
 
@@ -91,8 +92,8 @@ class User
         return false;
 	 }
 	 
-	 public static function generateSalt()
-	 {
+    public static function generateSalt()
+    {
 
 			$salt = '';
 			$saltLength = 8; // длина соли
@@ -101,7 +102,7 @@ class User
 			}
 			return $salt;
 
-	 }
+    }
 
     public static function checkUserData($login, $password)
     {
@@ -138,7 +139,7 @@ class User
 
         header("Location: /user/login");
 
-	 }
+    }
 	 
 	 public static function setValueCookie($login, $key)
 	 {
@@ -187,6 +188,23 @@ class User
 			return $result->fetch();
 
 	 }
+
+	 public static function getIdByKey($key)
+     {
+
+         $db = Db::getConnection();
+
+         $sql = 'SELECT * FROM users WHERE cookie = :cookie';
+
+         $result = $db->prepare($sql);
+         $result->bindParam(':cookie', $key, PDO::PARAM_STR);
+         $result->execute();
+
+         $user = $result->fetch();
+
+         return $user['id'];
+
+     }
 
     public static function isGuest()
     {

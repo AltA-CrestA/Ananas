@@ -10,7 +10,7 @@
                         <img src="/app/template/img/contact/where.svg" class="contact__icon" alt="">
                     </div>
                     <div class="block__text">
-                        <p><span class="text__stil">Мы находимся:</span> г. Красноярск ул. Мира 135</p>
+                        <p><span class="text__stil">Мы находимся:</span> г. Красноярск ул. Карла Маркса 102Б</p>
                     </div>
                 </div>
                 <div class="contact__block">
@@ -26,7 +26,7 @@
                         <img src="/app/template/img/contact/Office.svg" class="contact__icon" alt="">
                     </div>
                     <div class="block__text">
-                        <p><span class="text__stil">Мы работаем:</span> с 8:00 - 20:00</p>
+                        <p><span class="text__stil">Мы работаем:</span> с 12:00 - 22:00</p>
                     </div>
                 </div>
                 <div class="contact__block">
@@ -34,11 +34,10 @@
                         <img src="/app/template/img/contact/newsletter.svg" class="contact__icon" alt="">
                     </div>
                     <div class="block__text">
-                        <p><span class="text__stil">Будем рады вашим письмам:</span> <a href="../../../index.php">ananas@mail.ru</a></p>
+                        <p><span class="text__stil">Будем рады вашим письмам:</span> <a href="#">info@ananaskras.ru</a></p>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <section class="contact__map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A582aaf246c4dd761b40b9152f2972b14d5ba597bb175e610af457990200217bc&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>

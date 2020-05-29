@@ -26,10 +26,13 @@
                 </div>
             </div>
             <div class="about-img wow fadeInRight" data-wow-offset="150">
-                <picture>
+                <video width='100%' height='400' preload="auto" autoplay="true" loop="true" muted="muted">
+                    <source  src="/app/template/video/1.mp4" type='video/mp4' autoplay>
+                </video>
+                <!-- <picture>
                     <source srcset="/app/template/img/01.png" type="image/webp">
                     <img src="/app/template/img/01.png" alt="">
-                </picture>
+                </picture> -->
             </div>
         </div>
         <div class="buy">

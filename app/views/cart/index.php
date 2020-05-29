@@ -34,7 +34,7 @@
                         <div class="up__сost">
                             <div class="up__text">
                                 <p><?php echo $ticket['price'] ; ?> руб.</p>
-                                <div><a href="/cart/delete/<?php echo $ticket['id']?>"><img src="/app/template/img/cross.svg" class="up__text-deite" alt=""></a></div>
+                                <div><a href="/cart/delete/<?php echo $ticket['id']?>"><img src="/app/template/img/cross.png" class="up__text-deite" alt=""></a></div>
                             </div>
                         </div>
                     </div>

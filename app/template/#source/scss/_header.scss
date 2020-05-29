@@ -9,6 +9,7 @@ body {
     top: 0;
     left: 0;
     z-index: 50;
+
     &:before {
         content: "";
         position: absolute;
@@ -37,6 +38,7 @@ body {
     position: relative;
     z-index: 3;
     flex: 0 0 150px;
+
     & img {
         max-width: 100%;
     }
@@ -51,6 +53,7 @@ body {
     position: relative;
     align-items: center;
     z-index: 2;
+
     li {
         margin-left: 70px;
     }
@@ -60,6 +63,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+
     &:hover {
         animation: neon6 1.5s ease-in-out infinite alternate;
     }
@@ -67,6 +71,7 @@ body {
 
 .header-login {
     z-index: 20;
+
     .login__button {
         @extend %tplneon;
         @include disflex(inline-flex, flex-start, center);
@@ -77,10 +82,12 @@ body {
         @include fontzcolor(16px, #fff);
         font-weight: 700;
     }
+
     .header__buttons {
         font-size: 16px;
         display: flex;
         justify-content: center;
+
         .header-cart {
             cursor: pointer;
             position: relative;
@@ -106,6 +113,7 @@ body {
                 hsl(0, 0%, 100%) 0px 0px 0.22em, hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em,
                 hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 0.75em,
                 inset hsl(308, 100%, 50%) 0 0 0.6em;
+
             &:hover {
                 text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em,
                     hsl(0, 0%, 100%) 0px 0px 0.9em, hsl(308, 100%, 50%) 0px 0px 0.6em,
@@ -116,9 +124,11 @@ body {
                     hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
                     hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
             }
+
             position: relative;
             padding: 10px;
             border-radius: 50%;
+
             .icon__cart-basket {
                 position: absolute;
                 border: 0.1em solid white;
@@ -135,6 +145,7 @@ body {
                 left: 28px;
                 bottom: -9px;
             }
+
             @media (max-width: 967px) {
                 .icon__cart-basket {
                     padding: 3.5px 3px 0.7px 4px;
@@ -146,11 +157,13 @@ body {
                 }
             }
         }
+
         @media (max-width: 967px) {
             .header-cart {
                 font-size: 14px;
             }
         }
+
         .header-user {
             cursor: pointer;
             position: relative;
@@ -177,6 +190,7 @@ body {
                 hsl(0, 0%, 100%) 0px 0px 0.22em, hsl(308, 100%, 50%) 0px 0px 0.3em, hsl(308, 100%, 50%) 0px 0px 0.52em,
                 hsl(308, 100%, 50%) 0px 0px 0.6em, hsl(308, 100%, 50%) 0px 0px 0.75em,
                 inset hsl(308, 100%, 50%) 0 0 0.6em;
+
             &:hover {
                 text-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em, hsl(0, 0%, 100%) 0px 0px 0.6em,
                     hsl(0, 0%, 100%) 0px 0px 0.9em, hsl(308, 100%, 50%) 0px 0px 0.6em,
@@ -187,15 +201,18 @@ body {
                     hsl(308, 100%, 50%) 0px 0px 1.04em, hsl(308, 100%, 50%) 0px 0px 1.2em,
                     hsl(308, 100%, 50%) 0px 0px 1.5em, inset hsl(308, 100%, 50%) 0 0 1.2em;
             }
+
             text-transform: none;
             padding: 10px 12px;
             border-radius: 50px;
             margin-right: 20px;
             position: relative;
             display: inline-block;
+
             a {
                 color: #fff;
             }
+
             .dropdown-content {
                 text-align: center;
                 display: none;
@@ -208,12 +225,14 @@ body {
                 padding: 20px 10px;
                 min-width: 100%;
                 z-index: 1;
+
                 a {
                     padding: 12px 16px;
                     text-shadow: none;
                     display: block;
                     line-height: 20px;
                     font-size: 12px;
+
                     &:hover {
                         @extend %tplneon;
                         box-shadow: none;
@@ -228,6 +247,7 @@ body {
                     padding: 10px 0px;
                     width: 130px;
                     z-index: 1;
+
                     a {
                         padding: 10px 5px;
                         text-shadow: none;
@@ -238,27 +258,33 @@ body {
                     }
                 }
             }
+
             &:hover .dropdown-content {
                 display: block;
             }
         }
     }
+
     @media (max-width: 976px) {
         .header__buttons {
             font-size: 14px;
             margin-right: 15px;
         }
+
         .header-user {
             padding: 0px;
         }
+
         .login__button {
             margin-right: 15px;
         }
     }
+
     @media (max-width: 400px) {
         .header__buttons {
             margin-right: 30px;
         }
+
         .login__button {
             margin-right: 30px;
         }
@@ -282,8 +308,10 @@ body {
     @include disflex(flex, flex-start, center);
     background: #09102c;
     padding: 10px 100px;
+
     .header__logged {
         width: 10%;
+
         & img {
             max-width: 70%;
         }
@@ -350,8 +378,8 @@ body {
 
 .up__text {
     position: relative;
+
     .up__text-deite {
-        content: "";
         cursor: pointer;
         position: absolute;
         top: -3px;
@@ -391,6 +419,7 @@ body {
     line-height: 20px;
     list-style: none;
 }
+
 .cart__down {
     margin-top: 70px;
     display: flex;
@@ -398,6 +427,7 @@ body {
     font-size: 20px;
     position: relative;
     margin-bottom: 50px;
+
     &::after {
         position: absolute;
         content: "";
@@ -416,6 +446,7 @@ body {
         margin-left: 50px;
     }
 }
+
 @media (max-width: 1140px) {
     .header__list li {
         margin-left: 20px;
@@ -432,24 +463,30 @@ body {
 @media (max-width: 976px) {
     .header__logo {
         flex: 0 0 auto;
+
         & img {
             width: 70px;
         }
     }
+
     .header {
         height: 60px;
         padding-top: 5px;
     }
+
     .container {
         padding: 0px 15px;
     }
+
     body.lock {
         overflow: hidden;
     }
+
     .header__body {
         height: 50px;
         justify-content: space-between;
     }
+
     .header__burger {
         display: block;
         position: relative;
@@ -457,6 +494,7 @@ body {
         height: 20px;
         z-index: 3;
     }
+
     .header__burger span {
         position: absolute;
         background-color: #fff;
@@ -466,6 +504,7 @@ body {
         top: 9px;
         transition: all 0.3s ease 0s;
     }
+
     .header__burger:before,
     .header__burger:after {
         content: "";
@@ -476,12 +515,15 @@ body {
         left: 0;
         transition: all 0.3s ease 0s;
     }
+
     .header__burger:before {
         top: 0;
     }
+
     .header__burger:after {
         bottom: 0;
     }
+
     .header__burger.active span {
         transform: scale(0);
     }
@@ -490,10 +532,12 @@ body {
         transform: rotate(45deg);
         top: 9px;
     }
+
     .header__burger.active:after {
         transform: rotate(-45deg);
         bottom: 9px;
     }
+
     .header__menu {
         position: fixed;
         text-align: center;
@@ -506,29 +550,37 @@ body {
         background-color: #32133f;
         padding: 80px 10px 20px 10px;
     }
+
     .header__menu.active {
         top: 0;
     }
+
     .header__list {
         display: block;
         margin-top: 20px;
     }
+
     .header__list li {
         margin: 0 0 60px 0;
     }
+
     .header__link {
         font-size: 45px;
     }
+
     .content {
         padding: 70px 0 0 0;
     }
+
     .login__button {
         @include fontzcolor(16px, #fff);
         padding: 8px 15px;
     }
+
     .header__link {
         font-size: 32px;
     }
+
     .contetnt__cart {
         width: 670px;
     }
@@ -546,30 +598,37 @@ body {
     .title__cart {
         font-size: 40px;
     }
+
     .contetnt__cart {
         width: 450px;
     }
+
     .up__title,
     .cart__up {
         font-size: 16px;
     }
+
     .cart__down {
         font-size: 16px;
     }
+
     .button__amount {
         font-size: 16px;
         width: 20px;
         height: 20px;
     }
+
     .title__amount {
         margin-right: 80px;
     }
+
     .up__text {
         .up__text-deite {
             top: -6px;
             right: -33px;
         }
     }
+
     .cart__box {
         min-height: 50vh;
     }
@@ -587,34 +646,42 @@ body {
     .small__user {
         display: none;
     }
+
     .up__text {
         .up__text-deite {
             top: -8px;
             right: -33px;
         }
     }
+
     .title__cart {
         font-size: 30px;
         margin-bottom: 40px;
     }
+
     .contetnt__cart {
         width: 280px;
     }
+
     .big__title {
         display: none;
     }
+
     .small__title {
         font-size: 16px;
         display: block;
         font-weight: bolder;
     }
+
     .cart__up {
         font-size: 12px;
     }
+
     .cart__down {
         font-size: 12px;
         margin-bottom: 35px;
     }
+
     .title__amount {
         margin-right: 10px;
     }
@@ -624,6 +691,7 @@ body {
     .title__cart {
         margin-bottom: 30px;
     }
+
     .cart__up-main {
         margin-bottom: 40px;
     }

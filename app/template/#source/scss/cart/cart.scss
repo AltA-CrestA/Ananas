@@ -1,0 +1,116 @@
+// Корзина
+.cart__box {
+    @include disflex(flex, center, center);
+    flex-direction: column;
+    background-color: rgb(226, 226, 226);
+    color: black;
+    padding: 50px 0;
+    font-family: Montserrat;
+    min-height: 77vh;
+}
+
+.title__cart {
+    text-align: center;
+    color: black;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: Comfortaa;
+    margin-bottom: 50px;
+}
+
+#order {
+    margin-bottom: 20px;
+    @extend %tplneon;
+}
+
+.contetnt__cart {
+    color: black;
+    width: 1000px;
+    padding: 0 40px 0 40px;
+}
+
+.cart__up-main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+}
+
+.cart__up {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.up__title {
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.small__title {
+    display: none;
+}
+
+.up__text {
+    position: relative;
+
+    .up__text-deite {
+        cursor: pointer;
+        position: absolute;
+        top: -3px;
+        right: -33px;
+        z-index: 200;
+        height: 28px;
+        width: 28px;
+    }
+}
+
+.title__amount {
+    margin-right: 110px;
+}
+
+.inpute__amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uk-form-small {
+    display: none;
+}
+
+.button__amount {
+    font-size: 21px;
+    width: 26px;
+    height: 26px;
+    background-color: #ab2179;
+    border-radius: 50%;
+    color: black;
+}
+
+#mySelect {
+    text-align: justify;
+    font-size: 25px;
+    line-height: 20px;
+    list-style: none;
+}
+
+.cart__down {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 50px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        border-top: 2px solid black;
+        color: white;
+        width: 100%;
+        top: -10px;
+        left: 0;
+    }
+}

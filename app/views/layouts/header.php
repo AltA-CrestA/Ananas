@@ -14,27 +14,29 @@
 
 <body>
 <header class="header">
-    <div class="container">
-        <div class="header__body">
-            <a href="/" class="header__logo">
-                <picture>
-                    <source srcset="/app/template/img/01.webp" type="image/webp">
-                    <img src="/app/template/img/01.png" alt="">
-                </picture>
-            </a>
-            <nav class="header__menu">
-                <ul class="header__list">
+    <div class="header__container">
+        <div class="header__container__body">
+            <div class="header__container__body-logo">
+                <a href="/">
+                    <picture>
+                        <source srcset="/app/template/img/01.webp" type="image/webp">
+                        <img src="/app/template/img/01.png" alt="">
+                    </picture>
+                </a>
+            </div>
+            <nav class="header__container__body-menu">
+                <ul>
                     <li>
-                        <a href="/catalog/" class="header__link">Каталог</a>
+                        <a href="/catalog/">Каталог</a>
                     </li>
                     <li>
-                        <a href="/ticket/" class="header__link">Абонементы</a>
+                        <a href="/ticket/">Абонементы</a>
                     </li>
                     <li>
-                        <a href="/#about" class="header__link">О нас</a>
+                        <a href="/#about">О нас</a>
                     </li>
                     <li>
-                        <a href="/contacts/" class="header__link">Контакты</a>
+                        <a href="/contacts/">Контакты</a>
                     </li>
 
                 </ul>

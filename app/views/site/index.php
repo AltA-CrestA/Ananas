@@ -138,5 +138,6 @@
                 </div>
             </div>
         </div>
+    </div>
 
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>

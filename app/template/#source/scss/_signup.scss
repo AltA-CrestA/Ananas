@@ -2,64 +2,127 @@
   background: center / cover no-repeat url("/app/template/img/010.jpg");
   @include disflex(flex, center, center);
   padding: 80px 0;
-}
 
-.signup-container {
-  width: 800px;
-  background: center / cover no-repeat url("/app/template/img/005.png");
-  border-radius: 20px;
-  padding: 0 0 40px 0;
-}
+  &__container {
+    width: 800px;
+    background: center / cover no-repeat url("/app/template/img/005.png");
+    border-radius: 20px;
+    padding: 0 0 40px 0;
 
-.signup-title {
-  @include fontzcolor(30px, #09102c);
-  background: #fff;
-  text-align: center;
-  border-bottom-left-radius: 80%;
-  border-bottom-right-radius: 80%;
-  padding: 40px 0;
-  font-weight: 700;
-}
+    h2 {
+      @include adaptiv-fontAll(30, 24);
+      color: #09102c;
+      background: #fff;
+      text-align: center;
+      border-bottom-left-radius: 80%;
+      border-bottom-right-radius: 80%;
+      padding: 40px 0;
+      font-weight: 700;
+    }
 
-.signup-mistakes {
-  @extend %tplerror;
-}
+    &-form {
+      &-item {
+        @include disflex(flex, space-around, center);
 
-.signup-row {
-  @include disflex(flex, space-around, center);
+        &:last-child {
+          flex-direction: column;
+          padding: 0 5vw;
+          //  text-align: center;
+          height: 150px;
+        }
 
-  &:last-child {
-    flex-direction: column;
-    padding: 0 100px;
-    //  text-align: center;
-    height: 150px;
-  }
-}
+        &-string {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          color: #fff;
+          padding: 20px 0;
 
-.signup__string {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #fff;
-  padding: 20px 0;
+          label {
+            @include adaptiv-fontAll(24, 16);
+          }
 
-  .signup-input {
-    @extend %tplinput;
-    width: 300px;
-    margin-top: 10px;
-  }
+          input {
+            @extend %tplinput;
+            width: 300px;
+            margin-top: 10px;
+          }
+        }
 
-  @media (max-width: 350px) {
-    .signup-input {
-      width: 260px;
+        .checkbox__register {
+          display: flex;
+          align-items: center;
+          margin: 0px 0 30px 0;
+          color: white;
+          width: 100%;
+          text-align: center;
+          @include adaptiv-fontAll(20, 14);
+
+          a {
+            @extend %tpltext;
+            color: white;
+          }
+
+          label {
+            cursor: pointer;
+            margin-right: 20px;
+
+
+            &:hover {
+              filter: brightness(1.2);
+            }
+
+            input {
+              display: none;
+
+              &:checked~.checkbox__div {
+                background-color: #fff;
+                box-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em;
+                transition: 0.3x ease-in-out;
+              }
+
+              &:checked~.checkbox__div::before {
+                background-color: #af2179;
+                left: 18.5px;
+              }
+            }
+
+            .checkbox__div {
+              position: relative;
+              width: 45px;
+              height: 28px;
+              border-radius: 500px;
+              background-color: #fff;
+              transition: 0.3s ease-in-out;
+
+              &:before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 24px;
+                height: 24px;
+                background-color: #af2179;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out;
+              }
+
+            }
+          }
+        }
+      }
+
+      .signup__button {
+        @include adaptiv-fontAll(20, 14);
+        @extend %tplneon;
+        display: block;
+      }
     }
   }
-}
 
-.signup__button {
-  font-size: 20px;
-  @extend %tplneon;
-  display: block;
+  .signup-mistakes {
+    @extend %tplerror;
+  }
 }
 
 .no-neon {
@@ -77,126 +140,17 @@
   @extend %tplneon;
 }
 
-.signup__checkbox {
-  @include fontzcolor(14px, #fff);
-  display: flex;
-  max-width: 300px;
-
-  input {
-    margin-right: 10px;
-  }
-}
-
-// Чекбокс
-
-.checkbox__register {
-  display: flex;
-  align-items: center;
-  margin: 0px 0 30px 0;
-  color: white;
-  width: 100%;
-  text-align: center;
-
-  a {
-    @extend %tpltext;
-    color: white;
-  }
-}
-
-.checkbox {
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.checkbox:hover {
-  filter: brightness(1.2);
-}
-
-.checkbox__div {
-  position: relative;
-  width: 45px;
-  height: 28px;
-  border-radius: 500px;
-  background-color: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.checkbox__input {
-  display: none;
-}
-
-.checkbox__input:checked~.checkbox__div {
-  background-color: #fff;
-  box-shadow: hsl(0, 0%, 100%) 0px 0px 0.3em;
-  transition: 0.3x ease-in-out;
-}
-
-.checkbox__input:checked~.checkbox__div::before {
-  background-color: #af2179;
-  left: 18.5px;
-}
-
-.checkbox__div::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 24px;
-  height: 24px;
-  background-color: #af2179;
-  border-radius: 50%;
-  transition: 0.3s ease-in-out;
-}
-
-// Адаптация от вячеславскеса
-@media (max-width: 640px) {
-  .signup-container {
-    width: 100%;
+@media (max-width:700px) {
+  .signup__container-form-item {
+    flex-direction: column;
   }
 
-  .signup-row {
-    display: block;
-
-    &:last-child {
-      padding: 0 80px;
-      display: flex;
-    }
+  .signup {
+    padding: 0px 0;
   }
 
-  .signup__string {
-    align-items: center;
-  }
-}
-
-@media (max-width: 450px) {
-  .signup-row {
-    &:last-child {
-      padding: 0 20px;
-    }
+  .signup__container {
+    border-radius: 0px;
   }
 
-  .checkbox__register {
-    font-size: 18px;
-    text-align: start;
-  }
-}
-
-// Адаптация от вячеславскеса
-@media (max-width: 350px) {
-  .label {
-    font-size: 18px;
-  }
-
-  .signup__checkbox {
-    margin-left: 5px;
-    @include fontzcolor(12px, #fff);
-  }
-
-  .signup__button {
-    font-size: 16px;
-  }
-
-  .checkbox__register {
-    font-size: 16px;
-  }
 }

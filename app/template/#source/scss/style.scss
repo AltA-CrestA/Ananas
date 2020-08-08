@@ -1,124 +1,26 @@
-//!--------MIXIN------------------//
-
-@mixin disflex($dis, $jc, $ai) {
-  display: $dis;
-  justify-content: $jc;
-  align-items: $ai;
-}
-
-@mixin wd($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin fontzcolor($font, $color) {
-  font-size: $font;
-  color: $color;
-}
-
-//  Pre-loader
-.preloader {
-  background: linear-gradient(90deg, #32133f 10%, #ab2179 90%);
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100000;
-}
-
-.prePreloader {
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #9370db;
-  animation: spin 2s linear infinite;
-}
-
-.prePreloader:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #ba55d3;
-  animation: spin 3s linear infinite;
-}
-
-.prePreloader:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #ff00ff;
-  animation: spin 1.5s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-//!--------MIXIN-END--------------//
-
-//!--------IMPORT SASS--------//
-
-@import "_null";
-@import "_view";
-@import "_header";
-@import "_footer";
+@import "plugins/_null";
+@import "plugins/_mixins";
+@import "plugins/_view";
+@import "plugins/preloader";
+@import "cart/cart";
+@import "header-footer/_header";
+@import "header-footer/_footer";
 @import "_svg-tool";
 @import "_signup";
 @import "_login";
 @import "_catalog";
-@import "_animate";
+@import "plugins/_animate";
 @import "_marker";
 @import "personal-page-edit";
 @import "personal-page";
 @import "_season-ticket";
-@import "_admin";
-@import "_admin__select";
-@import "_admin__create";
-@import "_admin__delete";
-@import "_admin__category";
-@import "_admin__user";
-@import "_admin__ticket";
+@import "admin/_admin";
+@import "admin/_admin__select";
+@import "admin/_admin__create";
+@import "admin/_admin__delete";
+@import "admin/_admin__category";
+@import "admin/_admin__user";
+@import "admin/_admin__ticket";
 @import "_privacy";
 //!--------END SASS---------//
 

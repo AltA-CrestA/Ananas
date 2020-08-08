@@ -20,54 +20,60 @@ body {
         background-color: #09102c;
         z-index: 2;
     }
-}
 
-.header__body {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    &__container {
+        margin: 0px auto;
+        padding: 15px 0px;
 
-.container {
-    margin: 0px auto;
-    padding: 15px 0px;
-}
+        &__body {
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
 
-.header__logo {
-    position: relative;
-    z-index: 3;
-    flex: 0 0 150px;
+            &-logo {
+                position: relative;
+                z-index: 3;
+                flex: 0 0 150px;
 
-    & img {
-        max-width: 100%;
+                & img {
+                    max-width: 100%;
+                }
+
+            }
+
+            &-menu {
+                ul {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    z-index: 2;
+
+                    li {
+                        margin-left: 70px;
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            font-size: 18px;
+
+                            &:hover {
+                                animation: neon6 1.5s ease-in-out infinite alternate;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
+
 
 .header__burger {
     display: none;
 }
 
-.header__list {
-    display: flex;
-    position: relative;
-    align-items: center;
-    z-index: 2;
-
-    li {
-        margin-left: 70px;
-    }
-}
-
-.header__link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-
-    &:hover {
-        animation: neon6 1.5s ease-in-out infinite alternate;
-    }
-}
 
 .header-login {
     z-index: 20;
@@ -79,7 +85,8 @@ body {
         border-radius: 20px;
         padding: 10px 20px;
         background-color: transparent;
-        @include fontzcolor(16px, #fff);
+        color: white;
+        @include adaptiv-fontAll(18, 12);
         font-weight: 700;
     }
 
@@ -322,134 +329,22 @@ body {
     fill: whites;
 }
 
-// Корзина
-.cart__box {
-    @include disflex(flex, center, center);
-    flex-direction: column;
-    background-color: rgb(226, 226, 226);
-    color: black;
-    padding: 50px 0;
-    font-family: Montserrat;
-    min-height: 77vh;
-}
-
-.title__cart {
-    text-align: center;
-    color: black;
-    font-size: 60px;
-    font-weight: 700;
-    font-family: Comfortaa;
-    margin-bottom: 50px;
-}
-
-#order {
-    margin-bottom: 20px;
-    @extend %tplneon;
-}
-
-.contetnt__cart {
-    color: black;
-    width: 1000px;
-    padding: 0 40px 0 40px;
-}
-
-.cart__up-main {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid black;
-    margin-bottom: 50px;
-}
-
-.cart__up {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.up__title {
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-.small__title {
-    display: none;
-}
-
-.up__text {
-    position: relative;
-
-    .up__text-deite {
-        cursor: pointer;
-        position: absolute;
-        top: -3px;
-        right: -33px;
-        z-index: 200;
-        height: 28px;
-        width: 28px;
-    }
-}
-
-.title__amount {
-    margin-right: 110px;
-}
-
-.inpute__amount {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.uk-form-small {
-    display: none;
-}
-
-.button__amount {
-    font-size: 21px;
-    width: 26px;
-    height: 26px;
-    background-color: #ab2179;
-    border-radius: 50%;
-    color: black;
-}
-
-#mySelect {
-    text-align: justify;
-    font-size: 25px;
-    line-height: 20px;
-    list-style: none;
-}
-
-.cart__down {
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    position: relative;
-    margin-bottom: 50px;
-
-    &::after {
-        position: absolute;
-        content: "";
-        border-top: 2px solid black;
-        color: white;
-        width: 100%;
-        top: -10px;
-        left: 0;
-    }
-}
-
 // МЕДИА 1500px - 1000px --------------------------
 
 @media (max-width: 1250px) {
-    .header__list li {
-        margin-left: 50px;
+    .header__container__body-menu {
+        li {
+            margin-left: 50px;
+        }
     }
+
 }
 
 @media (max-width: 1140px) {
-    .header__list li {
-        margin-left: 20px;
+    .header__container__body-menu {
+        li {
+            margin-left: 20px;
+        }
     }
 }
 
@@ -461,20 +356,12 @@ body {
 }
 
 @media (max-width: 976px) {
-    .header__logo {
-        flex: 0 0 auto;
-
-        & img {
-            width: 70px;
-        }
-    }
-
     .header {
         height: 60px;
         padding-top: 5px;
     }
 
-    .container {
+    .header__container {
         padding: 0px 15px;
     }
 
@@ -482,10 +369,19 @@ body {
         overflow: hidden;
     }
 
-    .header__body {
+    .header__container__body {
         height: 50px;
         justify-content: space-between;
     }
+
+    .header__container__body-logo {
+        flex: 0 0 auto;
+
+        & img {
+            width: 70px;
+        }
+    }
+
 
     .header__burger {
         display: block;
@@ -538,7 +434,7 @@ body {
         bottom: 9px;
     }
 
-    .header__menu {
+    .header__container__body-menu {
         position: fixed;
         text-align: center;
         top: -100%;
@@ -549,23 +445,24 @@ body {
         transition: all 0.3s ease 0s;
         background-color: #32133f;
         padding: 80px 10px 20px 10px;
-    }
 
-    .header__menu.active {
-        top: 0;
-    }
+        ul {
 
-    .header__list {
-        display: block;
-        margin-top: 20px;
-    }
+            display: block;
+            margin-top: 20px;
 
-    .header__list li {
-        margin: 0 0 60px 0;
-    }
+            li {
+                margin: 0 0 60px 0;
 
-    .header__link {
-        font-size: 45px;
+                a {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        &.active {
+            top: 0;
+        }
     }
 
     .content {
@@ -575,10 +472,6 @@ body {
     .login__button {
         @include fontzcolor(16px, #fff);
         padding: 8px 15px;
-    }
-
-    .header__link {
-        font-size: 32px;
     }
 
     .contetnt__cart {
